@@ -4,11 +4,12 @@ import { EPage } from "../../../../core/enums/page.enum";
 import { EBtnType } from "../../../../core/enums/btn-type.enum";
 import { SignService } from "../../../../core/services/sign/sign.service";
 import { FormBuilder, ReactiveFormsModule } from "@angular/forms";
+import { TextInputComponent } from "../../../../shared/components/input/text-input/text-input.component";
 
 @Component({
   selector: 'clt-authorization',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, TextInputComponent],
   templateUrl: './authorization.component.html',
   styleUrl: './authorization.component.scss'
 })

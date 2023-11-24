@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { LanguageService } from "./core/services/language/language.service";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,14 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title: string = 'GARC-admin';
+
+  constructor(
+    private languageService: LanguageService,
+  ) {}
+
+  ngOnInit(): void {
+    this.languageService.init();
+  }
 }
