@@ -4,7 +4,7 @@ import { inject } from "@angular/core";
 import { EPage } from "../../../core/enums/page.enum";
 
 export const nonAuthenticatedGuard: CanActivateFn = (): boolean => {
-  if (inject(SecurityService).isAuthenticated()) {
+  if (!inject(SecurityService).isAuthenticated()) {
     return true;
   } else {
     inject(Router).navigate([EPage.Main]).then();

@@ -1,0 +1,11 @@
+@import "color";
+
+$text-color-default: rgba($white, 0.65);
+$text-label-size: 16px;
+$text-size-default: 13px;
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
