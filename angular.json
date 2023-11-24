@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "clt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -30,7 +30,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/global.scss",
+              "src/styles/layout.scss",
+              "src/styles/positioning.scss",
+              "src/styles/input.scss",
+              "src/styles/effect.scss"
             ],
             "scripts": []
           },

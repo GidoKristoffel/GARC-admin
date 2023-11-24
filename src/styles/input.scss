@@ -1,0 +1,50 @@
+@import "color";
+
+.input {
+  border: 1px solid rgba($white, 0.08);
+  background-color: rgba($black, 0.15);
+  height: 32px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  outline: none;
+  caret-color: $white;
+  color: rgba($white,.85);
+
+  &:hover {
+    border-color: rgba($white,.25);
+  }
+}
+
+.dropdown-input {
+  display: flex;
+  align-items: center;
+  color: $philippine-silver;
+  height: 32px;
+  border: 1px solid rgba($white, 0.08);
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.dropdown-options {
+  border: 1px solid rgba($white, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &>div {
+    padding: 8px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba($white, 0.08);
+    }
+
+    &:hover {
+      background-color: rgba($white, 0.08);
+      color: rgba($white, 0.85);
+    }
+  }
+}
