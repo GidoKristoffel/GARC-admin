@@ -1,0 +1,28 @@
+{
+  "page": {
+    "authorization": {
+      "email": {
+        "label": "Электронная почта",
+        "placeholder": "Введите электронную почту"
+      },
+      "password": {
+        "label": "Пароль",
+        "placeholder": "Введите пароль"
+      },
+      "btn": {
+        "sign-in": "Войти"
+      },
+      "divider": {
+        "label": "Или"
+      },
+      "google": {
+        "label": "Google"
+      }
+    }
+  },
+  "language": {
+    "en": "Английский",
+    "ua": "Украинский",
+    "ru": "Русский"
+  }
+}

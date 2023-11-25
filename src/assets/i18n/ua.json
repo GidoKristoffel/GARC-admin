@@ -1,0 +1,28 @@
+{
+  "page": {
+    "authorization": {
+      "email": {
+        "label": "Електронна пошта",
+        "placeholder": "Введіть електронну пошту"
+      },
+      "password": {
+        "label": "Пароль",
+        "placeholder": "Введіть пароль"
+      },
+      "btn": {
+        "sign-in": "Увійти"
+      },
+      "divider": {
+        "label": "Або"
+      },
+      "google": {
+        "label": "Google"
+      }
+    }
+  },
+  "language": {
+    "en": "Англійська",
+    "ua": "Українська",
+    "ru": "Російська"
+  }
+}

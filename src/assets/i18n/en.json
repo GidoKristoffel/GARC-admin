@@ -1,0 +1,28 @@
+{
+  "page": {
+    "authorization": {
+      "email": {
+        "label": "Email",
+        "placeholder": "Write email"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Write password"
+      },
+      "btn": {
+        "sign-in": "Sing in"
+      },
+      "divider": {
+        "label": "Or"
+      },
+      "google": {
+        "label": "Google"
+      }
+    }
+  },
+  "language": {
+    "en": "English",
+    "ua": "Ukrainian",
+    "ru": "Russian"
+  }
+}

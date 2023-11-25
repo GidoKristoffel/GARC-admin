@@ -1,0 +1,20 @@
+@import "color";
+
+.btn {
+  height: 32px;
+  background-color: rgba($black, 0.15);
+  color: rgba($white, 0.85);
+  border-radius: 16px;
+  padding: 0 16px;
+  border: 1px solid rgba(0,0,0,0);
+
+  &:hover {
+    border-color: rgba($white,.25);
+  }
+
+  &:active {
+    color: $tan-2;
+    border: 1px solid $tan-2;
+    background-color: rgba($tan, 0.06);;
+  }
+}

@@ -29,6 +29,11 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "styles": [
               "src/styles.scss",
               "src/styles/global.scss",
@@ -73,7 +78,10 @@
               "buildTarget": "GARC-admin:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "port": 5600
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -95,7 +103,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/global.scss",
+              "src/styles/layout.scss",
+              "src/styles/positioning.scss",
+              "src/styles/input.scss",
+              "src/styles/effect.scss"
             ],
             "scripts": []
           }

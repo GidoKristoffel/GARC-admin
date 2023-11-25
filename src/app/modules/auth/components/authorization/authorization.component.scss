@@ -1,0 +1,24 @@
+tvt-default-btn {
+  margin-left: auto;
+}
+
+.registration {
+  width: 100%;
+
+  & p {
+    margin: 0;
+  }
+}
+
+.authorization {
+  width: 285px;
+  box-sizing: border-box;
+
+  & > clt-text-input, & > clt-password-input, & > clt-horizontal-divider {
+    margin-bottom: 16px;
+  }
+
+  & > clt-extended-fab-btn {
+    margin-bottom: 4px;
+  }
+}
