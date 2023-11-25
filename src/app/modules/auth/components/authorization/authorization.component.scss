@@ -14,11 +14,11 @@ tvt-default-btn {
   width: 285px;
   box-sizing: border-box;
 
-  & > clt-text-input, & > clt-password-input, & > clt-horizontal-divider {
+  & > clt-text-input, & > clt-password-input {
     margin-bottom: 16px;
   }
 
-  & > clt-extended-fab-btn {
-    margin-bottom: 4px;
+  & > clt-horizontal-divider {
+    margin: 8px 0;
   }
 }

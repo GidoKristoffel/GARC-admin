@@ -11,11 +11,17 @@ import {
 import { DefaultSelectComponent } from "../../../../shared/components/select/default-select/default-select.component";
 import { DefaultBtnComponent } from "../../../../shared/components/button/default-btn/default-btn.component";
 import { TranslateModule } from "@ngx-translate/core";
+import {
+  HorizontalDividerComponent
+} from "../../../../shared/components/divider/horizontal-divider/horizontal-divider.component";
+import {
+  ExtendedFabBtnComponent
+} from "../../../../shared/components/button/extended-fab-btn/extended-fab-btn.component";
 
 @Component({
   selector: 'clt-authorization',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, TextInputComponent, PasswordInputComponent, DefaultSelectComponent, DefaultBtnComponent, TranslateModule],
+  imports: [CommonModule, ReactiveFormsModule, TextInputComponent, PasswordInputComponent, DefaultSelectComponent, DefaultBtnComponent, TranslateModule, HorizontalDividerComponent, ExtendedFabBtnComponent],
   templateUrl: './authorization.component.html',
   styleUrl: './authorization.component.scss'
 })

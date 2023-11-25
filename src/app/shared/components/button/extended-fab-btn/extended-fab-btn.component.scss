@@ -1,0 +1,33 @@
+@import "color";
+
+:host {
+  width: 100%;
+}
+
+svg-icon {
+  margin-right: 4px;
+}
+
+.extended-fab-btn {
+  align-items: center;
+  border: 1px solid rgba($white, 0.08);
+  padding: 4px;
+  border-radius: 8px;
+  background-color: rgba($black, 0.15);
+
+  &:hover {
+    border-color: rgba($white, 0.25);
+  }
+
+  &:active {
+    color: #d3bc8e;
+    border: 1px solid #d3bc8e;
+    background-color: rgba(211, 188, 141, 0.06);
+
+    & .icon {
+      & g {
+        fill: #d3bc8e;
+      }
+    }
+  }
+}

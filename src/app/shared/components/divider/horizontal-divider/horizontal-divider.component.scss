@@ -1,0 +1,28 @@
+@import "color";
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+
+  & .line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    & span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: rgba($white, 0.08);
+    }
+  }
+
+  & .label {
+    padding: 0 4px;
+  }
+}
