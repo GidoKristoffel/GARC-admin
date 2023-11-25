@@ -1,8 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="logIn()" class="authorization card flex-column-right">
   <clt-text-input formField="login" label="page.authorization.email.label" placeholder="page.authorization.email.placeholder"></clt-text-input>
-<!--  <tvt-password-input formField="password" label="page.authorization.password.label" placeholder="page.authorization.password.placeholder"></tvt-password-input>-->
-<!--  <tvt-default-link label="page.authorization.account-recovery" [src]="recoveryLink"></tvt-default-link>-->
-<!--  <tvt-default-btn [type]="btnType">{{ 'page.authorization.btn.sign-in' | translate }}</tvt-default-btn>-->
+  <clt-password-input formField="password" label="page.authorization.password.label" placeholder="page.authorization.password.placeholder"></clt-password-input>
+  <clt-default-btn [type]="btnType">{{ 'page.authorization.btn.sign-in' | translate }}</clt-default-btn>
 <!--  <tvt-horizontal-divider label="page.authorization.divider.label"></tvt-horizontal-divider>-->
 <!--  <tvt-extended-fab-btn src="./assets/images/icons/google.svg" label="page.authorization.google.label"></tvt-extended-fab-btn>-->
 <!--  <div class="registration flex-center">-->

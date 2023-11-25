@@ -5,11 +5,17 @@ import { EBtnType } from "../../../../core/enums/btn-type.enum";
 import { SignService } from "../../../../core/services/sign/sign.service";
 import { FormBuilder, ReactiveFormsModule } from "@angular/forms";
 import { TextInputComponent } from "../../../../shared/components/input/text-input/text-input.component";
+import {
+  PasswordInputComponent
+} from "../../../../shared/components/input/password-input/password-input/password-input.component";
+import { DefaultSelectComponent } from "../../../../shared/components/select/default-select/default-select.component";
+import { DefaultBtnComponent } from "../../../../shared/components/button/default-btn/default-btn.component";
+import { TranslateModule } from "@ngx-translate/core";
 
 @Component({
   selector: 'clt-authorization',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, TextInputComponent],
+  imports: [CommonModule, ReactiveFormsModule, TextInputComponent, PasswordInputComponent, DefaultSelectComponent, DefaultBtnComponent, TranslateModule],
   templateUrl: './authorization.component.html',
   styleUrl: './authorization.component.scss'
 })
