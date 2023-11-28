@@ -1,0 +1,20 @@
+<div class="sidebar flex-column">
+  <div class="flex-column gap-4" cltScrollClass>
+    @for (support of sidebar.main; track support.id) {
+      @switch (support.type) {
+        @case (sidebarType.Button) {
+          <clt-sidebar-btn [icon]="support.icon" [label]="support.label" [link]="support.link"></clt-sidebar-btn>
+        }
+        @default {
+          <div class="sidebar-header">{{ support.label | translate }}</div>
+          <clt-horizontal-divider></clt-horizontal-divider>
+        }
+      }
+    }
+  </div>
+  <div class="flex-column gap-4">
+    <clt-sidebar-btn icon="./assets/images/icons/settings.svg" label="page.main.sidebar.settings" [link]="settingsLink"></clt-sidebar-btn>
+    <clt-horizontal-divider></clt-horizontal-divider>
+    <clt-sidebar-btn icon="./assets/images/icons/exit.svg" label="page.main.sidebar.exit" (click)="logOut()"></clt-sidebar-btn>
+  </div>
+</div>

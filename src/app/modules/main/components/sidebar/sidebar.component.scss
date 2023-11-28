@@ -1,0 +1,23 @@
+@import "color";
+
+.sidebar {
+  height: 100vh;
+  box-sizing: border-box;
+  border-right: 2px solid $granite-gray;
+  padding: 4px;
+  justify-content: space-between;
+
+  &-header {
+    font-size: 16px;
+    padding: 8px 8px 0;
+  }
+
+  & > div:first-child {
+    overflow: auto;
+    margin-bottom: 16px;
+  }
+
+  & .scroll {
+    padding-right: 4px;
+  }
+}

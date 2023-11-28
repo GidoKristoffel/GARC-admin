@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from "@ngx-translate/core";
 import { IOption } from "../../../interfaces/select.interface";
-import { ClickOutsideDirective } from "../../../directives/click-outside.directive";
+import { ClickOutsideDirective } from "../../../directives/click-outside/click-outside.directive";
 import { SvgIconComponent } from "angular-svg-icon";
 
 @Component({

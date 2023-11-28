@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from "@angular/router";
 
 @Component({
-  selector: 'clt-materials',
+  selector: 'clt-enemies',
   standalone: true,
   imports: [CommonModule, RouterOutlet],
-  templateUrl: './materials.component.html',
-  styleUrl: './materials.component.scss'
+  templateUrl: './enemies.component.html',
+  styleUrl: './enemies.component.scss'
 })
-export class MaterialsComponent {
+export class EnemiesComponent {
 
 }
