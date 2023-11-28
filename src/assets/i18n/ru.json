@@ -18,6 +18,40 @@
       "google": {
         "label": "Google"
       }
+    },
+    "main": {
+      "sidebar": {
+        "account": {
+          "title": "Аккауны",
+          "admin": "Администраторы",
+          "user": "Пользователи"
+        },
+        "character": {
+          "title": "Персонажы",
+          "character": "Персонажы",
+          "traveler": "Путешественник"
+        },
+        "weapon": {
+          "title": "Оружие",
+          "weapon": "Оружие"
+        },
+        "material": {
+          "title": "Материалы",
+          "character-weapon-enhancement": "Улучшение персонажей и оружия",
+          "character-level-up": "Повышение уровня персонажей",
+          "character-ascension": "Вознесение персонажей",
+          "character-talents": "Таланты",
+          "weapon": "Оружие"
+        },
+        "enemy": {
+          "title": "Враги",
+          "mob": "Мобы",
+          "elite-boss": "Элитные боссы",
+          "weekly-boss": "Еженедельные боссы"
+        },
+        "settings": "Настройки",
+        "exit": "Выход"
+      }
     }
   },
   "language": {

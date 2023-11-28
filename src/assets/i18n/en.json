@@ -18,6 +18,40 @@
       "google": {
         "label": "Google"
       }
+    },
+    "main": {
+      "sidebar": {
+        "account": {
+          "title": "Accounts",
+          "admin": "Administrators",
+          "user": "Users"
+        },
+        "character": {
+          "title": "Characters",
+          "character": "Characters",
+          "traveler": "Traveler"
+        },
+        "weapon": {
+          "title": "Weapons",
+          "weapon": "Weapons"
+        },
+        "material": {
+          "title": "Materials",
+          "character-weapon-enhancement": "Characters and weapon enhancement",
+          "character-level-up": "Character level-up",
+          "character-ascension": "Character ascension",
+          "character-talents": "Talents",
+          "weapon": "Weapons"
+        },
+        "enemy": {
+          "title": "Enemies",
+          "mob": "Mobs",
+          "elite-boss": "Elite bosses",
+          "weekly-boss": "Weekly bosses"
+        },
+        "settings": "Settings",
+        "exit": "Exit"
+      }
     }
   },
   "language": {

@@ -18,6 +18,40 @@
       "google": {
         "label": "Google"
       }
+    },
+    "main": {
+      "sidebar": {
+        "account": {
+          "title": "Акаунти",
+          "admin": "Адміністратори",
+          "user": "Користувачі"
+        },
+        "character": {
+          "title": "Персонажі",
+          "character": "Персонажі",
+          "traveler": "Мандрівник"
+        },
+        "weapon": {
+          "title": "Зброя",
+          "weapon": "Зброя"
+        },
+        "material": {
+          "title": "Матеріали",
+          "character-weapon-enhancement": "Покращення персонажів та зброї",
+          "character-level-up": "Підвищення рівня персонажів",
+          "character-ascension": "Вознесіння персонажів",
+          "character-talents": "Таланти",
+          "weapon": "Зброя"
+        },
+        "enemy": {
+          "title": "Вороги",
+          "mob": "Моби",
+          "elite-boss": "Елітні боси",
+          "weekly-boss": "Щотижневі боси"
+        },
+        "settings": "Налаштування",
+        "exit": "Вихід"
+      }
     }
   },
   "language": {

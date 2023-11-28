@@ -11,6 +11,7 @@ export const routes: Routes = [
   },
   {
     path: EPage.Main,
+    loadComponent: () => import('./pages/main/main-page.component').then(c => c.MainPageComponent),
     loadChildren: () => import('./pages/main/main-page.routes').then(r => r.mainPage),
     canActivate: [authenticatedGuard],
   },
