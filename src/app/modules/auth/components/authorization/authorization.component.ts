@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EPage } from "../../../../core/enums/page.enum";
 import { EBtnType } from "../../../../core/enums/btn-type.enum";
 import { SignService } from "../../../../core/services/sign/sign.service";
 import { FormBuilder, ReactiveFormsModule } from "@angular/forms";

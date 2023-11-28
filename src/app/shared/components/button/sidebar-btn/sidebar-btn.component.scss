@@ -1,0 +1,12 @@
+@import "color";
+
+.sidebar-btn {
+  font-size: 14px;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: rgba($black, 0.15);
+  }
+}
