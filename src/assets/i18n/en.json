@@ -52,6 +52,47 @@
         "settings": "Settings",
         "exit": "Exit"
       }
+    },
+    "characters": {
+      "playable": {
+        "create": {
+          "field": {
+            "name": {
+              "en": "Name [English]",
+              "ua": "Name [Ukrainian]",
+              "ru": "Name [Russian]"
+            },
+            "quality": "Quality",
+            "elemental-type": "Elemental Type",
+            "region": "Region",
+            "bonus-attribute": "Bonus attribute from ascension",
+            "weapon": "Weapon type",
+            "constellation": {
+              "en": "Constellation [English]",
+              "ua": "Constellation [Ukrainian]",
+              "ru": "Constellation [Russian]"
+            },
+            "arche": "Arche",
+            "birthday": "Birthday",
+            "title": {
+              "en": "Title [English]",
+              "ua": "Title [Ukrainian]",
+              "ru": "Title [Russian]"
+            },
+            "affiliation": {
+              "en": "Affiliation [English]",
+              "ua": "Affiliation [Ukrainian]",
+              "ru": "Affiliation [Russian]"
+            },
+            "icon": "Icon",
+            "splash-art": "Splash art",
+            "card-icon": "Card"
+          },
+          "btn": {
+            "save": "Save"
+          }
+        }
+      }
     }
   },
   "language": {

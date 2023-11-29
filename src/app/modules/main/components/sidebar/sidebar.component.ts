@@ -23,11 +23,11 @@ export enum ESidebarType {
 })
 export class SidebarComponent {
   public readonly baseUrl: string = EPage.Main + '/';
-  public readonly baseUrlAccount: string = this.baseUrl + EPage.Account + '/';
-  public readonly baseUrlCharacter: string = this.baseUrl + EPage.Character + '/';
-  public readonly baseUrlWeapon: string = this.baseUrl + EPage.Weapon + '/';
+  public readonly baseUrlAccount: string = this.baseUrl + EPage.Accounts + '/';
+  public readonly baseUrlCharacter: string = this.baseUrl + EPage.Characters + '/';
+  public readonly baseUrlWeapon: string = this.baseUrl + EPage.Weapons + '/';
   public readonly baseUrlMaterial: string = this.baseUrl + EPage.Material + '/';
-  public readonly baseUrlEnemy: string = this.baseUrl + EPage.Enemy + '/';
+  public readonly baseUrlEnemy: string = this.baseUrl + EPage.Enemies + '/';
   public readonly settingsLink: string = this.baseUrl + EPage.Settings;
 
   public readonly sidebarType: typeof ESidebarType = ESidebarType;
@@ -46,14 +46,14 @@ export class SidebarComponent {
         type: ESidebarType.Button,
         label: 'page.main.sidebar.account.admin',
         icon: './assets/images/icons/account-admin.svg',
-        link: this.baseUrlAccount + EPage.Admin,
+        link: this.baseUrlAccount + EPage.Admins,
       },
       {
         id: 2,
         type: ESidebarType.Button,
         label: 'page.main.sidebar.account.user',
         icon: './assets/images/icons/account-user.svg',
-        link: this.baseUrlAccount + EPage.User,
+        link: this.baseUrlAccount + EPage.Users,
       },
       {
         id: 3,
@@ -74,7 +74,7 @@ export class SidebarComponent {
         type: ESidebarType.Button,
         label: 'page.main.sidebar.character.character',
         icon: './assets/images/icons/character.svg',
-        link: this.baseUrlCharacter + EPage.Character,
+        link: this.baseUrlCharacter + EPage.Characters,
       },
       {
         id: 6,
@@ -88,7 +88,7 @@ export class SidebarComponent {
         type: ESidebarType.Button,
         label: 'page.main.sidebar.weapon.weapon',
         icon: './assets/images/icons/weapon.svg',
-        link: this.baseUrlWeapon + EPage.Weapon,
+        link: this.baseUrlWeapon + EPage.Weapons,
       },
       {
         id: 8,
@@ -102,21 +102,21 @@ export class SidebarComponent {
         type: ESidebarType.Button,
         label: 'page.main.sidebar.material.character-weapon-enhancement',
         icon: './assets/images/icons/character-weapon-upgrades.svg',
-        link: this.baseUrlMaterial + EPage.CharacterWeaponUpgrades,
+        link: this.baseUrlMaterial + EPage.CharactersWeaponEnhancement,
       },
       {
         id: 10,
         type: ESidebarType.Button,
         label: 'page.main.sidebar.material.character-level-up',
         icon: './assets/images/icons/character-development.svg',
-        link: this.baseUrlMaterial + EPage.CharacterDevelopment,
+        link: this.baseUrlMaterial + EPage.CharacterLevelUp,
       },
       {
         id: 11,
         type: ESidebarType.Button,
         label: 'page.main.sidebar.material.character-ascension',
         icon: './assets/images/icons/character-elevation.svg',
-        link: this.baseUrlMaterial + EPage.CharacterElevation,
+        link: this.baseUrlMaterial + EPage.CharacterAscension,
       },
       {
         id: 12,
@@ -130,7 +130,7 @@ export class SidebarComponent {
         type: ESidebarType.Button,
         label: 'page.main.sidebar.material.weapon',
         icon: './assets/images/icons/material-weapon.svg',
-        link: this.baseUrlMaterial + EPage.Weapon,
+        link: this.baseUrlMaterial + EPage.Weapons,
       },
       {
         id: 14,
@@ -144,21 +144,21 @@ export class SidebarComponent {
         type: ESidebarType.Button,
         label: 'page.main.sidebar.enemy.mob',
         icon: './assets/images/icons/mob.svg',
-        link: this.baseUrlEnemy + EPage.Mob,
+        link: this.baseUrlEnemy + EPage.Mobs,
       },
       {
         id: 16,
         type: ESidebarType.Button,
         label: 'page.main.sidebar.enemy.elite-boss',
         icon: './assets/images/icons/elite-boss.svg',
-        link: this.baseUrlEnemy + EPage.EliteBoss,
+        link: this.baseUrlEnemy + EPage.EliteBosses,
       },
       {
         id: 17,
         type: ESidebarType.Button,
         label: 'page.main.sidebar.enemy.weekly-boss',
         icon: './assets/images/icons/weekly-boss.svg',
-        link: this.baseUrlEnemy + EPage.WeeklyBoss,
+        link: this.baseUrlEnemy + EPage.WeeklyBosses,
       }
     ],
   };

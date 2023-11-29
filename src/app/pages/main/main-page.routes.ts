@@ -3,17 +3,17 @@ import { EPage } from "../../core/enums/page.enum";
 
 export const mainPage: Routes = [
   {
-    path: EPage.Account,
+    path: EPage.Accounts,
     loadComponent: () => import('./accounts/accounts.component').then(c => c.AccountsComponent),
     loadChildren: () => import('./accounts/accounts.routes').then(r => r.accountsPage)
   },
   {
-    path: EPage.Character,
+    path: EPage.Characters,
     loadComponent: () => import('./characters/characters.component').then(c => c.CharactersComponent),
     loadChildren: () => import('./characters/characters.routes').then(r => r.charactersPage)
   },
   {
-    path: `${ EPage.Weapon }/${ EPage.Weapon }`,
+    path: `${ EPage.Weapons }/${ EPage.Weapons }`,
     loadComponent: () => import('./weapons/weapons.component').then(c => c.WeaponsComponent),
   },
   {
@@ -22,7 +22,7 @@ export const mainPage: Routes = [
     loadChildren: () => import('./materials/materials.routes').then(r => r.materialsRoutes),
   },
   {
-    path: EPage.Enemy,
+    path: EPage.Enemies,
     loadComponent: () => import('./enemies/enemies.component').then(c => c.EnemiesComponent),
     loadChildren: () => import('./enemies/enemies.routes').then(r => r.enemiesRoutes),
   },
@@ -32,7 +32,7 @@ export const mainPage: Routes = [
   },
   {
     path: EPage.Empty,
-    redirectTo: `${ EPage.Account }`,
+    redirectTo: `${ EPage.Accounts }`,
     pathMatch: 'full'
   },
 ];

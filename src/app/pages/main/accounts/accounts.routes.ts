@@ -3,16 +3,16 @@ import { EPage } from "../../../core/enums/page.enum";
 
 export const accountsPage: Routes = [
   {
-    path: EPage.Admin,
+    path: EPage.Admins,
     loadComponent: () => import('./admin-accounts/admin-accounts.component').then(c => c.AdminAccountsComponent)
   },
   {
-    path: EPage.User,
+    path: EPage.Users,
     loadComponent: () => import('./user-accounts/user-accounts.component').then(c => c.UserAccountsComponent)
   },
   {
     path: EPage.Empty,
-    redirectTo: `${ EPage.Admin }`,
+    redirectTo: `${ EPage.Admins }`,
     pathMatch: "full"
   }
 ];
