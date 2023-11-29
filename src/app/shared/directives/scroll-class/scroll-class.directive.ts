@@ -18,7 +18,7 @@ export class ScrollClassDirective implements AfterViewInit, OnDestroy {
   private checkScroll(): void {
     const element = this.elRef.nativeElement;
 
-    const hasScrollbar: boolean = element.scrollHeight > element.scrollTop + element.clientHeight;
+    const hasScrollbar: boolean = element.scrollHeight > element.scrollTop + element.clientHeight || element.scrollTop > 0;
     if (hasScrollbar) {
       this.renderer.addClass(element, 'scroll');
     } else {

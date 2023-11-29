@@ -1,0 +1,10 @@
+<div class="wrapper flex-align-center">
+  <div class="label field-label">{{ label | translate }}</div>
+  <div class="field">
+    <select class="input dropdown" [value]="''">
+      @for (option of options; track $index) {
+        <option [value]="option">{{ option.label }}</option>
+      }
+    </select>
+  </div>
+</div>
