@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IOption } from "../../../../shared/interfaces/select.interface";
+import { IOption } from "../../../../shared/interfaces/input.interface";
 import { LanguageService } from "../../../../core/services/language/language.service";
 import { ELanguage } from "../../../../core/enums/language.enum";
 import { getEnumValues, isStringInEnum } from "../../../../core/utilities/enum.utility";
@@ -16,6 +16,7 @@ import { DefaultSelectComponent } from "../../../../shared/components/select/def
 export class LanguagePickerComponent implements OnInit {
   public languages: IOption[] = [];
   public selected!: string;
+  public readonly iconSvg: string = './assets/images/icons/language.svg';
 
   constructor(
     private languageService: LanguageService

@@ -88,6 +88,66 @@
             "splash-art": "Splash art",
             "card-icon": "Card"
           },
+          "select": {
+            "quality": {
+              "epic": "Epic",
+              "legendary": "Legendary",
+              "other": "Other"
+            },
+            "element": {
+              "anemo": "Anemo",
+              "geo": "Geo",
+              "electro": "Electro",
+              "dendro": "Dendro",
+              "hydro": "Hydro",
+              "pyro": "Pyro",
+              "cryo": "Cryo",
+              "other": "Other"
+            },
+            "region": {
+              "mondstadt": "Mondstadt",
+              "liyue": "Liyue",
+              "inazuma": "Inazuma",
+              "sumeru": "Sumeru",
+              "fontaine": "Fontaine",
+              "natlan": "Natlan",
+              "snezhnaya": "Snezhnaya",
+              "other": "Other"
+            },
+            "bonus-attribute": {
+              "crit-dmg": "CRIT DMG",
+              "elemental-mastery": "Elemental Mastery",
+              "energy-recharge": "Energy Recharge",
+              "crit-rate": "CRIT Rate",
+              "hp": "HP",
+              "healing-bonus": "Healing Bonus",
+              "physical-dmg-bonus": "Physical DMG Bonus",
+              "atk": "ATK",
+              "def": "DEF",
+              "pyro-dmg-bonus": "Pyro DMG Bonus",
+              "hydro-dmg-bonus": "Hydro DMG Bonus",
+              "dendro-dmg-bonus": "Dendro DMG Bonus",
+              "electro-dmg-bonus": "Electro DMG Bonus",
+              "cryo-dmg-bonus": "Cryo DMG Bonus",
+              "anemo-dmg-bonus": "Anemo DMG Bonus",
+              "geo-dmg-bonus": "Geo DMG Bonus",
+              "other": "Other"
+            },
+            "weapon": {
+              "sword": "Sword",
+              "claymore": "Claymore",
+              "bow": "Bow",
+              "catalyst": "Catalyst",
+              "polearm": "Polearm",
+              "other": "Other"
+            }
+          },
+          "checkbox": {
+            "arche": {
+              "usia": "Usia",
+              "pneuma": "Pneuma"
+            }
+          },
           "btn": {
             "save": "Save"
           }

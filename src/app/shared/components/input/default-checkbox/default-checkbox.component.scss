@@ -1,0 +1,27 @@
+@import "color";
+
+label {
+  font-size: 14px;
+  width: min-content;
+
+  & .checkbox {
+    display: none;
+  }
+
+  & .checkmark {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid rgba($white, 0.08);
+    background-color: rgba($black, 0.15);
+    box-sizing: border-box;
+  }
+
+  &:hover {
+    color: rgba($white,.85);
+
+    & .checkmark {
+      border-color: rgba($white,.25);
+    }
+  }
+}
