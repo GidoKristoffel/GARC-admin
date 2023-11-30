@@ -15,11 +15,12 @@ import { EWeapon } from "../../enums/weapon.enum";
 import { EBtnType } from "../../../../core/enums/btn-type.enum";
 import { CheckboxFieldComponent } from "../../../../shared/components/fields/checkbox-field/checkbox-field.component";
 import { EArche } from "../../enums/arche.enum";
+import { DatetimeFieldComponent } from "../../../../shared/components/fields/datetime-field/datetime-field.component";
 
 @Component({
   selector: 'clt-characters-playable-create',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, CheckboxFieldComponent],
+  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, CheckboxFieldComponent, DatetimeFieldComponent],
   templateUrl: './characters-playable-create.component.html',
   styleUrl: './characters-playable-create.component.scss'
 })
@@ -37,6 +38,7 @@ export class CharactersPlayableCreateComponent implements OnInit {
     constellationUa: [''],
     constellationRu: [''],
     arche: [[]],
+    birthday: [''],
     titleEn: [''],
     titleUa: [''],
     titleRu: [''],
