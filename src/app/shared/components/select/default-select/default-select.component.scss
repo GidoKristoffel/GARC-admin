@@ -1,10 +1,19 @@
+@import "color";
+
+.default-select-wrapper {
+  position: relative;
+}
+
 .default-select-input {
-  width: 120px;
+  background-color: $gunmetal;
 }
 
 .default-select-options {
-  margin-top: 8px;
-  width: 120px;
+  position: absolute;
+  top: 40px;
+  min-width: 120px;
+  z-index: 1000;
+  background-color: $gunmetal;
 }
 
 .default-select-text {

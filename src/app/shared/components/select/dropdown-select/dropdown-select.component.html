@@ -1,1 +1,8 @@
-<p>dropdown-select works!</p>
+<div class="flex-column-right disable-selection">
+  <div class="pointer" (click)="toggle()">{{ selected }}</div>
+  <div>
+    @for (option of options; track $index) {
+      <div (click)="select(option)">{{ option.label | translate }}</div>
+    }
+  </div>
+</div>

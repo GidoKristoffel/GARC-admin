@@ -2,7 +2,7 @@
   <div class="label field-label">{{ label | translate }}</div>
   <div class="field">
     <div class="dropdown-wrapper">
-      <clt-dropdown-select [options]="options"></clt-dropdown-select>
+      <clt-default-select defaultOption=" " [options]="options" (change)="change($event)"></clt-default-select>
     </div>
   </div>
 </div>
