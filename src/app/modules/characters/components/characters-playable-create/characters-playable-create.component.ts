@@ -16,11 +16,12 @@ import { EBtnType } from "../../../../core/enums/btn-type.enum";
 import { CheckboxFieldComponent } from "../../../../shared/components/fields/checkbox-field/checkbox-field.component";
 import { EArche } from "../../enums/arche.enum";
 import { DatetimeFieldComponent } from "../../../../shared/components/fields/datetime-field/datetime-field.component";
+import { ImageFieldComponent } from "../../../../shared/components/fields/image-field/image-field.component";
 
 @Component({
   selector: 'clt-characters-playable-create',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, CheckboxFieldComponent, DatetimeFieldComponent],
+  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, CheckboxFieldComponent, DatetimeFieldComponent, ImageFieldComponent],
   templateUrl: './characters-playable-create.component.html',
   styleUrl: './characters-playable-create.component.scss'
 })
@@ -45,6 +46,9 @@ export class CharactersPlayableCreateComponent implements OnInit {
     affiliationEn: [''],
     affiliationUa: [''],
     affiliationRu: [''],
+    icon: [''],
+    splashArt: [''],
+    cardIcon: ['']
   });
 
   public qualityOptions: IOption[] = [];
