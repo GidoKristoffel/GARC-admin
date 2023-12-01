@@ -15,7 +15,7 @@ import { DefaultSelectComponent } from "../../../../shared/components/select/def
 })
 export class LanguagePickerComponent implements OnInit {
   public languages: IOption[] = [];
-  public selected!: string;
+  public selected!: IOption;
   public readonly iconSvg: string = './assets/images/icons/language.svg';
 
   constructor(
@@ -28,7 +28,10 @@ export class LanguagePickerComponent implements OnInit {
   }
 
   private initCurrentLanguage(): void {
-    this.selected = 'language.' + this.languageService.getCurrentLanguage();
+    this.selected = {
+      label: 'language.' + this.languageService.getCurrentLanguage(),
+      value: this.languageService.getCurrentLanguage(),
+    }
   }
 
   private initLanguages(): void {

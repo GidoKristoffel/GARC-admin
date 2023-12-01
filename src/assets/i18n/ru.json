@@ -155,6 +155,24 @@
       }
     }
   },
+  "shared": {
+    "datetime": {
+      "month": {
+        "january": "Январь",
+        "february": "Февраль",
+        "march": "Март",
+        "april": "Апрель",
+        "may": "Май",
+        "june": "Июнь",
+        "july": "Июль",
+        "august": "Август",
+        "september": "Сентябрь",
+        "october": "Октябрь",
+        "november": "Ноябрь",
+        "december": "Декабрь"
+      }
+    }
+  },
   "language": {
     "en": "Английский",
     "ua": "Украинский",
