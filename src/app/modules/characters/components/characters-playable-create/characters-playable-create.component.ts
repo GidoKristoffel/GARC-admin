@@ -38,7 +38,7 @@ export class CharactersPlayableCreateComponent implements OnInit {
     constellationUa: [''],
     constellationRu: [''],
     arche: [[]],
-    birthday: [''],
+    birthday: [null],
     titleEn: [''],
     titleUa: [''],
     titleRu: [''],

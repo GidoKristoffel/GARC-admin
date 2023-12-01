@@ -1,7 +1,7 @@
 <div class="wrapper flex-align-center">
   <div class="label field-label">{{ label | translate }}</div>
-  <div class="field">
-    <clt-default-select [defaultOption]="dayOption.length ? dayOption[0].value : ' '" [options]="dayOption"></clt-default-select>
-    <clt-default-select defaultOption=" " [options]="monthOption" (change)="change($event)"></clt-default-select>
+  <div class="field flex gap-8">
+    <clt-default-select [(value)]="currentDay" [defaultOption]="defaultDay" [options]="dayOption" (change)="updateDate()"></clt-default-select>
+    <clt-default-select [(value)]="currentMonth" [options]="monthOption" (change)="change($event)"></clt-default-select>
   </div>
 </div>

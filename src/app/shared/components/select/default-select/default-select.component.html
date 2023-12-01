@@ -2,10 +2,10 @@
   <div class="dropdown-input pointer default-select-input flex-left" (click)="toggle()" (clickOutside)="close()">
     <svg-icon *ngIf="iconSvg" [src]="iconSvg" [svgStyle]="svgIconStyle"></svg-icon>
     <div [class.default-select-text]="iconSvg">
-      {{ selected | translate }}
+      {{ selected.label | translate }}
     </div>
   </div>
-  <div class="pointer dropdown-options default-select-options" *ngIf="openSelector">
+  <div class="pointer dropdown-options default-select-options" *ngIf="openSelector && options.length">
     <div *ngFor="let option of options" (click)="select(option)">
       {{ option.label | translate }}
     </div>
