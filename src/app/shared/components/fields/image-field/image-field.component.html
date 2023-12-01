@@ -1,4 +1,12 @@
-<div class="wrapper">
-  <div class="label">{{ label | translate }}</div>
-  <div class="field"></div>
+<div class="wrapper flex-align-center">
+  <div class="label field-label">{{ label | translate }}</div>
+  <div class="field">
+    @if (imageUrl) {
+      <img [src]="imageUrl" alt="">
+    } @else {
+      <div class="img-empty flex-center">{{ 'error.image.empty' | translate }}</div>
+    }
+    <clt-text-input [formField]="formField"></clt-text-input>
+    <div (click)="loadImage()">btn</div>
+  </div>
 </div>

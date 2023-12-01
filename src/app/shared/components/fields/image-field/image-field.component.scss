@@ -1,0 +1,31 @@
+@import "color";
+
+.label {
+  margin-right: 8px;
+  min-width: 260px;
+}
+
+.field {
+  width: 100%;
+}
+
+img {
+  height: 200px;
+  width: fit-content;
+  border: 1px solid rgba($white, 0.08);
+  background-color: rgba($black, 0.15);
+  border-radius: 8px;
+  overflow: auto;
+  box-sizing: border-box;
+  display: block;
+}
+
+.img-empty {
+  height: 200px;
+  width: 200px;
+  border: 1px solid rgba($white, 0.08);
+  background-color: rgba($black, 0.15);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
