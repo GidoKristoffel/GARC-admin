@@ -4,11 +4,13 @@ import { TranslateModule } from "@ngx-translate/core";
 import { TextInputComponent } from "../../input/text-input/text-input.component";
 import { InjectReactiveForm } from "../../../../core/classes/inject-reactive-form/inject-reactive-form";
 import { FormGroupDirective } from "@angular/forms";
+import { DefaultBtnComponent } from "../../button/default-btn/default-btn.component";
+import { SvgIconComponent } from "angular-svg-icon";
 
 @Component({
   selector: 'clt-image-field',
   standalone: true,
-  imports: [CommonModule, TranslateModule, TextInputComponent, NgOptimizedImage],
+  imports: [CommonModule, TranslateModule, TextInputComponent, NgOptimizedImage, DefaultBtnComponent, SvgIconComponent],
   templateUrl: './image-field.component.html',
   styleUrl: './image-field.component.scss'
 })
@@ -17,6 +19,7 @@ export class ImageFieldComponent extends InjectReactiveForm {
   @Input() formField: string = '';
 
   public imageUrl: string = '';
+  public readonly icon: string = './assets/images/icons/load-img.svg';
 
   constructor(
     protected override rootFormGroup: FormGroupDirective,

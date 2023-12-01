@@ -1,12 +1,16 @@
 <div class="wrapper flex-align-center">
   <div class="label field-label">{{ label | translate }}</div>
-  <div class="field">
+  <div class="field flex-column gap-4">
     @if (imageUrl) {
       <img [src]="imageUrl" alt="">
     } @else {
       <div class="img-empty flex-center">{{ 'error.image.empty' | translate }}</div>
     }
-    <clt-text-input [formField]="formField"></clt-text-input>
-    <div (click)="loadImage()">btn</div>
+    <div class="flex gap-4">
+      <clt-text-input [formField]="formField"></clt-text-input>
+      <clt-default-btn (click)="loadImage()">
+        <svg-icon *ngIf="icon" [src]="icon" [svgStyle]="{ 'width.px': 18, display: 'flex' }"></svg-icon>
+      </clt-default-btn>
+    </div>
   </div>
 </div>
