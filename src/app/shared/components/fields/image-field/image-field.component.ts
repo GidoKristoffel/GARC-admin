@@ -6,11 +6,12 @@ import { InjectReactiveForm } from "../../../../core/classes/inject-reactive-for
 import { FormGroupDirective } from "@angular/forms";
 import { DefaultBtnComponent } from "../../button/default-btn/default-btn.component";
 import { SvgIconComponent } from "angular-svg-icon";
+import { FieldLineDirective } from "../../../directives/field-line/field-line.directive";
 
 @Component({
   selector: 'clt-image-field',
   standalone: true,
-  imports: [CommonModule, TranslateModule, TextInputComponent, NgOptimizedImage, DefaultBtnComponent, SvgIconComponent],
+  imports: [CommonModule, TranslateModule, TextInputComponent, NgOptimizedImage, DefaultBtnComponent, SvgIconComponent, FieldLineDirective],
   templateUrl: './image-field.component.html',
   styleUrl: './image-field.component.scss'
 })

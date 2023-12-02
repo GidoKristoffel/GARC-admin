@@ -5,11 +5,12 @@ import { ICheckboxChange, IOption } from "../../../interfaces/input.interface";
 import { DefaultCheckboxComponent } from "../../input/default-checkbox/default-checkbox.component";
 import { InjectReactiveForm } from "../../../../core/classes/inject-reactive-form/inject-reactive-form";
 import { FormGroupDirective } from "@angular/forms";
+import { FieldLineDirective } from "../../../directives/field-line/field-line.directive";
 
 @Component({
   selector: 'clt-checkbox-field',
   standalone: true,
-  imports: [CommonModule, TranslateModule, DefaultCheckboxComponent],
+  imports: [CommonModule, TranslateModule, DefaultCheckboxComponent, FieldLineDirective],
   templateUrl: './checkbox-field.component.html',
   styleUrl: './checkbox-field.component.scss'
 })

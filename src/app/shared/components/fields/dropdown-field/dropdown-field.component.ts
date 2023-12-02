@@ -5,11 +5,12 @@ import { DropdownSelectComponent } from "../../select/dropdown-select/dropdown-s
 import { DefaultSelectComponent } from "../../select/default-select/default-select.component";
 import { InjectReactiveForm } from "../../../../core/classes/inject-reactive-form/inject-reactive-form";
 import { FormGroupDirective } from "@angular/forms";
+import { FieldLineDirective } from "../../../directives/field-line/field-line.directive";
 
 @Component({
   selector: 'clt-dropdown-field',
   standalone: true,
-  imports: [CommonModule, TranslateModule, DropdownSelectComponent, DefaultSelectComponent],
+  imports: [CommonModule, TranslateModule, DropdownSelectComponent, DefaultSelectComponent, FieldLineDirective],
   templateUrl: './dropdown-field.component.html',
   styleUrl: './dropdown-field.component.scss'
 })
