@@ -26,13 +26,17 @@ export class DefaultSelectComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['defaultOption'] && changes['defaultOption'].currentValue) {
-      this.selected = changes['defaultOption'].currentValue
+      this.selected = changes['defaultOption'].currentValue;
     }
 
     if (changes['options'] && changes['options'].currentValue) {
       if (!isObjectInArray(this.selected, changes['options'].currentValue)) {
         this.selected = this.defaultOption;
       }
+    }
+
+    if (changes['value'] && changes['value'].currentValue) {
+      this.selected = changes['value'].currentValue;
     }
   }
 

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { TranslateModule } from "@ngx-translate/core";
 import { TextInputComponent } from "../../input/text-input/text-input.component";
@@ -15,7 +15,7 @@ import { FieldLineDirective } from "../../../directives/field-line/field-line.di
   templateUrl: './image-field.component.html',
   styleUrl: './image-field.component.scss'
 })
-export class ImageFieldComponent extends InjectReactiveForm {
+export class ImageFieldComponent extends InjectReactiveForm implements OnInit {
   @Input() label: string = '';
   @Input() formField: string = '';
 
@@ -26,6 +26,11 @@ export class ImageFieldComponent extends InjectReactiveForm {
     protected override rootFormGroup: FormGroupDirective,
   ) {
     super(rootFormGroup);
+  }
+
+  override ngOnInit(): void {
+    super.ngOnInit();
+    this.loadImage();
   }
 
   loadImage() {

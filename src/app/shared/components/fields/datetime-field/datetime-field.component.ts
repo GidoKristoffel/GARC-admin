@@ -32,7 +32,20 @@ export class DatetimeFieldComponent extends InjectReactiveForm implements OnInit
   }
 
   override ngOnInit(): void {
+    super.ngOnInit();
     this.initOptions();
+
+    if (this.form.value[this.formField]) {
+      const date: Date = new Date(this.form.value[this.formField]);
+      const month: string = date.toLocaleString('en', { month: 'long' });
+      const day: string = date.toLocaleString('en', { day: 'numeric' });
+
+      this.currentMonth = this.monthOption.find((m: IOption): boolean => m.value === month) || this.currentMonth;
+      if (EMonthDayCount.hasOwnProperty(this.currentMonth.value)) {
+        this.dayOption = this.generateObjectArray(+EMonthDayCount[this.currentMonth.value as keyof typeof EMonthDayCount]);
+      }
+      this.currentDay = { label: day, value: day };
+    }
   }
 
   private initOptions(): void {
