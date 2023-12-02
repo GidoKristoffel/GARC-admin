@@ -11,10 +11,9 @@ import { TranslateModule } from "@ngx-translate/core";
   styleUrl: './default-checkbox.component.scss'
 })
 export class DefaultCheckboxComponent {
+  @Input() checked: boolean = false;
   @Input() option!: IOption;
   @Output() changeValue: EventEmitter<ICheckboxChange> = new EventEmitter<ICheckboxChange>();
-
-  public checked: boolean = false;
 
   public toggle(): void {
     this.checked = !this.checked;

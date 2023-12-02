@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DestroyRef, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DefaultBtnComponent } from "../../../../shared/components/button/default-btn/default-btn.component";
 import { DropdownFieldComponent } from "../../../../shared/components/fields/dropdown-field/dropdown-field.component";
@@ -17,6 +17,8 @@ import { CheckboxFieldComponent } from "../../../../shared/components/fields/che
 import { EArche } from "../../enums/arche.enum";
 import { DatetimeFieldComponent } from "../../../../shared/components/fields/datetime-field/datetime-field.component";
 import { ImageFieldComponent } from "../../../../shared/components/fields/image-field/image-field.component";
+import { FormCacheService } from "../../../../core/services/form-cache/form-cache.service";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'clt-characters-playable-create',
@@ -57,14 +59,24 @@ export class CharactersPlayableCreateComponent implements OnInit {
   public bonusAttributeOptions: IOption[] = [];
   public weaponOptions: IOption[] = [];
   public archeOptions: IOption[] = [];
-
-  private readonly translateKey: string = 'page.characters.playable.create.';
   public readonly btnType: EBtnType = EBtnType.Submit;
+  private readonly translateKey: string = 'page.characters.playable.create.';
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private formCacheService: FormCacheService,
+    private destroyRef: DestroyRef,
+  ) {
+  }
 
   ngOnInit(): void {
     this.initOptions();
+    this.initForm();
+    this.loadCachedData();
+  }
+
+  public save(): void {
+    console.log('form: ', this.form.value);
   }
 
   private initOptions(): void {
@@ -76,6 +88,19 @@ export class CharactersPlayableCreateComponent implements OnInit {
     this.archeOptions = this.generateOptions<typeof EArche>(EArche, 'checkbox.arche');
   }
 
+  private initForm(): void {
+    this.form.valueChanges.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((data): void => {
+      this.formCacheService.saveFormData(data);
+    });
+  }
+
+  private loadCachedData(): void {
+    const cachedData = this.formCacheService.loadFormData();
+    if (cachedData) {
+      this.form.patchValue(cachedData);
+    }
+  }
+
   private generateOptions<T extends Object>(enumObject: T, translateSubKey: string = ''): IOption[] {
     return Object.values(enumObject).map((value): IOption => {
       return {
@@ -83,9 +108,5 @@ export class CharactersPlayableCreateComponent implements OnInit {
         value
       }
     });
-  }
-
-  public save(): void {
-    console.log('form: ', this.form.value);
   }
 }

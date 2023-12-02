@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from "@ngx-translate/core";
 import { ICheckboxChange, IOption } from "../../../interfaces/input.interface";
@@ -14,15 +14,28 @@ import { FieldLineDirective } from "../../../directives/field-line/field-line.di
   templateUrl: './checkbox-field.component.html',
   styleUrl: './checkbox-field.component.scss'
 })
-export class CheckboxFieldComponent extends InjectReactiveForm implements OnChanges {
+export class CheckboxFieldComponent extends InjectReactiveForm implements OnInit, OnChanges {
   @Input() label: string = '';
   @Input() options: IOption[] = [];
   @Input() formField: string = '';
 
   private optionValues: string[] = [];
+  public optionsData: {option: IOption, checked: boolean}[] = [];
 
   constructor(protected override rootFormGroup: FormGroupDirective) {
     super(rootFormGroup);
+  }
+
+  override ngOnInit() {
+    super.ngOnInit();
+    if (this.options) {
+      this.optionsData = this.options.map((option: IOption) => {
+        return {
+          option,
+          checked: this.isChecked(option.value)
+        };
+      });
+    }
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -43,5 +56,9 @@ export class CheckboxFieldComponent extends InjectReactiveForm implements OnChan
         );
       }
     }
+  }
+
+  public isChecked(value: any): boolean {
+    return this.form.value[this.formField].includes(value);
   }
 }

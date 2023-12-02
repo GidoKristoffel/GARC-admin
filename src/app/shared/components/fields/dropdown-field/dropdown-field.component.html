@@ -2,7 +2,7 @@
   <div class="label flex-center field-label" cltFieldLine>{{ label | translate }}</div>
   <div class="field">
     <div class="dropdown-wrapper">
-      <clt-default-select [options]="options" (change)="change($event)"></clt-default-select>
+      <clt-default-select [value]="defaultValue" [options]="options" (change)="change($event)"></clt-default-select>
     </div>
   </div>
 </div>
