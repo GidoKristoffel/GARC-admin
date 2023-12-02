@@ -7,18 +7,25 @@ import { AfterViewInit, Directive, ElementRef, OnDestroy, Renderer2 } from '@ang
 export class ScrollClassDirective implements AfterViewInit, OnDestroy {
   private resizeObserver!: ResizeObserver;
 
-  constructor(private elRef: ElementRef, private renderer: Renderer2) { }
+  constructor(
+    private elementRef: ElementRef,
+    private renderer: Renderer2
+  ) { }
 
   ngAfterViewInit(): void {
     this.checkScroll();
+    this.initResize();
+  }
+
+  private initResize(): void {
     this.resizeObserver = new ResizeObserver(() => this.checkScroll());
-    this.resizeObserver.observe(this.elRef.nativeElement);
+    this.resizeObserver.observe(this.elementRef.nativeElement);
   }
 
   private checkScroll(): void {
-    const element = this.elRef.nativeElement;
+    const element = this.elementRef.nativeElement;
+    const hasScrollbar: boolean = (element.scrollHeight > (element.scrollTop + element.clientHeight)) || (element.scrollTop > 0);
 
-    const hasScrollbar: boolean = element.scrollHeight > element.scrollTop + element.clientHeight || element.scrollTop > 0;
     if (hasScrollbar) {
       this.renderer.addClass(element, 'scroll');
     } else {

@@ -22,4 +22,8 @@ export class AuthorizationApiService {
   public logOut(): Observable<statusApiResponse> {
     return this.http.get<statusApiResponse>(this.api + 'auth/logout', {withCredentials: true});
   }
+
+  public refreshToken(): Observable<accessTokenResponse> {
+    return this.http.get<accessTokenResponse>(this.api + 'auth/refresh', {withCredentials: true});
+  }
 }

@@ -19,11 +19,16 @@ import { DatetimeFieldComponent } from "../../../../shared/components/fields/dat
 import { ImageFieldComponent } from "../../../../shared/components/fields/image-field/image-field.component";
 import { FormCacheService } from "../../../../core/services/form-cache/form-cache.service";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
+import { CharactersApiService } from "../../api/characters.api.service";
+import { ICharacterCreateForm } from "../../../auth/interfaces/form.interface";
+import { convertToUpperDashFormat } from "../../../../core/utilities/request.utility";
+import { ActivatedRoute, Router, RouterLink } from "@angular/router";
+import { EPage } from "../../../../core/enums/page.enum";
 
 @Component({
   selector: 'clt-characters-playable-create',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, CheckboxFieldComponent, DatetimeFieldComponent, ImageFieldComponent],
+  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, CheckboxFieldComponent, DatetimeFieldComponent, ImageFieldComponent, RouterLink],
   templateUrl: './characters-playable-create.component.html',
   styleUrl: './characters-playable-create.component.scss'
 })
@@ -60,12 +65,16 @@ export class CharactersPlayableCreateComponent implements OnInit {
   public weaponOptions: IOption[] = [];
   public archeOptions: IOption[] = [];
   public readonly btnType: EBtnType = EBtnType.Submit;
+  public readonly charactersViewLink: string = '../' + EPage.View;
   private readonly translateKey: string = 'page.characters.playable.create.';
 
   constructor(
     private formBuilder: FormBuilder,
     private formCacheService: FormCacheService,
     private destroyRef: DestroyRef,
+    private charactersApiService: CharactersApiService,
+    private router: Router,
+    private route: ActivatedRoute,
   ) {
   }
 
@@ -76,7 +85,46 @@ export class CharactersPlayableCreateComponent implements OnInit {
   }
 
   public save(): void {
-    console.log('form: ', this.form.value);
+    if (this.form) {
+      const submissionForm: ICharacterCreateForm = {
+        name: {
+          en: this.form.value.nameEn || '',
+          ua: this.form.value.nameUa || '',
+          ru: this.form.value.nameRu || '',
+        },
+        quality: convertToUpperDashFormat(this.form.value.quality!) as EQuality,
+        elementalType: convertToUpperDashFormat(this.form.value.elementalType!) as EElementType,
+        region: convertToUpperDashFormat(this.form.value.region!) as ERegion,
+        bonusAttribute: convertToUpperDashFormat(this.form.value.bonusAttribute!) as EBonusAttribute,
+        weapon: convertToUpperDashFormat(this.form.value.weapon!) as EWeapon,
+        constellation: {
+          en: this.form.value.constellationEn || '',
+          ua: this.form.value.constellationUa || '',
+          ru: this.form.value.constellationRu || '',
+        },
+        arche: this.form.value.arche || [],
+        birthday: this.form.value.birthday || new Date(),
+        title: {
+          en: this.form.value.titleEn || '',
+          ua: this.form.value.titleUa || '',
+          ru: this.form.value.titleRu || '',
+        },
+        affiliation: {
+          en: this.form.value.affiliationEn || '',
+          ua: this.form.value.affiliationUa || '',
+          ru: this.form.value.affiliationRu || '',
+        },
+        icon: this.form.value.icon || '',
+        splashArt: this.form.value.splashArt || '',
+        cardIcon: this.form.value.cardIcon || '',
+      };
+
+      this.charactersApiService.create(submissionForm)
+        .pipe(takeUntilDestroyed(this.destroyRef))
+        .subscribe((): void => {
+          this.router.navigate([this.charactersViewLink], { relativeTo: this.route }).then();
+        });
+    }
   }
 
   private initOptions(): void {

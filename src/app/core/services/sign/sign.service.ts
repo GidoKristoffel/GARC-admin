@@ -39,4 +39,13 @@ export class SignService {
         this.router.navigate([EPage.Authorization]).then();
       });
   }
+
+  public refreshToken(callback: () => {}): void {
+    this.authorizationApiService
+      .refreshToken()
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((response: accessTokenResponse): void => {
+        this.localStorageService.set(ELocalStorage.Token, (response.accessToken));
+      });
+  }
 }

@@ -29,3 +29,9 @@
   flex-direction: row;
   align-items: stretch;
 }
+
+.flex-row-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
