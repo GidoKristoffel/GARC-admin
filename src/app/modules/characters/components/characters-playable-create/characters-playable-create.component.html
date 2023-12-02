@@ -1,6 +1,6 @@
-<form [formGroup]="form" class="playable-create" (ngSubmit)="save()">
-  <div class="form-wrapper flex-column">
-    <div class="form flex-column" cltScrollClass>
+<form [formGroup]="form" class="playable-create flex-column gap-8" (ngSubmit)="save()">
+  <div class="form-wrapper flex-column gap-4">
+    <div class="form flex-column gap-4" cltScrollClass>
       <clt-text-field formField="nameEn" label="page.characters.playable.create.field.name.en"></clt-text-field>
       <clt-text-field formField="nameUa" label="page.characters.playable.create.field.name.ua"></clt-text-field>
       <clt-text-field formField="nameRu" label="page.characters.playable.create.field.name.ru"></clt-text-field>
@@ -31,7 +31,8 @@
       <clt-image-field formField="cardIcon" label="page.characters.playable.create.field.card-icon"></clt-image-field>
     </div>
   </div>
-  <div class="btn-wrapper">
-    <clt-default-btn [type]="btnType" [disabled]="!form.valid">{{ 'page.characters.playable.create.btn.save' | translate }}</clt-default-btn>
+  <div class="btn-wrapper flex-row-right gap-8">
+    <clt-default-btn [routerLink]="charactersViewLink">{{ 'shared.btn.cancel' | translate }}</clt-default-btn>
+    <clt-default-btn [type]="btnType" [disabled]="!form.valid">{{ 'shared.btn.save' | translate }}</clt-default-btn>
   </div>
 </form>

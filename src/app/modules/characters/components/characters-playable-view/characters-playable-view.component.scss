@@ -1,6 +1,6 @@
 @import "color";
 
-.playable-create {
+.playable-view {
   padding: 8px;
   gap: 8px;
 }
@@ -12,10 +12,6 @@
   height: calc(100vh - 83px);
 }
 
-.form {
-  overflow: auto;
-}
-
 .btn-wrapper {
   width: 100%;
   text-align: right;
@@ -23,8 +19,4 @@
   border: 1px solid $granite-gray;
   border-radius: 8px;
   padding: 4px 8px;
-}
-
-.scroll {
-  padding-right: 8px;
 }

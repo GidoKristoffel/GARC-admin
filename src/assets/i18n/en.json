@@ -147,9 +147,6 @@
               "usia": "Usia",
               "pneuma": "Pneuma"
             }
-          },
-          "btn": {
-            "save": "Save"
           }
         }
       }
@@ -171,6 +168,11 @@
         "november": "November",
         "december": "December"
       }
+    },
+    "btn": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "create": "Create"
     }
   },
   "language": {
