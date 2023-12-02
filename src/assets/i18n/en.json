@@ -177,5 +177,10 @@
     "en": "English",
     "ua": "Ukrainian",
     "ru": "Russian"
+  },
+  "error": {
+    "image": {
+      "not-found": "Image not found"
+    }
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DefaultBtnComponent } from "../../../../shared/components/button/default-btn/default-btn.component";
 import { DropdownFieldComponent } from "../../../../shared/components/fields/dropdown-field/dropdown-field.component";
-import { FormBuilder, ReactiveFormsModule } from "@angular/forms";
+import { FormBuilder, ReactiveFormsModule, Validators } from "@angular/forms";
 import { ScrollClassDirective } from "../../../../shared/directives/scroll-class/scroll-class.directive";
 import { TextFieldComponent } from "../../../../shared/components/fields/text-field/text-field.component";
 import { TranslateModule } from "@ngx-translate/core";
@@ -27,28 +27,28 @@ import { ImageFieldComponent } from "../../../../shared/components/fields/image-
 })
 export class CharactersPlayableCreateComponent implements OnInit {
   public form = this.formBuilder.group({
-    nameEn: [''],
-    nameUa: [''],
-    nameRu: [''],
-    quality: [''],
-    elementalType: [''],
-    region: [''],
-    bonusAttribute: [''],
-    weapon: [''],
-    constellationEn: [''],
-    constellationUa: [''],
-    constellationRu: [''],
+    nameEn: ['', [Validators.required]],
+    nameUa: ['', [Validators.required]],
+    nameRu: ['', [Validators.required]],
+    quality: ['', [Validators.required]],
+    elementalType: ['', [Validators.required]],
+    region: ['', [Validators.required]],
+    bonusAttribute: ['', [Validators.required]],
+    weapon: ['', [Validators.required]],
+    constellationEn: ['', [Validators.required]],
+    constellationUa: ['', [Validators.required]],
+    constellationRu: ['', [Validators.required]],
     arche: [[]],
-    birthday: [null],
-    titleEn: [''],
-    titleUa: [''],
-    titleRu: [''],
-    affiliationEn: [''],
-    affiliationUa: [''],
-    affiliationRu: [''],
-    icon: [''],
-    splashArt: [''],
-    cardIcon: ['']
+    birthday: [null, [Validators.required]],
+    titleEn: ['', [Validators.required]],
+    titleUa: ['', [Validators.required]],
+    titleRu: ['', [Validators.required]],
+    affiliationEn: ['', [Validators.required]],
+    affiliationUa: ['', [Validators.required]],
+    affiliationRu: ['', [Validators.required]],
+    icon: ['', [Validators.required]],
+    splashArt: ['', [Validators.required]],
+    cardIcon: ['', [Validators.required]]
   });
 
   public qualityOptions: IOption[] = [];

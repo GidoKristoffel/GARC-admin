@@ -23,3 +23,9 @@
   display: flex;
   align-items: center;
 }
+
+.flex-row-scratch {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}

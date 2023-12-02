@@ -32,6 +32,6 @@
     </div>
   </div>
   <div class="btn-wrapper">
-    <clt-default-btn [type]="btnType">{{ 'page.characters.playable.create.btn.save' | translate }}</clt-default-btn>
+    <clt-default-btn [type]="btnType" [disabled]="!form.valid">{{ 'page.characters.playable.create.btn.save' | translate }}</clt-default-btn>
   </div>
 </form>

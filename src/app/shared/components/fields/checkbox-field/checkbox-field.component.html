@@ -1,5 +1,5 @@
-<div class="wrapper flex-align-center">
-  <div class="label field-label">{{ label | translate }}</div>
+<div class="wrapper flex-row-scratch">
+  <div class="label flex-center field-label" cltFieldLine>{{ label | translate }}</div>
   <div class="field flex-column gap-4">
     @if (options) {
       @for (option of options; track $index) {

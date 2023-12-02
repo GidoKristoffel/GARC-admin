@@ -7,11 +7,12 @@ import { EMonth, EMonthDayCount } from "../../../../core/enums/date.enum";
 import { FormGroupDirective, FormsModule } from "@angular/forms";
 import { EDefaultValue } from "../../../../core/enums/default-value.enum";
 import { InjectReactiveForm } from "../../../../core/classes/inject-reactive-form/inject-reactive-form";
+import { FieldLineDirective } from "../../../directives/field-line/field-line.directive";
 
 @Component({
   selector: 'clt-datetime-field',
   standalone: true,
-  imports: [CommonModule, TranslateModule, DefaultSelectComponent, FormsModule],
+  imports: [CommonModule, TranslateModule, DefaultSelectComponent, FormsModule, FieldLineDirective],
   templateUrl: './datetime-field.component.html',
   styleUrl: './datetime-field.component.scss'
 })
