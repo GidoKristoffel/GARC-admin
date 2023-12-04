@@ -4,10 +4,12 @@ import { ERegion } from "../enums/region.enum";
 import { EBonusAttribute } from "../enums/bonus-attribute.enum";
 import { EWeapon } from "../enums/weapon.enum";
 import { EArche } from "../enums/arche.enum";
+import { EHeaderType } from "../../../core/enums/table.enum";
 
 export interface IHeader {
   id: string,
-  label: string
+  label: string,
+  type: EHeaderType
 }
 
 export interface IPlayableCharacterResponse {
@@ -68,4 +70,6 @@ export interface IPlayableCharacter {
   icon: string,
   splashArt: string,
   cardIcon: string,
+
+  [key: string]: any
 }

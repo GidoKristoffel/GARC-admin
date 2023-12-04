@@ -184,5 +184,29 @@
     "image": {
       "not-found": "Image not found"
     }
+  },
+  "table": {
+    "characters": {
+      "playable": {
+        "view": {
+          "id": "ID",
+          "name": "Name",
+          "quality": "Quality",
+          "element": "Elemental type",
+          "region": "Region",
+          "bonus-attribute": "Bonus attribute from ascension",
+          "weapon": "Weapon type",
+          "constellation": "Constellation",
+          "arche": "Arche",
+          "birthday": "Birthday",
+          "title": "Title",
+          "affiliation": "Affiliation",
+          "icon": "Icon",
+          "splash-art": "Splash art",
+          "card-icon": "Card",
+          "actions": "Actions"
+        }
+      }
+    }
   }
 }

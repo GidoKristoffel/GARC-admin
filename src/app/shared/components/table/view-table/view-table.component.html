@@ -1,0 +1,64 @@
+<div class="wrapper table_holder">
+  <table>
+    <thead>
+    <tr>
+      <th></th>
+      @for (header of headers; track $index) {
+        <th>{{ header.label | translate }}</th>
+      }
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of body">
+      <td></td>
+      @for (header of headers; track $index) {
+        <td *ngIf="header.type === headerType.String">{{ item[header.id] }}</td>
+        <td *ngIf="header.type === headerType.TranslateString">
+          {{ item[header.id][currentLang] }}
+        </td>
+        <td *ngIf="header.type === headerType.Array">{{ item[header.id] }}</td>
+        <td *ngIf="header.type === headerType.Action">{{ 'Actions' }}</td>
+      }
+    </tr>
+    <tr *ngFor="let item of body">
+      <td></td>
+      @for (header of headers; track $index) {
+        <td *ngIf="header.type === headerType.String">{{ item[header.id] }}</td>
+        <td *ngIf="header.type === headerType.TranslateString">
+          {{ item[header.id][currentLang] }}
+        </td>
+        <td *ngIf="header.type === headerType.Array">{{ item[header.id] }}</td>
+        <td *ngIf="header.type === headerType.Action">{{ 'Actions' }}</td>
+      }
+    </tr>
+    <tr *ngFor="let item of body">
+      <td></td>
+      @for (header of headers; track $index) {
+        <td *ngIf="header.type === headerType.String">{{ item[header.id] }}</td>
+        <td *ngIf="header.type === headerType.TranslateString">
+          {{ item[header.id][currentLang] }}
+        </td>
+        <td *ngIf="header.type === headerType.Array">{{ item[header.id] }}</td>
+        <td *ngIf="header.type === headerType.Action">{{ 'Actions' }}</td>
+      }
+    </tr>
+    <tr *ngFor="let item of body">
+      <td></td>
+      @for (header of headers; track $index) {
+        <td *ngIf="header.type === headerType.String">{{ item[header.id] }}</td>
+        <td *ngIf="header.type === headerType.TranslateString">
+          {{ item[header.id][currentLang] }}
+        </td>
+        <td *ngIf="header.type === headerType.Array">{{ item[header.id] }}</td>
+        <td *ngIf="header.type === headerType.Action">{{ 'Actions' }}</td>
+      }
+    </tr>
+    <tr>
+      <td></td>
+      @for (header of headers; track $index) {
+        <td></td>
+      }
+    </tr>
+    </tbody>
+  </table>
+</div>

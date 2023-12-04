@@ -1,17 +1,6 @@
 <form class="playable-view flex-column gap-8">
   <div class="form-wrapper flex-column gap-4">
-    <table>
-      <tr>
-        @for (header of headers; track $index) {
-          <th>{{ header.label }}</th>
-        }
-      </tr>
-      <tr *ngFor="let character of characters">
-        @for (header of headers; track $index) {
-          <td>{{ character[header.id] }}</td>
-        }
-      </tr>
-    </table>
+    <clt-view-table [headers]="headers" [body]="characters" [currentLang]="currentLang"></clt-view-table>
   </div>
   <div class="btn-wrapper flex-row-right gap-8">
     <clt-default-btn [routerLink]="charactersCreateLink">{{ 'shared.btn.create' | translate }}</clt-default-btn>

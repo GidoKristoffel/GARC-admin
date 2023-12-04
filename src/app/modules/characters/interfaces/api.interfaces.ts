@@ -1,5 +1,5 @@
 import { HttpStatusCode } from "@angular/common/http";
-import { IPlayableCharacterResponse } from "./table.interface";
+import { IPlayableCharacter, IPlayableCharacterResponse } from "./table.interface";
 
 export interface ICharacterCreateFormResponse {
   character: IPlayableCharacterResponse,
@@ -7,6 +7,6 @@ export interface ICharacterCreateFormResponse {
 }
 
 export interface ICharacterViewFormResponse {
-  character: IPlayableCharacterResponse[],
+  character: IPlayableCharacter[],
   status: HttpStatusCode
 }
