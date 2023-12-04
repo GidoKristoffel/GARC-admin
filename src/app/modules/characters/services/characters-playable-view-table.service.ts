@@ -10,7 +10,7 @@ export class CharactersPlayableViewTableService {
     {
       id: 'id',
       label: 'table.characters.playable.view.id',
-      type: EHeaderType.String,
+      type: EHeaderType.Id,
     },
     {
       id: 'name',

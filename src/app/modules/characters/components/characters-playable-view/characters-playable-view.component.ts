@@ -29,7 +29,6 @@ import { ViewTableComponent } from "../../../../shared/components/table/view-tab
 export class CharactersPlayableViewComponent implements OnInit {
   public readonly charactersCreateLink: string = '../' + EPage.Create;
   public headers: IHeader[] = [];
-  public readonly headerType: typeof EHeaderType = EHeaderType;
   public characters: IPlayableCharacter[] = [];
   public currentLang: string = '';
 
