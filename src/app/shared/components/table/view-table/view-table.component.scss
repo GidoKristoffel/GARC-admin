@@ -10,74 +10,78 @@
   height: 100%;
   position: relative;
   overflow: auto;
-}
 
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-}
+  & table {
+    border-collapse: separate;
+    border-spacing: 0;
 
-table th:last-child,
-table td:last-child{
-  border-right: 1px solid $independence;
-  position: sticky;
-  right: 0;
-  background-color: $outer-space-crayola;
-  padding-right: 1px;
-}
+    & thead tr {
+      background-color: $outer-space-crayola;
 
-table th:first-child,
-table td:first-child{
-  border-left: 1px solid $independence;
-  position: sticky;
-  left: 0;
-  z-index: 100;
-  width: 0;
-  padding: 0;
-}
+      & th {
+        border-top: 1px solid $independence;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: $outer-space-crayola;
+      }
+    }
 
-table th:nth-child(2),
-table td:nth-child(2) {
-  border-left: 0;
-}
+    & tbody tr {
+      &:last-child {
+        height: 0;
+        position: sticky;
+        bottom: 0;
+        z-index: 100;
+        border-bottom: 1px solid $independence;
+      }
 
-table tbody tr:last-child {
-  height: 0;
-  position: sticky;
-  bottom: 0;
-  z-index: 100;
-  border-bottom: 1px solid $independence;
-}
+      &:nth-last-child(2) td {
+        border-bottom: 0;
+      }
 
-table tbody tr:nth-last-child(2) {
-  border-bottom: 0;
-}
+      &:last-child td {
+        height: 0;
+        padding: 0;
+      }
+    }
+  }
 
-table tbody tr:last-child td {
-  height: 0;
-  padding: 0;
-}
+  & th,
+  & td {
+    text-align: center;
+    padding: 8px;
+    box-sizing: border-box;
 
-table thead tr {
-  background-color: $outer-space-crayola;
-}
+    &:last-child {
+      border-right: 1px solid $independence;
+      position: sticky;
+      right: 0;
+      background-color: $outer-space-crayola;
+      padding-right: 7px;
+    }
 
-table th {
-  border-top: 1px solid $independence;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: $outer-space-crayola;
-}
+    &:first-child{
+      border-left: 1px solid $independence;
+      position: sticky;
+      left: 0;
+      z-index: 100;
+      width: 0;
+      padding: 0;
+    }
 
-table th, table td {
-  text-align: center;
-  padding: 8px;
-  box-sizing: border-box;
+    &:nth-child(2) {
+      border-left: 0;
+    }
+  }
 }
 
 th,td,tr {
   border-bottom: 1px solid $independence;
   border-left: 1px solid $independence;
   text-align: center;
+}
+
+.table-id {
+  white-space: nowrap;
 }
