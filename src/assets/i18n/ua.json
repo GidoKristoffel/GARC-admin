@@ -184,5 +184,29 @@
     "image": {
       "not-found": "Зображення не знайдено"
     }
+  },
+  "table": {
+    "characters": {
+      "playable": {
+        "view": {
+          "id": "ID",
+          "name": "Ім'я",
+          "quality": "Якість",
+          "element": "Елемент",
+          "region": "Регіон",
+          "bonus-attribute": "Бонусна характеристика вознесіння",
+          "weapon": "Тип зброї",
+          "constellation": "Сузір'я",
+          "arche": "Архе",
+          "birthday": "День народження",
+          "title": "Титул",
+          "affiliation": "Приналежність",
+          "icon": "Піктограма",
+          "splash-art": "Сплеш арт",
+          "card-icon": "Картка",
+          "actions": "Дії"
+        }
+      }
+    }
   }
 }

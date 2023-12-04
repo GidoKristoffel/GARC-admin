@@ -184,5 +184,29 @@
     "image": {
       "not-found": "Изображение не найдено"
     }
+  },
+  "table": {
+    "characters": {
+      "playable": {
+        "view": {
+          "id": "ID",
+          "name": "Имя",
+          "quality": "Качество",
+          "element": "Элемент",
+          "region": "Регион",
+          "bonus-attribute": "Бонусная характеристика возвышения",
+          "weapon": "Тип оружия",
+          "constellation": "Созвездие",
+          "arche": "Архэ",
+          "birthday": "День рождения",
+          "title": "Титул",
+          "affiliation": "Принадлежность",
+          "icon": "Иконка",
+          "splash-art": "Сплэш арт",
+          "card-icon": "Карточка",
+          "actions": "Действия"
+        }
+      }
+    }
   }
 }
