@@ -53,8 +53,7 @@ export class CharactersPlayableViewComponent implements OnInit {
       .getAll()
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((response: ICharacterViewFormResponse): void => {
-        this.characters = response.character;
-        console.log(this.characters);
+        this.characters = response.character.map((character: IPlayableCharacter) => this.charactersPlayableViewTableService.convertTableData(character));
       });
   }
 

@@ -1,0 +1,11 @@
+@import "color";
+
+.icon-btn {
+  border: 1px solid $outer-space;
+  border-radius: 4px;
+  padding: 4px;
+
+  &:hover {
+    background: hsla(0,0%,100%,.08);
+  }
+}

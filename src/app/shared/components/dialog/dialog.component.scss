@@ -1,0 +1,20 @@
+@import "color";
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  background-color: rgba($black, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+
+  & .dialog {
+    padding: 20px;
+    border-radius: 8px;
+    background: $gunmetal-2;
+    font-size: 14px;
+
+    .btn-wrapper {
+      justify-content: space-around;
+    }
+  }
+}
