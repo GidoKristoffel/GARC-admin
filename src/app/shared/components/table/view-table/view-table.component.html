@@ -38,7 +38,7 @@
         <td *ngIf="header.type === headerType.Action">
           <div class="flex gap-8">
             <clt-icon-btn src="./assets/images/icons/edit.svg"></clt-icon-btn>
-            <clt-icon-btn src="./assets/images/icons/delete.svg" (click)="delete(item['id'])"></clt-icon-btn>
+            <clt-icon-btn src="./assets/images/icons/delete.svg" (click)="onDelete(item['id'])"></clt-icon-btn>
           </div>
         </td>
       }
