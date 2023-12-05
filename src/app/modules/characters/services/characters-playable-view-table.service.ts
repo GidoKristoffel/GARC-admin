@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IHeader, IPlayableCharacterResponse } from "../interfaces/table.interface";
+import { IHeader, IPlayableCharacter, IPlayableCharacterResponse } from "../interfaces/table.interface";
 import { EHeaderType } from "../../../core/enums/table.enum";
 
 @Injectable({
@@ -20,27 +20,27 @@ export class CharactersPlayableViewTableService {
     {
       id: 'quality',
       label: 'table.characters.playable.view.quality',
-      type: EHeaderType.String,
+      type: EHeaderType.Quality,
     },
     {
       id: 'elementalType',
       label: 'table.characters.playable.view.element',
-      type: EHeaderType.String,
+      type: EHeaderType.Element,
     },
     {
       id: 'region',
       label: 'table.characters.playable.view.region',
-      type: EHeaderType.String,
+      type: EHeaderType.Region,
     },
     {
       id: 'bonusAttribute',
       label: 'table.characters.playable.view.bonus-attribute',
-      type: EHeaderType.String,
+      type: EHeaderType.BonusAttribute,
     },
     {
       id: 'weapon',
       label: 'table.characters.playable.view.weapon',
-      type: EHeaderType.String,
+      type: EHeaderType.Weapon,
     },
     {
       id: 'constellation',
@@ -50,12 +50,12 @@ export class CharactersPlayableViewTableService {
     {
       id: 'arche',
       label: 'table.characters.playable.view.arche',
-      type: EHeaderType.Array,
+      type: EHeaderType.Arche,
     },
     {
       id: 'birthday',
       label: 'table.characters.playable.view.birthday',
-      type: EHeaderType.String,
+      type: EHeaderType.Date,
     },
     {
       id: 'title',
@@ -70,17 +70,17 @@ export class CharactersPlayableViewTableService {
     {
       id: 'icon',
       label: 'table.characters.playable.view.icon',
-      type: EHeaderType.String,
+      type: EHeaderType.Link,
     },
     {
       id: 'splashArt',
       label: 'table.characters.playable.view.splash-art',
-      type: EHeaderType.String,
+      type: EHeaderType.Link,
     },
     {
       id: 'cardIcon',
       label: 'table.characters.playable.view.card-icon',
-      type: EHeaderType.String,
+      type: EHeaderType.Link,
     },
     {
       id: 'actions',
@@ -95,7 +95,8 @@ export class CharactersPlayableViewTableService {
     return this.headers;
   }
 
-  public convertTableData(data: IPlayableCharacterResponse): void {
-    console.log(data);
+  public convertTableData(data: IPlayableCharacter): IPlayableCharacter {
+    data.birthday = new Date(data.birthday);
+    return data;
   }
 }

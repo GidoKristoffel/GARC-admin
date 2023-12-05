@@ -12,13 +12,35 @@
     <tr *ngFor="let item of body">
       <td></td>
       @for (header of headers; track $index) {
-        <td *ngIf="header.type === headerType.Id" class="table-id">{{ item[header.id] }}</td>
+        <td *ngIf="header.type === headerType.Id" class="table-id">
+          <img ngSrc="./assets/images/icons/copy.svg" height="16" width="16" class="pointer" (click)="copy(item[header.id])">
+          {{ item[header.id] }}
+        </td>
+        <td *ngIf="header.type === headerType.Quality">{{ qualityTranslate + item[header.id] | translate }}</td>
+        <td *ngIf="header.type === headerType.Element">{{ elementTranslate + item[header.id] | translate }}</td>
+        <td *ngIf="header.type === headerType.Region">{{ regionTranslate + item[header.id] | translate }}</td>
+        <td *ngIf="header.type === headerType.BonusAttribute">{{ bonusAttributeTranslate + item[header.id] | translate }}</td>
+        <td *ngIf="header.type === headerType.Weapon">{{ weaponTranslate + item[header.id] | translate }}</td>
         <td *ngIf="header.type === headerType.String">{{ item[header.id] }}</td>
         <td *ngIf="header.type === headerType.TranslateString">
           {{ item[header.id][currentLang] }}
         </td>
-        <td *ngIf="header.type === headerType.Array">{{ item[header.id] }}</td>
-        <td *ngIf="header.type === headerType.Action">{{ 'Actions' }}</td>
+        <td *ngIf="header.type === headerType.Arche">
+          <div *ngFor="let arrayItem of item[header.id]">{{ archeTranslate + arrayItem | translate }}</div>
+        </td>
+        <td *ngIf="header.type === headerType.Date">{{ item[header.id] | dfnsFormat: 'd MMMM' }}</td>
+        <td *ngIf="header.type === headerType.Link" class="table-link ellipsis">
+          <img ngSrc="./assets/images/icons/copy.svg" height="16" width="16" class="pointer" (click)="copy(item[header.id])">
+          <a [href]="item[header.id]" target="_blank">
+            {{ item[header.id] }}
+          </a>
+        </td>
+        <td *ngIf="header.type === headerType.Action">
+          <div class="flex gap-8">
+            <clt-icon-btn src="./assets/images/icons/edit.svg"></clt-icon-btn>
+            <clt-icon-btn src="./assets/images/icons/delete.svg" (click)="delete(item['id'])"></clt-icon-btn>
+          </div>
+        </td>
       }
     </tr>
     <tr>

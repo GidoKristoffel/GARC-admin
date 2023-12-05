@@ -3,3 +3,8 @@ export enum EBtnType {
   Reset = 'reset',
   Submit = 'submit'
 }
+
+export enum EDialogBtnType {
+  Agree = 'agree',
+  Disagree = 'disagree'
+}

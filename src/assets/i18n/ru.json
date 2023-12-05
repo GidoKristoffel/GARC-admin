@@ -172,7 +172,9 @@
     "btn": {
       "save": "Сохранить",
       "cancel": "Отмена",
-      "create": "Создать"
+      "create": "Создать",
+      "yes": "Да",
+      "no": "Нет"
     }
   },
   "language": {
@@ -208,5 +210,66 @@
         }
       }
     }
+  },
+  "enum": {
+    "quality": {
+      "epic": "Эпическое",
+      "legendary": "Легендарное",
+      "other": "Другое"
+    },
+    "element": {
+      "anemo": "Анемо",
+      "geo": "Гео",
+      "electro": "Електро",
+      "dendro": "Дендро",
+      "hydro": "Гидро",
+      "pyro": "Пиро",
+      "cryo": "Крио",
+      "other": "Другой"
+    },
+    "region": {
+      "mondstadt": "Мондштадт",
+      "liyue": "Ли Юэ",
+      "inazuma": "Инадзума",
+      "sumeru": "Сумеру",
+      "fontaine": "Фонтейн",
+      "natlan": "Натлан",
+      "snezhnaya": "Снежная",
+      "other": "Другой"
+    },
+    "bonus-attribute": {
+      "crit-dmg": "Крит. урон",
+      "elemental-mastery": "Мастерство стихий",
+      "energy-recharge": "Восст. энергии",
+      "crit-rate": "Шанс крит. попадания",
+      "hp": "HP",
+      "healing-bonus": "Бонус лечения",
+      "physical-dmg-bonus": "Бонус физ. урона",
+      "atk": "Сила атаки",
+      "def": "Защита",
+      "pyro-dmg-bonus": "Бонус Пиро урона",
+      "hydro-dmg-bonus": "Бонус Гидро урона",
+      "dendro-dmg-bonus": "Бонус Дендро урона",
+      "electro-dmg-bonus": "Бонус Электро урона",
+      "cryo-dmg-bonus": "Бонус Крио урона",
+      "anemo-dmg-bonus": "Бонус Анемо урона",
+      "geo-dmg-bonus": "Бонус Гео урона",
+      "other": "Другой"
+    },
+    "weapon": {
+      "sword": "Одноручное",
+      "claymore": "Двуручное",
+      "bow": "Стрелковое",
+      "catalyst": "Катализатор",
+      "polearm": "Древковое",
+      "other": "Другое"
+    },
+    "arche": {
+      "usia": "Усия",
+      "pneuma": "Пневма"
+    }
+  },
+  "dialog": {
+    "character-delete": "Вы уверены, что хотите удалить персонажа?"
   }
 }

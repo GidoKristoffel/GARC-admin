@@ -1,0 +1,10 @@
+<div class="wrapper flex-center fullscreen">
+  <div class="dialog flex-column gap-12">
+    <div class="answer">{{ answer | translate }}</div>
+    <clt-horizontal-divider></clt-horizontal-divider>
+    <div class="btn-wrapper flex-center">
+      <clt-dialog-btn (click)="agreeEmit()" [type]="dialogBtnType.Agree">{{ agreeLabel | translate }}</clt-dialog-btn>
+      <clt-dialog-btn (click)="disagreeEmit()" [type]="dialogBtnType.Disagree">{{ disagreeLabel | translate }}</clt-dialog-btn>
+    </div>
+  </div>
+</div>

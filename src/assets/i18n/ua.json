@@ -172,7 +172,9 @@
     "btn": {
       "save": "Зберегти",
       "cancel": "Скасувати",
-      "create": "Створити"
+      "create": "Створити",
+      "yes": "Так",
+      "no": "Ні"
     }
   },
   "language": {
@@ -208,5 +210,66 @@
         }
       }
     }
+  },
+  "enum": {
+    "quality": {
+      "epic": "Епічна",
+      "legendary": "Легендарна",
+      "other": "Інша"
+    },
+    "element": {
+      "anemo": "Анемо",
+      "geo": "Гео",
+      "electro": "Електро",
+      "dendro": "Дендро",
+      "hydro": "Гідро",
+      "pyro": "Піро",
+      "cryo": "Кріо",
+      "other": "Інший"
+    },
+    "region": {
+      "mondstadt": "Мондштадт",
+      "liyue": "Лі Юэ",
+      "inazuma": "Інадзума",
+      "sumeru": "Сумеру",
+      "fontaine": "Фонтейн",
+      "natlan": "Натлан",
+      "snezhnaya": "Сніжна",
+      "other": "Інший"
+    },
+    "bonus-attribute": {
+      "crit-dmg": "Крит. урон",
+      "elemental-mastery": "Майстерність стихій",
+      "energy-recharge": "Відновлення енергії",
+      "crit-rate": "Шанс крит. влучення",
+      "hp": "HP",
+      "healing-bonus": "Бонус лікування",
+      "physical-dmg-bonus": "Бонус фіз. шкоди",
+      "atk": "Сила атаки",
+      "def": "Захист",
+      "pyro-dmg-bonus": "Бонус Піро шкоди",
+      "hydro-dmg-bonus": "Бонус Гідро шкоди",
+      "dendro-dmg-bonus": "Бонус Дендро шкоди",
+      "electro-dmg-bonus": "Бонус Електро шкоди",
+      "cryo-dmg-bonus": "Бонус Кріо шкоди",
+      "anemo-dmg-bonus": "Бонус Анемо шкоди",
+      "geo-dmg-bonus": "Бонус Гео шкоди",
+      "other": "Інший"
+    },
+    "weapon": {
+      "sword": "Одноручна",
+      "claymore": "Дворучна",
+      "bow": "Стрілецька",
+      "catalyst": "Каталізатор",
+      "polearm": "Древкова",
+      "other": "Інше"
+    },
+    "arche": {
+      "usia": "Усія",
+      "pneuma": "Пневма"
+    }
+  },
+  "dialog": {
+    "character-delete": "Ви впевнені, що бажаєте видалити персонажа?"
   }
 }

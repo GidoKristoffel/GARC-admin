@@ -82,6 +82,40 @@ th,td,tr {
   text-align: center;
 }
 
-.table-id {
+.table-id, .table-link {
   white-space: nowrap;
+  position: relative;
+  user-select: none;
+
+  & img {
+    display: none;
+  }
+
+  &:hover {
+    & img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      padding: 2px;
+      height: 16px;
+    }
+  }
+}
+
+.table-link {
+  max-width: 200px;
+
+  & a {
+    color: $tan-2;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.btn-wrapper {
+  display: flex;
 }

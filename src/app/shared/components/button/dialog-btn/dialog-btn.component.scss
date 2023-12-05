@@ -1,0 +1,17 @@
+@import "color";
+@import "text";
+
+button {
+  border: 1px solid $auro-metal-saurus;
+  background-color: $gunmetal-2;
+  padding: 8px;
+  width: 100px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: $text-color-default;
+
+  &:hover {
+    background-color: rgba($white,0.08);
+    color: rgba($white, 0.85);
+  }
+}
