@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { EHeaderType } from "../../../../core/enums/table.enum";
 import { TranslateModule } from "@ngx-translate/core";
@@ -21,6 +21,7 @@ export class ViewTableComponent {
   @Input() headers: IHeader[] = [];
   @Input() body: {[key: string]: any}[] = [];
   @Input() currentLang: string = ELanguage.English;
+  @Output() delete: EventEmitter<string> = new EventEmitter<string>();
 
   protected readonly headerType = EHeaderType;
 
@@ -40,9 +41,9 @@ export class ViewTableComponent {
     this.clipboardService.copyFromContent(text);
   }
 
-  public delete(id: string): void {
+  public onDelete(id: string): void {
     this.dialogService.openCharacterDelete((): void => {
-      console.log('User with id: ' + id + ' was deleted');
+      this.delete.emit(id);
     });
   }
 }

@@ -4,7 +4,11 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { statusApiResponse } from "../../../shared/interfaces/api.interface";
 import { ICharacterCreateForm } from "../../auth/interfaces/form.interface";
-import { ICharacterCreateFormResponse, ICharacterViewFormResponse } from "../interfaces/api.interfaces";
+import {
+  ICharacterCreateFormResponse,
+  ICharacterDeleteFormResponse,
+  ICharacterViewFormResponse
+} from "../interfaces/api.interfaces";
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +26,9 @@ export class CharactersApiService {
 
   public getAll(): Observable<ICharacterViewFormResponse> {
     return this.http.get<ICharacterViewFormResponse>(this.api + 'character', {withCredentials: true});
+  }
+
+  public delete(id: string): Observable<ICharacterDeleteFormResponse> {
+    return this.http.delete<ICharacterDeleteFormResponse>(this.api + 'character/' + id, {withCredentials: true});
   }
 }

@@ -34,7 +34,8 @@ export class CharactersPlayableViewComponent implements OnInit {
 
   constructor(
     private charactersPlayableViewTableService: CharactersPlayableViewTableService,
-    private charactersApiService: CharactersApiService, private destroyRef: DestroyRef,
+    private charactersApiService: CharactersApiService,
+    private destroyRef: DestroyRef,
     private translateService: TranslateService
 
   ) {}
@@ -49,6 +50,7 @@ export class CharactersPlayableViewComponent implements OnInit {
 
   private initHeaderData(): void {
     this.headers = this.charactersPlayableViewTableService.getHeader();
+    this.getCharacters();
     this.charactersApiService
       .getAll()
       .pipe(takeUntilDestroyed(this.destroyRef))
@@ -57,7 +59,21 @@ export class CharactersPlayableViewComponent implements OnInit {
       });
   }
 
-  public isString(propertyValue: any): boolean {
-    return typeof propertyValue === 'string';
+  private getCharacters(): void {
+    this.charactersApiService
+      .getAll()
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((response: ICharacterViewFormResponse): void => {
+        this.characters = response.character.map((character: IPlayableCharacter) => this.charactersPlayableViewTableService.convertTableData(character));
+      });
+  }
+
+  public delete(id: string): void {
+    this.charactersApiService
+      .delete(id)
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((): void => {
+        this.getCharacters();
+      });
   }
 }
