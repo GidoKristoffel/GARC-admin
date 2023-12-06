@@ -1,0 +1,16 @@
+@import "color";
+
+.label {
+  min-width: 280px;
+}
+
+.value {
+  width: 100%;
+  border-radius: 8px;
+  min-height: 32px;
+}
+
+.line {
+  width: 100%;
+  border: 1px solid $granite-gray;
+}

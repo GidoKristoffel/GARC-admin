@@ -15,3 +15,8 @@ export interface ICharacterDeleteFormResponse {
   character: {id: string} | null,
   status: HttpStatusCode
 }
+
+export interface ICharacterDetailFormResponse {
+  character: IPlayableCharacter,
+  status: HttpStatusCode
+}

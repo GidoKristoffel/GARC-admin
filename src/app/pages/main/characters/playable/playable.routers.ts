@@ -11,7 +11,11 @@ export const playableRouters: Routes = [
     loadComponent: () => import('./playable-view/playable-view.component').then(c => c.PlayableViewComponent),
   },
   {
-    path: EPage.Edit,
+    path: EPage.Details + EPage.ParamId,
+    loadComponent: () => import('./playable-details-page/playable-details-page.component').then(c => c.PlayableDetailsPageComponent),
+  },
+  {
+    path: EPage.Edit + EPage.ParamId,
     loadComponent: () => import('./playable-edit/playable-edit.component').then(c => c.PlayableEditComponent),
   },
   {

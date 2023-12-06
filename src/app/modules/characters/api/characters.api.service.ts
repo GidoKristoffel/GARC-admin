@@ -6,7 +6,7 @@ import { statusApiResponse } from "../../../shared/interfaces/api.interface";
 import { ICharacterCreateForm } from "../../auth/interfaces/form.interface";
 import {
   ICharacterCreateFormResponse,
-  ICharacterDeleteFormResponse,
+  ICharacterDeleteFormResponse, ICharacterDetailFormResponse,
   ICharacterViewFormResponse
 } from "../interfaces/api.interfaces";
 
@@ -30,5 +30,9 @@ export class CharactersApiService {
 
   public delete(id: string): Observable<ICharacterDeleteFormResponse> {
     return this.http.delete<ICharacterDeleteFormResponse>(this.api + 'character/' + id, {withCredentials: true});
+  }
+
+  public getById(id: string): Observable<ICharacterDetailFormResponse> {
+    return this.http.get<ICharacterDetailFormResponse>(this.api + 'character/' + id, {withCredentials: true});
   }
 }
