@@ -21,4 +21,6 @@ export enum EPage {
   View = 'view',
   Create = 'create',
   Edit = 'edit',
+  Details = 'details',
+  ParamId = '/:id',
 }

@@ -9,11 +9,13 @@ import { ClipboardService } from "ngx-clipboard";
 import { DateFnsModule } from "ngx-date-fns";
 import { IconBtnComponent } from "../../button/icon-btn/icon-btn.component";
 import { DialogService } from "../../../../core/services/dialog/dialog.service";
+import { RouterLink } from "@angular/router";
+import { EPage } from "../../../../core/enums/page.enum";
 
 @Component({
   selector: 'clt-view-table',
   standalone: true,
-  imports: [CommonModule, TranslateModule, TableScrollDirective, NgOptimizedImage, DateFnsModule, IconBtnComponent],
+  imports: [CommonModule, TranslateModule, TableScrollDirective, NgOptimizedImage, DateFnsModule, IconBtnComponent, RouterLink],
   templateUrl: './view-table.component.html',
   styleUrl: './view-table.component.scss'
 })
@@ -24,6 +26,8 @@ export class ViewTableComponent {
   @Output() delete: EventEmitter<string> = new EventEmitter<string>();
 
   protected readonly headerType = EHeaderType;
+  public readonly characterEditLink: string = '../' + EPage.Edit;
+  public readonly characterDetailsLink: string = '../' + EPage.Details;
 
   public readonly qualityTranslate: string = 'enum.quality.';
   public readonly elementTranslate: string = 'enum.element.';
