@@ -14,3 +14,11 @@
   width: 100%;
   border: 1px solid $granite-gray;
 }
+
+.value-wrapper {
+  border: 1px solid rgba($white, 0.08);
+  background-color: rgba($black, 0.15);
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}

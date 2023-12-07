@@ -13,4 +13,5 @@ import { TranslateModule } from "@ngx-translate/core";
 })
 export class TextFieldViewComponent {
   @Input() label: string = '';
+  @Input() valueWrapper: boolean = true;
 }
