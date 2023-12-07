@@ -1,8 +1,14 @@
-<form class="playable-view flex-column gap-8">
-  <div class="form-wrapper flex-column gap-4">
-    <clt-view-table [headers]="headers" [body]="characters" [currentLang]="currentLang" (delete)="delete($event)"></clt-view-table>
+<form class="height-100 flex-column gap-8 padding-8">
+  <div class="card-wrapper-form-main flex-column flex-fill-space gap-4">
+    <clt-view-table
+      [metadata]="metadata"
+      [body]="characters"
+      [currentLang]="currentLang"
+      (delete)="delete($event)"
+    ></clt-view-table>
   </div>
-  <div class="btn-wrapper flex-row-right gap-8">
-    <clt-default-btn [routerLink]="charactersCreateLink">{{ 'shared.btn.create' | translate }}</clt-default-btn>
+  <div class="card-wrapper-btn flex-row-right gap-8">
+    <clt-default-btn [routerLink]="createItemLink">{{ 'shared.btn.create' | translate }}</clt-default-btn>
   </div>
 </form>
+

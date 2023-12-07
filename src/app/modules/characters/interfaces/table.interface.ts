@@ -6,12 +6,6 @@ import { EWeapon } from "../enums/weapon.enum";
 import { EArche } from "../enums/arche.enum";
 import { EHeaderType } from "../../../core/enums/table.enum";
 
-export interface IHeader {
-  id: string,
-  label: string,
-  type: EHeaderType
-}
-
 export interface IPlayableCharacterResponse {
   id: string,
   nameEn: string,

@@ -8,16 +8,16 @@ import { ImageFieldComponent } from "../../../../shared/components/fields/image-
 import { ScrollClassDirective } from "../../../../shared/directives/scroll-class/scroll-class.directive";
 import { TextFieldComponent } from "../../../../shared/components/fields/text-field/text-field.component";
 import { DefaultBtnComponent } from "../../../../shared/components/button/default-btn/default-btn.component";
-import { LangChangeEvent, TranslateModule, TranslateService } from "@ngx-translate/core";
-import { EPage } from "../../../../core/enums/page.enum";
+import { TranslateModule } from "@ngx-translate/core";
 import { RouterLink } from "@angular/router";
 import { CharactersPlayableViewTableService } from "../../services/characters-playable-view-table.service";
-import { IHeader, IPlayableCharacter } from "../../interfaces/table.interface";
+import { IPlayableCharacter } from "../../interfaces/table.interface";
 import { CharactersApiService } from "../../api/characters.api.service";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { ICharacterViewFormResponse } from "../../interfaces/api.interfaces";
-import { EHeaderType } from "../../../../core/enums/table.enum";
 import { ViewTableComponent } from "../../../../shared/components/table/view-table/view-table.component";
+import { LanguageService } from "../../../../core/services/language/language.service";
+import { SharedView } from "../../../../core/classes/shared-view/shared-view";
 
 @Component({
   selector: 'clt-characters-playable-view',
@@ -26,37 +26,22 @@ import { ViewTableComponent } from "../../../../shared/components/table/view-tab
   templateUrl: './characters-playable-view.component.html',
   styleUrl: './characters-playable-view.component.scss'
 })
-export class CharactersPlayableViewComponent implements OnInit {
-  public readonly charactersCreateLink: string = '../' + EPage.Create;
-  public headers: IHeader[] = [];
+export class CharactersPlayableViewComponent extends SharedView implements OnInit {
   public characters: IPlayableCharacter[] = [];
-  public currentLang: string = '';
 
   constructor(
-    private charactersPlayableViewTableService: CharactersPlayableViewTableService,
     private charactersApiService: CharactersApiService,
-    private destroyRef: DestroyRef,
-    private translateService: TranslateService
-
-  ) {}
-
-  ngOnInit(): void {
-    this.initHeaderData();
-    this.currentLang = this.translateService.currentLang;
-    this.translateService.onLangChange.subscribe((event: LangChangeEvent): void => {
-      this.currentLang = event.lang;
-    });
+    private charactersPlayableViewTableService: CharactersPlayableViewTableService,
+    protected override destroyRef: DestroyRef,
+    protected override languageService: LanguageService,
+  ) {
+    super(destroyRef, languageService);
   }
 
-  private initHeaderData(): void {
-    this.headers = this.charactersPlayableViewTableService.getHeader();
+  ngOnInit(): void {
+    this.initLanguage();
+    this.initMetadata(() => this.charactersPlayableViewTableService.getHeader());
     this.getCharacters();
-    this.charactersApiService
-      .getAll()
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((response: ICharacterViewFormResponse): void => {
-        this.characters = response.character.map((character: IPlayableCharacter) => this.charactersPlayableViewTableService.convertTableData(character));
-      });
   }
 
   private getCharacters(): void {
