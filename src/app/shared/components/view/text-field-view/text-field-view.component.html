@@ -2,7 +2,7 @@
   <div class="label flex-center field-label" cltFieldLine>
     {{ label | translate }}
   </div>
-  <div class="value flex-align-center">
+  <div class="value flex-align-center" [class.value-wrapper]="valueWrapper">
     <ng-content></ng-content>
   </div>
 </div>

@@ -20,10 +20,10 @@ import { ImageFieldComponent } from "../../../../shared/components/fields/image-
 import { FormCacheService } from "../../../../core/services/form-cache/form-cache.service";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { CharactersApiService } from "../../api/characters.api.service";
-import { ICharacterCreateForm } from "../../../auth/interfaces/form.interface";
 import { convertToUpperDashFormat } from "../../../../core/utilities/request.utility";
 import { ActivatedRoute, Router, RouterLink } from "@angular/router";
 import { EPage } from "../../../../core/enums/page.enum";
+import { ICharacterApiForm } from "../../interfaces/form.interface";
 
 @Component({
   selector: 'clt-characters-playable-create',
@@ -64,6 +64,7 @@ export class CharactersPlayableCreateComponent implements OnInit {
   public bonusAttributeOptions: IOption[] = [];
   public weaponOptions: IOption[] = [];
   public archeOptions: IOption[] = [];
+
   public readonly btnType: EBtnType = EBtnType.Submit;
   public readonly charactersViewLink: string = '../' + EPage.View;
   private readonly translateKey: string = 'page.characters.playable.create.';
@@ -84,9 +85,40 @@ export class CharactersPlayableCreateComponent implements OnInit {
     this.loadCachedData();
   }
 
+  private initOptions(): void {
+    this.qualityOptions = this.generateOptions<typeof EQuality>(EQuality, 'select.quality');
+    this.elementOptions = this.generateOptions<typeof EElementType>(EElementType, 'select.element');
+    this.regionOptions = this.generateOptions<typeof ERegion>(ERegion, 'select.region');
+    this.bonusAttributeOptions = this.generateOptions<typeof EBonusAttribute>(EBonusAttribute, 'select.bonus-attribute');
+    this.weaponOptions = this.generateOptions<typeof EWeapon>(EWeapon, 'select.weapon');
+    this.archeOptions = this.generateOptions<typeof EArche>(EArche, 'checkbox.arche');
+  }
+
+  private initForm(): void {
+    this.form.valueChanges.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((data): void => {
+      this.formCacheService.saveFormData(data);
+    });
+  }
+
+  private loadCachedData(): void {
+    const cachedData = this.formCacheService.loadFormData();
+    if (cachedData) {
+      this.form.patchValue(cachedData);
+    }
+  }
+
+  private generateOptions<T extends Object>(enumObject: T, translateSubKey: string = ''): IOption[] {
+    return Object.values(enumObject).map((value): IOption => {
+      return {
+        label: this.translateKey + translateSubKey + '.' + value,
+        value
+      }
+    });
+  }
+
   public save(): void {
     if (this.form) {
-      const submissionForm: ICharacterCreateForm = {
+      const submissionForm: ICharacterApiForm = {
         name: {
           en: this.form.value.nameEn || '',
           ua: this.form.value.nameUa || '',
@@ -125,36 +157,5 @@ export class CharactersPlayableCreateComponent implements OnInit {
           this.router.navigate([this.charactersViewLink], { relativeTo: this.route }).then();
         });
     }
-  }
-
-  private initOptions(): void {
-    this.qualityOptions = this.generateOptions<typeof EQuality>(EQuality, 'select.quality');
-    this.elementOptions = this.generateOptions<typeof EElementType>(EElementType, 'select.element');
-    this.regionOptions = this.generateOptions<typeof ERegion>(ERegion, 'select.region');
-    this.bonusAttributeOptions = this.generateOptions<typeof EBonusAttribute>(EBonusAttribute, 'select.bonus-attribute');
-    this.weaponOptions = this.generateOptions<typeof EWeapon>(EWeapon, 'select.weapon');
-    this.archeOptions = this.generateOptions<typeof EArche>(EArche, 'checkbox.arche');
-  }
-
-  private initForm(): void {
-    this.form.valueChanges.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((data): void => {
-      this.formCacheService.saveFormData(data);
-    });
-  }
-
-  private loadCachedData(): void {
-    const cachedData = this.formCacheService.loadFormData();
-    if (cachedData) {
-      this.form.patchValue(cachedData);
-    }
-  }
-
-  private generateOptions<T extends Object>(enumObject: T, translateSubKey: string = ''): IOption[] {
-    return Object.values(enumObject).map((value): IOption => {
-      return {
-        label: this.translateKey + translateSubKey + '.' + value,
-        value
-      }
-    });
   }
 }

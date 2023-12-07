@@ -22,12 +22,12 @@ import { FormatPipeModule } from "ngx-date-fns";
 })
 export class CharactersPlayableDetailsComponent implements OnInit {
   public readonly charactersViewLink: string = '../../' + EPage.View;
+  public readonly translateKey: string = 'page.characters.playable.create.';
   public charactersEditLink: string = '../../' + EPage.Edit;
   public id: string | null = '';
   public character!: IPlayableCharacter;
   public currentLang: ELanguage = ELanguage.English;
   public language: typeof ELanguage = ELanguage;
-  public readonly translateKey: string = 'page.characters.playable.create.';
 
   constructor(
     private route: ActivatedRoute,
@@ -39,16 +39,6 @@ export class CharactersPlayableDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.initLanguage();
     this.initRoute();
-  }
-
-  public getCharacterById(id: string): void {
-    this.charactersApiService
-      .getById(id)
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((response: ICharacterDetailFormResponse): void => {
-        this.character = response.character;
-        this.character.birthday = new Date(this.character.birthday);
-      });
   }
 
   private initLanguage(): void {
@@ -64,5 +54,15 @@ export class CharactersPlayableDetailsComponent implements OnInit {
       this.charactersEditLink += EPage.ParamId.replace(':id', this.id);
       this.getCharacterById(this.id);
     }
+  }
+
+  private getCharacterById(id: string): void {
+    this.charactersApiService
+      .getById(id)
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((response: ICharacterDetailFormResponse): void => {
+        this.character = response.character;
+        this.character.birthday = new Date(this.character.birthday);
+      });
   }
 }

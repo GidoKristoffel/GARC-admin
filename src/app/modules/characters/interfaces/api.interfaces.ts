@@ -20,3 +20,8 @@ export interface ICharacterDetailFormResponse {
   character: IPlayableCharacter,
   status: HttpStatusCode
 }
+
+export interface ICharacterEditFormResponse {
+  character: IPlayableCharacter,
+  status: HttpStatusCode
+}
