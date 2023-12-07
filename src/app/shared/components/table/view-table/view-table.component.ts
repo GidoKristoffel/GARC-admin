@@ -11,11 +11,12 @@ import { DialogService } from "../../../../core/services/dialog/dialog.service";
 import { RouterLink } from "@angular/router";
 import { EPage } from "../../../../core/enums/page.enum";
 import { ITableMetadata } from "../../../interfaces/table.interface";
+import { ScrollClassDirective } from "../../../directives/scroll-class/scroll-class.directive";
 
 @Component({
   selector: 'clt-view-table',
   standalone: true,
-  imports: [CommonModule, TranslateModule, TableScrollDirective, NgOptimizedImage, DateFnsModule, IconBtnComponent, RouterLink],
+  imports: [CommonModule, TranslateModule, TableScrollDirective, NgOptimizedImage, DateFnsModule, IconBtnComponent, RouterLink, ScrollClassDirective],
   templateUrl: './view-table.component.html',
   styleUrl: './view-table.component.scss'
 })
