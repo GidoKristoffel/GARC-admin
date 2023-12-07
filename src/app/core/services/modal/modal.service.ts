@@ -4,11 +4,12 @@ import {
   createComponent,
   EmbeddedViewRef,
   EnvironmentInjector,
-  Injectable, Type
+  Injectable,
+  Type,
 } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ModalService {
   constructor(
@@ -18,12 +19,14 @@ export class ModalService {
 
   public open<C>(component: Type<C>): ComponentRef<C> {
     const componentRef: ComponentRef<C> = createComponent(component, {
-      environmentInjector: this.environmentInjector
+      environmentInjector: this.environmentInjector,
     });
-    const domElement: HTMLElement = (componentRef.hostView as EmbeddedViewRef<any>).rootNodes[0] as HTMLElement;
+    const domElement: HTMLElement = (
+      componentRef.hostView as EmbeddedViewRef<any>
+    ).rootNodes[0] as HTMLElement;
 
     this.appRef.attachView(componentRef.hostView);
-    document.body.appendChild(domElement)
+    document.body.appendChild(domElement);
 
     return componentRef;
   }

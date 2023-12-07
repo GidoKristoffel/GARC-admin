@@ -8,10 +8,9 @@ describe('CharactersPlayableViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CharactersPlayableViewComponent]
-    })
-    .compileComponents();
-    
+      imports: [CharactersPlayableViewComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(CharactersPlayableViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,9 +1,15 @@
 <div class="wrapper flex-row-scratch">
-  <div class="label flex-center field-label" cltFieldLine>{{ label | translate }}</div>
+  <div class="label flex-center field-label" cltFieldLine>
+    {{ label | translate }}
+  </div>
   <div class="field flex-column gap-4">
     @if (optionsData) {
       @for (optionData of optionsData; track $index) {
-        <clt-default-checkbox [checked]="optionData.checked" [option]="optionData.option" (changeValue)="change($event)"></clt-default-checkbox>
+        <clt-default-checkbox
+          [checked]="optionData.checked"
+          [option]="optionData.option"
+          (changeValue)="change($event)"
+        ></clt-default-checkbox>
       }
     }
   </div>

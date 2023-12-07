@@ -8,10 +8,9 @@ describe('HorizontalDividerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HorizontalDividerComponent]
-    })
-    .compileComponents();
-    
+      imports: [HorizontalDividerComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(HorizontalDividerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

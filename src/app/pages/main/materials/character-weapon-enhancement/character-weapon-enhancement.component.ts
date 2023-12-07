@@ -6,8 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './character-weapon-enhancement.component.html',
-  styleUrl: './character-weapon-enhancement.component.scss'
+  styleUrl: './character-weapon-enhancement.component.scss',
 })
-export class CharacterWeaponEnhancementComponent {
-
-}
+export class CharacterWeaponEnhancementComponent {}

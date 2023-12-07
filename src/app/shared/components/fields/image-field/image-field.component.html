@@ -1,15 +1,23 @@
 <div class="wrapper flex-row-scratch">
-  <div class="label flex-center field-label" cltFieldLine>{{ label | translate }}</div>
+  <div class="label flex-center field-label" cltFieldLine>
+    {{ label | translate }}
+  </div>
   <div class="field flex-column gap-4">
     @if (imageUrl) {
-      <img [src]="imageUrl" alt="">
+      <img [src]="imageUrl" alt="" />
     } @else {
-      <div class="img-empty flex-center">{{ 'error.image.not-found' | translate }}</div>
+      <div class="img-empty flex-center">
+        {{ "error.image.not-found" | translate }}
+      </div>
     }
     <div class="flex gap-4">
       <clt-text-input [formField]="formField"></clt-text-input>
       <clt-default-btn (click)="loadImage()">
-        <svg-icon *ngIf="icon" [src]="icon" [svgStyle]="{ 'width.px': 18, display: 'flex' }"></svg-icon>
+        <svg-icon
+          *ngIf="icon"
+          [src]="icon"
+          [svgStyle]="{ 'width.px': 18, display: 'flex' }"
+        ></svg-icon>
       </clt-default-btn>
     </div>
   </div>

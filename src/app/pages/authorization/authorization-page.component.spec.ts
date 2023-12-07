@@ -8,10 +8,9 @@ describe('AuthorizationPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AuthorizationPageComponent]
-    })
-    .compileComponents();
-    
+      imports: [AuthorizationPageComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(AuthorizationPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -6,8 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './weekly-bosses.component.html',
-  styleUrl: './weekly-bosses.component.scss'
+  styleUrl: './weekly-bosses.component.scss',
 })
-export class WeeklyBossesComponent {
-
-}
+export class WeeklyBossesComponent {}

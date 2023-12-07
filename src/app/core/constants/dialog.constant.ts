@@ -1,5 +1,5 @@
-import { TDialogs } from "../types/dialog.type";
-import { EDialog } from "../enums/dialog.enum";
+import { TDialogs } from '../types/dialog.type';
+import { EDialog } from '../enums/dialog.enum';
 
 export const dialogs: TDialogs = {
   [EDialog.CharacterDelete]: {

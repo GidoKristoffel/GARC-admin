@@ -8,10 +8,9 @@ describe('EliteBossesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EliteBossesComponent]
-    })
-    .compileComponents();
-    
+      imports: [EliteBossesComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(EliteBossesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

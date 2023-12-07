@@ -12,10 +12,10 @@
   line-height: 20px;
   outline: none;
   caret-color: $white;
-  color: rgba($white,.85);
+  color: rgba($white, 0.85);
 
   &:hover {
-    border-color: rgba($white,.25);
+    border-color: rgba($white, 0.25);
   }
 }
 
@@ -36,7 +36,7 @@
   overflow: hidden;
   box-sizing: border-box;
 
-  &>div {
+  & > div {
     padding: 8px;
 
     &:not(:last-child) {

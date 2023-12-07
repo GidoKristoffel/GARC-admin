@@ -1,38 +1,118 @@
-<form [formGroup]="form" class="playable-create flex-column gap-8" (ngSubmit)="save()">
+<form
+  [formGroup]="form"
+  class="playable-create flex-column gap-8"
+  (ngSubmit)="save()"
+>
   <div class="form-wrapper flex-column gap-4">
     <div class="form flex-column gap-4" cltScrollClass>
-      <clt-text-field formField="nameEn" label="page.characters.playable.create.field.name.en"></clt-text-field>
-      <clt-text-field formField="nameUa" label="page.characters.playable.create.field.name.ua"></clt-text-field>
-      <clt-text-field formField="nameRu" label="page.characters.playable.create.field.name.ru"></clt-text-field>
+      <clt-text-field
+        formField="nameEn"
+        label="page.characters.playable.create.field.name.en"
+      ></clt-text-field>
+      <clt-text-field
+        formField="nameUa"
+        label="page.characters.playable.create.field.name.ua"
+      ></clt-text-field>
+      <clt-text-field
+        formField="nameRu"
+        label="page.characters.playable.create.field.name.ru"
+      ></clt-text-field>
 
-      <clt-dropdown-field formField="quality" [options]="qualityOptions" label="page.characters.playable.create.field.quality"></clt-dropdown-field>
-      <clt-dropdown-field formField="elementalType" [options]="elementOptions" label="page.characters.playable.create.field.elemental-type"></clt-dropdown-field>
-      <clt-dropdown-field formField="region" [options]="regionOptions" label="page.characters.playable.create.field.region"></clt-dropdown-field>
-      <clt-dropdown-field formField="bonusAttribute" [options]="bonusAttributeOptions" label="page.characters.playable.create.field.bonus-attribute"></clt-dropdown-field>
-      <clt-dropdown-field formField="weapon" [options]="weaponOptions" label="page.characters.playable.create.field.weapon"></clt-dropdown-field>
+      <clt-dropdown-field
+        formField="quality"
+        [options]="qualityOptions"
+        label="page.characters.playable.create.field.quality"
+      ></clt-dropdown-field>
+      <clt-dropdown-field
+        formField="elementalType"
+        [options]="elementOptions"
+        label="page.characters.playable.create.field.elemental-type"
+      ></clt-dropdown-field>
+      <clt-dropdown-field
+        formField="region"
+        [options]="regionOptions"
+        label="page.characters.playable.create.field.region"
+      ></clt-dropdown-field>
+      <clt-dropdown-field
+        formField="bonusAttribute"
+        [options]="bonusAttributeOptions"
+        label="page.characters.playable.create.field.bonus-attribute"
+      ></clt-dropdown-field>
+      <clt-dropdown-field
+        formField="weapon"
+        [options]="weaponOptions"
+        label="page.characters.playable.create.field.weapon"
+      ></clt-dropdown-field>
 
-      <clt-text-field formField="constellationEn" label="page.characters.playable.create.field.constellation.en"></clt-text-field>
-      <clt-text-field formField="constellationUa" label="page.characters.playable.create.field.constellation.ua"></clt-text-field>
-      <clt-text-field formField="constellationRu" label="page.characters.playable.create.field.constellation.ru"></clt-text-field>
+      <clt-text-field
+        formField="constellationEn"
+        label="page.characters.playable.create.field.constellation.en"
+      ></clt-text-field>
+      <clt-text-field
+        formField="constellationUa"
+        label="page.characters.playable.create.field.constellation.ua"
+      ></clt-text-field>
+      <clt-text-field
+        formField="constellationRu"
+        label="page.characters.playable.create.field.constellation.ru"
+      ></clt-text-field>
 
-      <clt-checkbox-field formField="arche" [options]="archeOptions" label="page.characters.playable.create.field.arche"></clt-checkbox-field>
-      <clt-datetime-field formField="birthday" label="page.characters.playable.create.field.birthday"></clt-datetime-field>
+      <clt-checkbox-field
+        formField="arche"
+        [options]="archeOptions"
+        label="page.characters.playable.create.field.arche"
+      ></clt-checkbox-field>
+      <clt-datetime-field
+        formField="birthday"
+        label="page.characters.playable.create.field.birthday"
+      ></clt-datetime-field>
 
-      <clt-text-field formField="titleEn" label="page.characters.playable.create.field.title.en"></clt-text-field>
-      <clt-text-field formField="titleUa" label="page.characters.playable.create.field.title.ua"></clt-text-field>
-      <clt-text-field formField="titleRu" label="page.characters.playable.create.field.title.ru"></clt-text-field>
+      <clt-text-field
+        formField="titleEn"
+        label="page.characters.playable.create.field.title.en"
+      ></clt-text-field>
+      <clt-text-field
+        formField="titleUa"
+        label="page.characters.playable.create.field.title.ua"
+      ></clt-text-field>
+      <clt-text-field
+        formField="titleRu"
+        label="page.characters.playable.create.field.title.ru"
+      ></clt-text-field>
 
-      <clt-text-field formField="affiliationEn" label="page.characters.playable.create.field.affiliation.en"></clt-text-field>
-      <clt-text-field formField="affiliationUa" label="page.characters.playable.create.field.affiliation.ua"></clt-text-field>
-      <clt-text-field formField="affiliationRu" label="page.characters.playable.create.field.affiliation.ru"></clt-text-field>
+      <clt-text-field
+        formField="affiliationEn"
+        label="page.characters.playable.create.field.affiliation.en"
+      ></clt-text-field>
+      <clt-text-field
+        formField="affiliationUa"
+        label="page.characters.playable.create.field.affiliation.ua"
+      ></clt-text-field>
+      <clt-text-field
+        formField="affiliationRu"
+        label="page.characters.playable.create.field.affiliation.ru"
+      ></clt-text-field>
 
-      <clt-image-field formField="icon" label="page.characters.playable.create.field.icon"></clt-image-field>
-      <clt-image-field formField="splashArt" label="page.characters.playable.create.field.splash-art"></clt-image-field>
-      <clt-image-field formField="cardIcon" label="page.characters.playable.create.field.card-icon"></clt-image-field>
+      <clt-image-field
+        formField="icon"
+        label="page.characters.playable.create.field.icon"
+      ></clt-image-field>
+      <clt-image-field
+        formField="splashArt"
+        label="page.characters.playable.create.field.splash-art"
+      ></clt-image-field>
+      <clt-image-field
+        formField="cardIcon"
+        label="page.characters.playable.create.field.card-icon"
+      ></clt-image-field>
     </div>
   </div>
   <div class="btn-wrapper flex-row-right gap-8">
-    <clt-default-btn [routerLink]="charactersViewLink">{{ 'shared.btn.cancel' | translate }}</clt-default-btn>
-    <clt-default-btn [type]="btnType" [disabled]="!form.valid">{{ 'shared.btn.save' | translate }}</clt-default-btn>
+    <clt-default-btn [routerLink]="charactersViewLink">{{
+      "shared.btn.cancel" | translate
+    }}</clt-default-btn>
+    <clt-default-btn [type]="btnType" [disabled]="!form.valid">{{
+      "shared.btn.save" | translate
+    }}</clt-default-btn>
   </div>
 </form>

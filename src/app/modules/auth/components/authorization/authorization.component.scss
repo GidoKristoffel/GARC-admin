@@ -14,7 +14,8 @@ tvt-default-btn {
   width: 285px;
   box-sizing: border-box;
 
-  & > clt-text-input, & > clt-password-input {
+  & > clt-text-input,
+  & > clt-password-input {
     margin-bottom: 16px;
   }
 

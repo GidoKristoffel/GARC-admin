@@ -8,10 +8,9 @@ describe('ExtendedFabBtnComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ExtendedFabBtnComponent]
-    })
-    .compileComponents();
-    
+      imports: [ExtendedFabBtnComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ExtendedFabBtnComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

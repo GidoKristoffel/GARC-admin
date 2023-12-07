@@ -8,10 +8,9 @@ describe('DefaultSelectComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DefaultSelectComponent]
-    })
-    .compileComponents();
-    
+      imports: [DefaultSelectComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(DefaultSelectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

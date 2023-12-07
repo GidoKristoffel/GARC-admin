@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { ELocalStorage } from "../../enums/local-storage.enum";
+import { ELocalStorage } from '../../enums/local-storage.enum';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LocalStorageService {
   public get(key: ELocalStorage): string {

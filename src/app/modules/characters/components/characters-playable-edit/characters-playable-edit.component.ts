@@ -1,37 +1,60 @@
 import { Component, DestroyRef, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ScrollClassDirective } from "../../../../shared/directives/scroll-class/scroll-class.directive";
-import { DefaultBtnComponent } from "../../../../shared/components/button/default-btn/default-btn.component";
-import { LangChangeEvent, TranslateModule, TranslateService } from "@ngx-translate/core";
-import { ActivatedRoute, Router, RouterLink } from "@angular/router";
-import { EPage } from "../../../../core/enums/page.enum";
-import { CheckboxFieldComponent } from "../../../../shared/components/fields/checkbox-field/checkbox-field.component";
-import { DatetimeFieldComponent } from "../../../../shared/components/fields/datetime-field/datetime-field.component";
-import { DropdownFieldComponent } from "../../../../shared/components/fields/dropdown-field/dropdown-field.component";
-import { ImageFieldComponent } from "../../../../shared/components/fields/image-field/image-field.component";
-import { TextFieldComponent } from "../../../../shared/components/fields/text-field/text-field.component";
-import { EQuality } from "../../enums/quality.enum";
-import { EElementType } from "../../enums/element-type.enum";
-import { ERegion } from "../../enums/region.enum";
-import { EBonusAttribute } from "../../enums/bonus-attribute.enum";
-import { EWeapon } from "../../enums/weapon.enum";
-import { EArche } from "../../enums/arche.enum";
-import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
-import { IOption } from "../../../../shared/interfaces/input.interface";
-import { CharactersApiService } from "../../api/characters.api.service";
-import { convertToUpperDashFormat } from "../../../../core/utilities/request.utility";
-import { ICharacterDetailFormResponse } from "../../interfaces/api.interfaces";
-import { IPlayableCharacter } from "../../interfaces/table.interface";
-import { EBtnType } from "../../../../core/enums/btn-type.enum";
-import { ICharacterApiForm } from "../../interfaces/form.interface";
+import { ScrollClassDirective } from '../../../../shared/directives/scroll-class/scroll-class.directive';
+import { DefaultBtnComponent } from '../../../../shared/components/button/default-btn/default-btn.component';
+import {
+  LangChangeEvent,
+  TranslateModule,
+  TranslateService,
+} from '@ngx-translate/core';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { EPage } from '../../../../core/enums/page.enum';
+import { CheckboxFieldComponent } from '../../../../shared/components/fields/checkbox-field/checkbox-field.component';
+import { DatetimeFieldComponent } from '../../../../shared/components/fields/datetime-field/datetime-field.component';
+import { DropdownFieldComponent } from '../../../../shared/components/fields/dropdown-field/dropdown-field.component';
+import { ImageFieldComponent } from '../../../../shared/components/fields/image-field/image-field.component';
+import { TextFieldComponent } from '../../../../shared/components/fields/text-field/text-field.component';
+import { EQuality } from '../../enums/quality.enum';
+import { EElementType } from '../../enums/element-type.enum';
+import { ERegion } from '../../enums/region.enum';
+import { EBonusAttribute } from '../../enums/bonus-attribute.enum';
+import { EWeapon } from '../../enums/weapon.enum';
+import { EArche } from '../../enums/arche.enum';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import {
+  FormBuilder,
+  FormControl,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
+import { IOption } from '../../../../shared/interfaces/input.interface';
+import { CharactersApiService } from '../../api/characters.api.service';
+import { convertToUpperDashFormat } from '../../../../core/utilities/request.utility';
+import { ICharacterDetailFormResponse } from '../../interfaces/api.interfaces';
+import { IPlayableCharacter } from '../../interfaces/table.interface';
+import { EBtnType } from '../../../../core/enums/btn-type.enum';
+import { ICharacterApiForm } from '../../interfaces/form.interface';
 
 @Component({
   selector: 'clt-characters-playable-edit',
   standalone: true,
-  imports: [CommonModule, ScrollClassDirective, DefaultBtnComponent, TranslateModule, RouterLink, CheckboxFieldComponent, DatetimeFieldComponent, DropdownFieldComponent, ImageFieldComponent, TextFieldComponent, FormsModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    ScrollClassDirective,
+    DefaultBtnComponent,
+    TranslateModule,
+    RouterLink,
+    CheckboxFieldComponent,
+    DatetimeFieldComponent,
+    DropdownFieldComponent,
+    ImageFieldComponent,
+    TextFieldComponent,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   templateUrl: './characters-playable-edit.component.html',
-  styleUrl: './characters-playable-edit.component.scss'
+  styleUrl: './characters-playable-edit.component.scss',
 })
 export class CharactersPlayableEditComponent implements OnInit {
   public form = this.formBuilder.group({
@@ -56,7 +79,7 @@ export class CharactersPlayableEditComponent implements OnInit {
     affiliationRu: ['', [Validators.required]],
     icon: ['', [Validators.required]],
     splashArt: ['', [Validators.required]],
-    cardIcon: ['', [Validators.required]]
+    cardIcon: ['', [Validators.required]],
   });
 
   public qualityOptions: IOption[] = [];
@@ -93,9 +116,11 @@ export class CharactersPlayableEditComponent implements OnInit {
 
   public initLanguage(): void {
     this.currentLang = this.translateService.currentLang;
-    this.translateService.onLangChange.subscribe((event: LangChangeEvent): void => {
-      this.currentLang = event.lang;
-    });
+    this.translateService.onLangChange.subscribe(
+      (event: LangChangeEvent): void => {
+        this.currentLang = event.lang;
+      },
+    );
   }
 
   public initRoute(): void {
@@ -133,7 +158,7 @@ export class CharactersPlayableEditComponent implements OnInit {
           affiliationRu: character.affiliation.ru,
           icon: character.icon,
           splashArt: character.splashArt,
-          cardIcon: character.cardIcon
+          cardIcon: character.cardIcon,
         });
         this.initOptions();
         this.loaded = true;
@@ -141,20 +166,41 @@ export class CharactersPlayableEditComponent implements OnInit {
   }
 
   private initOptions(): void {
-    this.qualityOptions = this.generateOptions<typeof EQuality>(EQuality, 'select.quality');
-    this.elementOptions = this.generateOptions<typeof EElementType>(EElementType, 'select.element');
-    this.regionOptions = this.generateOptions<typeof ERegion>(ERegion, 'select.region');
-    this.bonusAttributeOptions = this.generateOptions<typeof EBonusAttribute>(EBonusAttribute, 'select.bonus-attribute');
-    this.weaponOptions = this.generateOptions<typeof EWeapon>(EWeapon, 'select.weapon');
-    this.archeOptions = this.generateOptions<typeof EArche>(EArche, 'checkbox.arche');
+    this.qualityOptions = this.generateOptions<typeof EQuality>(
+      EQuality,
+      'select.quality',
+    );
+    this.elementOptions = this.generateOptions<typeof EElementType>(
+      EElementType,
+      'select.element',
+    );
+    this.regionOptions = this.generateOptions<typeof ERegion>(
+      ERegion,
+      'select.region',
+    );
+    this.bonusAttributeOptions = this.generateOptions<typeof EBonusAttribute>(
+      EBonusAttribute,
+      'select.bonus-attribute',
+    );
+    this.weaponOptions = this.generateOptions<typeof EWeapon>(
+      EWeapon,
+      'select.weapon',
+    );
+    this.archeOptions = this.generateOptions<typeof EArche>(
+      EArche,
+      'checkbox.arche',
+    );
   }
 
-  private generateOptions<T extends Object>(enumObject: T, translateSubKey: string = ''): IOption[] {
+  private generateOptions<T extends Object>(
+    enumObject: T,
+    translateSubKey: string = '',
+  ): IOption[] {
     return Object.values(enumObject).map((value): IOption => {
       return {
         label: this.translateKey + translateSubKey + '.' + value,
-        value
-      }
+        value,
+      };
     });
   }
 
@@ -167,9 +213,13 @@ export class CharactersPlayableEditComponent implements OnInit {
           ru: this.form.value.nameRu || '',
         },
         quality: convertToUpperDashFormat(this.form.value.quality!) as EQuality,
-        elementalType: convertToUpperDashFormat(this.form.value.elementalType!) as EElementType,
+        elementalType: convertToUpperDashFormat(
+          this.form.value.elementalType!,
+        ) as EElementType,
         region: convertToUpperDashFormat(this.form.value.region!) as ERegion,
-        bonusAttribute: convertToUpperDashFormat(this.form.value.bonusAttribute!) as EBonusAttribute,
+        bonusAttribute: convertToUpperDashFormat(
+          this.form.value.bonusAttribute!,
+        ) as EBonusAttribute,
         weapon: convertToUpperDashFormat(this.form.value.weapon!) as EWeapon,
         constellation: {
           en: this.form.value.constellationEn || '',
@@ -194,10 +244,15 @@ export class CharactersPlayableEditComponent implements OnInit {
       };
 
       if (this.id) {
-        this.charactersApiService.update(this.id, submissionForm)
+        this.charactersApiService
+          .update(this.id, submissionForm)
           .pipe(takeUntilDestroyed(this.destroyRef))
           .subscribe((): void => {
-            this.router.navigate([this.charactersDetailsLink], { relativeTo: this.route }).then();
+            this.router
+              .navigate([this.charactersDetailsLink], {
+                relativeTo: this.route,
+              })
+              .then();
           });
       }
     }

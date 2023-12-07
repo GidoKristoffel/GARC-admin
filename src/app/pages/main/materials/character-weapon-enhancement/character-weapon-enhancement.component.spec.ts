@@ -8,10 +8,9 @@ describe('CharacterWeaponEnhancementComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CharacterWeaponEnhancementComponent]
-    })
-    .compileComponents();
-    
+      imports: [CharacterWeaponEnhancementComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(CharacterWeaponEnhancementComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

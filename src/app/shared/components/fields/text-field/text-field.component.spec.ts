@@ -8,10 +8,9 @@ describe('TextFieldComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TextFieldComponent]
-    })
-    .compileComponents();
-    
+      imports: [TextFieldComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(TextFieldComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
