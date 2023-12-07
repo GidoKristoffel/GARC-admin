@@ -1,8 +1,17 @@
 <div *ngIf="option">
-  <label [for]="option.label" class="flex-align-center gap-8 pointer" (change)="toggle()">
-    <input type="checkbox" [id]="option.label" class="checkbox pointer">
+  <label
+    [for]="option.label"
+    class="flex-align-center gap-8 pointer"
+    (change)="toggle()"
+  >
+    <input type="checkbox" [id]="option.label" class="checkbox pointer" />
     <div class="checkmark flex-center">
-      <img *ngIf="checked" ngSrc="./assets/images/icons/check.svg" height="16" width="16">
+      <img
+        *ngIf="checked"
+        ngSrc="./assets/images/icons/check.svg"
+        height="16"
+        width="16"
+      />
     </div>
     {{ option.label | translate }}
   </label>

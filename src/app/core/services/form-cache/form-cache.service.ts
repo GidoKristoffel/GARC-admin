@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
-import { ELocalStorage } from "../../enums/local-storage.enum";
+import { ELocalStorage } from '../../enums/local-storage.enum';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FormCacheService {
   saveFormData(data: any): void {
-    localStorage.setItem(ELocalStorage.CharacterFormCreate, JSON.stringify(data));
+    localStorage.setItem(
+      ELocalStorage.CharacterFormCreate,
+      JSON.stringify(data),
+    );
   }
 
   loadFormData(): any {

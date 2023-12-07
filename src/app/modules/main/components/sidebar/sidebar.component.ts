@@ -1,30 +1,35 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EPage } from "../../../../core/enums/page.enum";
-import { SignService } from "../../../../core/services/sign/sign.service";
-import { SidebarBtnComponent } from "../../../../shared/components/button/sidebar-btn/sidebar-btn.component";
-import {
-  HorizontalDividerComponent
-} from "../../../../shared/components/divider/horizontal-divider/horizontal-divider.component";
-import { TranslateModule } from "@ngx-translate/core";
-import { ScrollClassDirective } from "../../../../shared/directives/scroll-class/scroll-class.directive";
+import { EPage } from '../../../../core/enums/page.enum';
+import { SignService } from '../../../../core/services/sign/sign.service';
+import { SidebarBtnComponent } from '../../../../shared/components/button/sidebar-btn/sidebar-btn.component';
+import { HorizontalDividerComponent } from '../../../../shared/components/divider/horizontal-divider/horizontal-divider.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { ScrollClassDirective } from '../../../../shared/directives/scroll-class/scroll-class.directive';
 
 export enum ESidebarType {
   Button = 'button',
-  Divider = 'Divider'
+  Divider = 'Divider',
 }
 
 @Component({
   selector: 'clt-sidebar',
   standalone: true,
-  imports: [CommonModule, SidebarBtnComponent, HorizontalDividerComponent, TranslateModule, ScrollClassDirective],
+  imports: [
+    CommonModule,
+    SidebarBtnComponent,
+    HorizontalDividerComponent,
+    TranslateModule,
+    ScrollClassDirective,
+  ],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.scss'
+  styleUrl: './sidebar.component.scss',
 })
 export class SidebarComponent {
   public readonly baseUrl: string = EPage.Main + '/';
   public readonly baseUrlAccount: string = this.baseUrl + EPage.Accounts + '/';
-  public readonly baseUrlCharacter: string = this.baseUrl + EPage.Characters + '/';
+  public readonly baseUrlCharacter: string =
+    this.baseUrl + EPage.Characters + '/';
   public readonly baseUrlWeapon: string = this.baseUrl + EPage.Weapons + '/';
   public readonly baseUrlMaterial: string = this.baseUrl + EPage.Material + '/';
   public readonly baseUrlEnemy: string = this.baseUrl + EPage.Enemies + '/';
@@ -159,13 +164,11 @@ export class SidebarComponent {
         label: 'page.main.sidebar.enemy.weekly-boss',
         icon: './assets/images/icons/weekly-boss.svg',
         link: this.baseUrlEnemy + EPage.WeeklyBosses,
-      }
+      },
     ],
   };
 
-  constructor(
-    private signService: SignService,
-  ) {}
+  constructor(private signService: SignService) {}
 
   public logOut(): void {
     this.signService.logOut();

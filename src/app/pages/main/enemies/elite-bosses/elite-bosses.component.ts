@@ -6,8 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './elite-bosses.component.html',
-  styleUrl: './elite-bosses.component.scss'
+  styleUrl: './elite-bosses.component.scss',
 })
-export class EliteBossesComponent {
-
-}
+export class EliteBossesComponent {}

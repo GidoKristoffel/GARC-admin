@@ -61,7 +61,7 @@
       padding-right: 7px;
     }
 
-    &:first-child{
+    &:first-child {
       border-left: 1px solid $independence;
       position: sticky;
       left: 0;
@@ -76,13 +76,16 @@
   }
 }
 
-th,td,tr {
+th,
+td,
+tr {
   border-bottom: 1px solid $independence;
   border-left: 1px solid $independence;
   text-align: center;
 }
 
-.table-id, .table-link {
+.table-id,
+.table-link {
   white-space: nowrap;
   position: relative;
   user-select: none;

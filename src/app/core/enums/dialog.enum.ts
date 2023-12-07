@@ -1,3 +1,3 @@
 export enum EDialog {
-  CharacterDelete = 'character-delete'
-};
+  CharacterDelete = 'character-delete',
+}

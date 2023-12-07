@@ -2,10 +2,13 @@ import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[cltTableScroll]',
-  standalone: true
+  standalone: true,
 })
 export class TableScrollDirective {
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+  ) {}
 
   @HostListener('scroll', ['$event'])
   onScroll(event: Event): void {
@@ -13,8 +16,16 @@ export class TableScrollDirective {
     console.log('++++++');
 
     // Фиксация заголовка
-    this.renderer.setStyle(this.el.nativeElement.querySelector('thead'), 'left', `-${scrollLeft}px`);
-    this.renderer.setStyle(this.el.nativeElement.querySelector('thead th:nth-child(1)'), 'left', `${scrollLeft}px`);
+    this.renderer.setStyle(
+      this.el.nativeElement.querySelector('thead'),
+      'left',
+      `-${scrollLeft}px`,
+    );
+    this.renderer.setStyle(
+      this.el.nativeElement.querySelector('thead th:nth-child(1)'),
+      'left',
+      `${scrollLeft}px`,
+    );
 
     // Фиксация первой колонки
     const rows = this.el.nativeElement.querySelectorAll('tbody tr');

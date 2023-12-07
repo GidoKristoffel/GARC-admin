@@ -8,10 +8,9 @@ describe('DatetimeFieldComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DatetimeFieldComponent]
-    })
-    .compileComponents();
-    
+      imports: [DatetimeFieldComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(DatetimeFieldComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

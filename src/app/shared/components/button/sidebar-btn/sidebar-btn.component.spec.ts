@@ -8,10 +8,9 @@ describe('SidebarBtnComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SidebarBtnComponent]
-    })
-    .compileComponents();
-    
+      imports: [SidebarBtnComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(SidebarBtnComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

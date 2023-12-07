@@ -24,21 +24,21 @@ label {
 }
 
 ::-webkit-scrollbar {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   height: 8px;
   width: 8px;
 }
 
 ::-webkit-scrollbar-corner {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsla(0,0%,100%,.08);
+  background: hsla(0, 0%, 100%, 0.08);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsla(0,0%,100%,.16);
-  border: 1px solid hsla(0,0%,100%,.25);
+  background: hsla(0, 0%, 100%, 0.16);
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
 }

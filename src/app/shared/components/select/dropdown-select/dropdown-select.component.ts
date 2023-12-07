@@ -1,17 +1,17 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from "@ngx-translate/core";
-import { IOption } from "../../../interfaces/input.interface";
+import { TranslateModule } from '@ngx-translate/core';
+import { IOption } from '../../../interfaces/input.interface';
 
 @Component({
   selector: 'clt-dropdown-select',
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './dropdown-select.component.html',
-  styleUrl: './dropdown-select.component.scss'
+  styleUrl: './dropdown-select.component.scss',
 })
 export class DropdownSelectComponent implements OnChanges {
-  @Input() options: { label: string, value: string }[] = [];
+  @Input() options: { label: string; value: string }[] = [];
   @Input() defaultOption: string = '';
 
   public openSelector: boolean = false;

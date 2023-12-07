@@ -8,10 +8,9 @@ describe('CharacterLevelUpComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CharacterLevelUpComponent]
-    })
-    .compileComponents();
-    
+      imports: [CharacterLevelUpComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(CharacterLevelUpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
