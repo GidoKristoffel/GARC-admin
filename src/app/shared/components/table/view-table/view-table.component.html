@@ -3,7 +3,7 @@
     <thead>
     <tr>
       <th></th>
-      @for (header of headers; track $index) {
+      @for (header of metadata; track $index) {
         <th>{{ header.label | translate }}</th>
       }
     </tr>
@@ -11,7 +11,7 @@
     <tbody>
     <tr *ngFor="let item of body">
       <td></td>
-      @for (header of headers; track $index) {
+      @for (header of metadata; track $index) {
         <td *ngIf="header.type === headerType.Id" class="table-id">
           <img ngSrc="./assets/images/icons/copy.svg" height="16" width="16" class="pointer" (click)="copy(item[header.id])">
           {{ item[header.id] }}
@@ -45,7 +45,7 @@
     </tr>
     <tr>
       <td></td>
-      @for (header of headers; track $index) {
+      @for (header of metadata; track $index) {
         <td></td>
       }
     </tr>

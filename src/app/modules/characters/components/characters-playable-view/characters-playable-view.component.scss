@@ -1,23 +1,12 @@
 @import "color";
 
-.playable-view {
-  padding: 8px;
-  gap: 8px;
+form {
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .form-wrapper {
   border: 1px solid $granite-gray;
   border-radius: 8px;
   padding: 8px;
-  height: calc(100vh - 83px);
-  overflow: auto;
-}
-
-.btn-wrapper {
-  width: 100%;
-  text-align: right;
-  box-sizing: border-box;
-  border: 1px solid $granite-gray;
-  border-radius: 8px;
-  padding: 4px 8px;
 }

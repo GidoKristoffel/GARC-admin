@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { IHeader, IPlayableCharacter, IPlayableCharacterResponse } from "../interfaces/table.interface";
+import { IPlayableCharacter } from "../interfaces/table.interface";
 import { EHeaderType } from "../../../core/enums/table.enum";
+import { ITableMetadata } from "../../../shared/interfaces/table.interface";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CharactersPlayableViewTableService {
-  private readonly headers: IHeader[] = [
+  private readonly headers: ITableMetadata[] = [
     {
       id: 'id',
       label: 'table.characters.playable.view.id',
@@ -91,7 +92,7 @@ export class CharactersPlayableViewTableService {
 
   constructor() { }
 
-  public getHeader(): IHeader[] {
+  public getHeader(): ITableMetadata[] {
     return this.headers;
   }
 
