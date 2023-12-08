@@ -10,7 +10,7 @@ import { TextFieldComponent } from '../../../../shared/components/fields/text-fi
 import { DefaultBtnComponent } from '../../../../shared/components/button/default-btn/default-btn.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
-import { CharactersPlayableViewTableService } from '../../services/characters-playable-view-table.service';
+import { CharactersPlayableViewTableService } from '../../services/characters-playable-view-table/characters-playable-view-table.service';
 import { IPlayableCharacter } from '../../interfaces/table.interface';
 import { CharactersApiService } from '../../api/characters.api.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
