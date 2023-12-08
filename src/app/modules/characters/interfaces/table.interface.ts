@@ -4,7 +4,6 @@ import { ERegion } from '../enums/region.enum';
 import { EBonusAttribute } from '../enums/bonus-attribute.enum';
 import { EWeapon } from '../enums/weapon.enum';
 import { EArche } from '../enums/arche.enum';
-import { EHeaderType } from '../../../core/enums/table.enum';
 
 export interface IPlayableCharacterResponse {
   id: string;

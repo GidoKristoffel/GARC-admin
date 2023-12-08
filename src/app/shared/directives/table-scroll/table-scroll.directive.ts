@@ -13,9 +13,7 @@ export class TableScrollDirective {
   @HostListener('scroll', ['$event'])
   onScroll(event: Event): void {
     const scrollLeft = (event.target as HTMLElement).scrollLeft;
-    console.log('++++++');
 
-    // Фиксация заголовка
     this.renderer.setStyle(
       this.el.nativeElement.querySelector('thead'),
       'left',
@@ -27,7 +25,6 @@ export class TableScrollDirective {
       `${scrollLeft}px`,
     );
 
-    // Фиксация первой колонки
     const rows = this.el.nativeElement.querySelectorAll('tbody tr');
     rows.forEach((row: any): void => {
       const firstCell = row.querySelector('td:first-child');

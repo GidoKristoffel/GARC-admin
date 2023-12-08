@@ -12,4 +12,7 @@ export enum EHeaderType {
   Link = 'link',
   TranslateString = 'translate-string',
   Action = 'action',
+  Option = 'option',
+  Checkbox = 'checkbox',
+  Birthday = 'birthday'
 }

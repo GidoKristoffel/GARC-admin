@@ -3,12 +3,12 @@ import { ITableMetadata } from '../../../shared/interfaces/table.interface';
 import { LanguageService } from '../../services/language/language.service';
 import { DestroyRef } from '@angular/core';
 
-export class SharedView {
+export abstract class SharedView {
   public readonly createItemLink: string = '../' + EPage.Create;
   public metadata: ITableMetadata[] = [];
   public currentLang: string = '';
 
-  constructor(
+  protected constructor(
     protected destroyRef: DestroyRef,
     protected languageService: LanguageService,
   ) {}

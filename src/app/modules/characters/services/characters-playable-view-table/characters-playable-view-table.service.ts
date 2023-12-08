@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { IPlayableCharacter } from '../interfaces/table.interface';
-import { EHeaderType } from '../../../core/enums/table.enum';
-import { ITableMetadata } from '../../../shared/interfaces/table.interface';
+import { IPlayableCharacter } from '../../interfaces/table.interface';
+import { EHeaderType } from '../../../../core/enums/table.enum';
+import { ITableMetadata } from '../../../../shared/interfaces/table.interface';
 
 @Injectable({
   providedIn: 'root',

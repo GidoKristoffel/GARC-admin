@@ -5,3 +5,7 @@ export interface ITableMetadata {
   label: string;
   type: EHeaderType;
 }
+
+export interface ITableExtendedMetadata extends ITableMetadata {
+  option: string;
+}
