@@ -22,6 +22,10 @@ import { CharactersPlayableService } from "../../services/characters-playable/ch
 import {
   CharactersPlayableFormService
 } from "../../services/characters-playable-form/characters-playable-form.service";
+import { IFormMetadata } from "../../../../shared/interfaces/form.interface";
+import {
+  CharactersPlayableMetadataService
+} from "../../services/characters-playable-metadata/characters-playable-metadata.service";
 
 @Component({
   selector: 'clt-characters-playable-create',
@@ -51,7 +55,8 @@ export class CharactersPlayableCreateComponent extends SharedCreate<FormGroup<IC
     private destroyRef: DestroyRef,
     private charactersPlayableOptionsService: CharactersPlayableOptionsService,
     private charactersPlayableService: CharactersPlayableService,
-    private charactersPlayableFormService: CharactersPlayableFormService
+    private charactersPlayableFormService: CharactersPlayableFormService,
+    private charactersPlayableMetadataService: CharactersPlayableMetadataService,
   ) {
     super(formBuilder);
   }
@@ -61,6 +66,7 @@ export class CharactersPlayableCreateComponent extends SharedCreate<FormGroup<IC
     this.initForm();
     this.initCashing();
     this.loadCachedData();
+    this.initMetadata(this.charactersPlayableMetadataService.getCreate())
   }
 
   private initOptions(): void {
@@ -88,5 +94,9 @@ export class CharactersPlayableCreateComponent extends SharedCreate<FormGroup<IC
 
   public save(): void {
     this.charactersPlayableService.createCharacter(this.form, this.viewLink);
+  }
+
+  protected initMetadata(metadata: IFormMetadata[]): void {
+    this.metadata = metadata;
   }
 }
