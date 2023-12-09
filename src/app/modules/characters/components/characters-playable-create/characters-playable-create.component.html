@@ -1,9 +1,9 @@
 <form
   [formGroup]="form"
-  class="playable-create flex-column gap-8"
+  class="height-100 flex-column gap-8 padding-8"
   (ngSubmit)="save()"
 >
-  <div class="form-wrapper flex-column gap-4">
+  <div class="card-wrapper-form-main flex-column flex-fill-space gap-4">
     <div class="form flex-column gap-4" cltScrollClass>
       <clt-text-field
         formField="nameEn"
@@ -20,27 +20,27 @@
 
       <clt-dropdown-field
         formField="quality"
-        [options]="qualityOptions"
+        [options]="options.quality"
         label="page.characters.playable.create.field.quality"
       ></clt-dropdown-field>
       <clt-dropdown-field
         formField="elementalType"
-        [options]="elementOptions"
+        [options]="options.element"
         label="page.characters.playable.create.field.elemental-type"
       ></clt-dropdown-field>
       <clt-dropdown-field
         formField="region"
-        [options]="regionOptions"
+        [options]="options.region"
         label="page.characters.playable.create.field.region"
       ></clt-dropdown-field>
       <clt-dropdown-field
         formField="bonusAttribute"
-        [options]="bonusAttributeOptions"
+        [options]="options.bonusAttribute"
         label="page.characters.playable.create.field.bonus-attribute"
       ></clt-dropdown-field>
       <clt-dropdown-field
         formField="weapon"
-        [options]="weaponOptions"
+        [options]="options.weapon"
         label="page.characters.playable.create.field.weapon"
       ></clt-dropdown-field>
 
@@ -59,7 +59,7 @@
 
       <clt-checkbox-field
         formField="arche"
-        [options]="archeOptions"
+        [options]="options.arche"
         label="page.characters.playable.create.field.arche"
       ></clt-checkbox-field>
       <clt-datetime-field
@@ -107,8 +107,8 @@
       ></clt-image-field>
     </div>
   </div>
-  <div class="btn-wrapper flex-row-right gap-8">
-    <clt-default-btn [routerLink]="charactersViewLink">{{
+  <div class="card-wrapper-btn flex-row-right gap-8">
+    <clt-default-btn [routerLink]="viewLink">{{
       "shared.btn.cancel" | translate
     }}</clt-default-btn>
     <clt-default-btn [type]="btnType" [disabled]="!form.valid">{{
