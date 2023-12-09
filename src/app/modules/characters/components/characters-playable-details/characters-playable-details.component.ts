@@ -4,11 +4,7 @@ import { ScrollClassDirective } from '../../../../shared/directives/scroll-class
 import { DefaultBtnComponent } from '../../../../shared/components/button/default-btn/default-btn.component';
 import { EPage } from '../../../../core/enums/page.enum';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import {
-  LangChangeEvent,
-  TranslateModule,
-  TranslateService,
-} from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { TextFieldViewComponent } from '../../../../shared/components/view/text-field-view/text-field-view.component';
 import { IPlayableCharacter } from '../../interfaces/table.interface';
 import { CharactersApiService } from '../../api/characters.api.service';
@@ -16,6 +12,9 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ICharacterDetailFormResponse } from '../../interfaces/api.interfaces';
 import { ELanguage } from '../../../../core/enums/language.enum';
 import { FormatPipeModule } from 'ngx-date-fns';
+import { SharedDetails } from '../../../../core/classes/shared-details/shared-details';
+import { LanguageService } from '../../../../core/services/language/language.service';
+import { CharactersPlayableMetadataService } from '../../services/characters-playable-metadata/characters-playable-metadata.service';
 
 @Component({
   selector: 'clt-characters-playable-details',
@@ -32,45 +31,30 @@ import { FormatPipeModule } from 'ngx-date-fns';
   templateUrl: './characters-playable-details.component.html',
   styleUrl: './characters-playable-details.component.scss',
 })
-export class CharactersPlayableDetailsComponent implements OnInit {
-  public readonly charactersViewLink: string = '../../' + EPage.View;
-  public readonly translateKey: string = 'page.characters.playable.create.';
-  public charactersEditLink: string = '../../' + EPage.Edit;
-  public id: string | null = '';
+export class CharactersPlayableDetailsComponent
+  extends SharedDetails
+  implements OnInit
+{
   public character!: IPlayableCharacter;
-  public currentLang: ELanguage = ELanguage.English;
   public language: typeof ELanguage = ELanguage;
 
   constructor(
-    private route: ActivatedRoute,
     private charactersApiService: CharactersApiService,
-    private destroyRef: DestroyRef,
-    private translateService: TranslateService,
-  ) {}
+    private charactersPlayableMetadataService: CharactersPlayableMetadataService,
+    protected override route: ActivatedRoute,
+    protected override destroyRef: DestroyRef,
+    protected override languageService: LanguageService,
+  ) {
+    super(route, destroyRef, languageService);
+  }
 
   ngOnInit(): void {
     this.initLanguage();
     this.initRoute();
+    this.initMetadata(this.charactersPlayableMetadataService.getDetails());
   }
 
-  private initLanguage(): void {
-    this.currentLang = this.translateService.currentLang as ELanguage;
-    this.translateService.onLangChange.subscribe(
-      (event: LangChangeEvent): void => {
-        this.currentLang = event.lang as ELanguage;
-      },
-    );
-  }
-
-  private initRoute(): void {
-    this.id = this.route.snapshot.paramMap.get('id');
-    if (typeof this.id === 'string') {
-      this.charactersEditLink += EPage.ParamId.replace(':id', this.id);
-      this.getCharacterById(this.id);
-    }
-  }
-
-  private getCharacterById(id: string): void {
+  protected initTableData(id: string): void {
     this.charactersApiService
       .getById(id)
       .pipe(takeUntilDestroyed(this.destroyRef))

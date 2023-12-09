@@ -6,13 +6,9 @@ export enum EHeaderType {
   Region = 'region',
   BonusAttribute = 'bonus-attribute',
   Weapon = 'weapon',
-  Array = 'array',
   Arche = 'Arche',
   Date = 'date',
   Link = 'link',
   TranslateString = 'translate-string',
   Action = 'action',
-  Option = 'option',
-  Checkbox = 'checkbox',
-  Birthday = 'birthday'
 }

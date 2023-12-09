@@ -13,8 +13,8 @@ export abstract class SharedView {
     protected languageService: LanguageService,
   ) {}
 
-  protected initMetadata(getMetadata: () => ITableMetadata[]): void {
-    this.metadata = getMetadata();
+  protected initMetadata(metadata: ITableMetadata[]): void {
+    this.metadata = metadata;
   }
 
   protected initLanguage(): void {

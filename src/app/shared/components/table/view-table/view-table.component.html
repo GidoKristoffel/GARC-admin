@@ -18,38 +18,38 @@
               height="16"
               width="16"
               class="pointer"
-              (click)="copy(item[header.id])"
+              (click)="copy(item[header.fieldName])"
             />
-            {{ item[header.id] }}
+            {{ item[header.fieldName] }}
           </td>
           <td *ngIf="header.type === headerType.Quality">
-            {{ qualityTranslate + item[header.id] | translate }}
+            {{ qualityTranslate + item[header.fieldName] | translate }}
           </td>
           <td *ngIf="header.type === headerType.Element">
-            {{ elementTranslate + item[header.id] | translate }}
+            {{ elementTranslate + item[header.fieldName] | translate }}
           </td>
           <td *ngIf="header.type === headerType.Region">
-            {{ regionTranslate + item[header.id] | translate }}
+            {{ regionTranslate + item[header.fieldName] | translate }}
           </td>
           <td *ngIf="header.type === headerType.BonusAttribute">
-            {{ bonusAttributeTranslate + item[header.id] | translate }}
+            {{ bonusAttributeTranslate + item[header.fieldName] | translate }}
           </td>
           <td *ngIf="header.type === headerType.Weapon">
-            {{ weaponTranslate + item[header.id] | translate }}
+            {{ weaponTranslate + item[header.fieldName] | translate }}
           </td>
           <td *ngIf="header.type === headerType.String">
-            {{ item[header.id] }}
+            {{ item[header.fieldName] }}
           </td>
           <td *ngIf="header.type === headerType.TranslateString">
-            {{ item[header.id][currentLang] }}
+            {{ item[header.fieldName][currentLang] }}
           </td>
           <td *ngIf="header.type === headerType.Arche">
-            <div *ngFor="let arrayItem of item[header.id]">
+            <div *ngFor="let arrayItem of item[header.fieldName]">
               {{ archeTranslate + arrayItem | translate }}
             </div>
           </td>
           <td *ngIf="header.type === headerType.Date">
-            {{ item[header.id] | dfnsFormat: "d MMMM" }}
+            {{ item[header.fieldName] | dfnsFormat: "d MMMM" }}
           </td>
           <td
             *ngIf="header.type === headerType.Link"
@@ -60,10 +60,10 @@
               height="16"
               width="16"
               class="pointer"
-              (click)="copy(item[header.id])"
+              (click)="copy(item[header.fieldName])"
             />
-            <a [href]="item[header.id]" target="_blank">
-              {{ item[header.id] }}
+            <a [href]="item[header.fieldName]" target="_blank">
+              {{ item[header.fieldName] }}
             </a>
           </td>
           <td *ngIf="header.type === headerType.Action">
