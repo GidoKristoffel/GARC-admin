@@ -18,7 +18,6 @@ import { EElementType } from '../../enums/element-type.enum';
 import { ERegion } from '../../enums/region.enum';
 import { EBonusAttribute } from '../../enums/bonus-attribute.enum';
 import { EWeapon } from '../../enums/weapon.enum';
-import { IFormMetadata } from "../../../../shared/interfaces/form.interface";
 
 @Injectable({
   providedIn: 'root',
