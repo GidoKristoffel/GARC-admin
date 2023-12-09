@@ -18,14 +18,11 @@ import { EElementType } from '../../enums/element-type.enum';
 import { ERegion } from '../../enums/region.enum';
 import { EBonusAttribute } from '../../enums/bonus-attribute.enum';
 import { EWeapon } from '../../enums/weapon.enum';
-import { ITableExtendedMetadata } from "../../../../shared/interfaces/table.interface";
-import { metadata } from "../../data-structures/metadata.structure";
 
 @Injectable({
   providedIn: 'root',
 })
 export class CharactersPlayableFormService {
-  private readonly metadata: ITableExtendedMetadata[] = metadata;
   private readonly form: FormGroup<ICharacterFormBuilder> =
     this.formBuilder.group({
       nameEn: ['', [Validators.required]],
@@ -56,10 +53,6 @@ export class CharactersPlayableFormService {
 
   public getForm(): FormGroup<ICharacterFormBuilder> {
     return this.form;
-  }
-
-  public getMetadata(): ITableExtendedMetadata[] {
-    return this.metadata;
   }
 
   public convertToForm(character: IPlayableCharacter): ICharacter {

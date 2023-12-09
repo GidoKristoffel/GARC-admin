@@ -18,6 +18,9 @@ import { ICharacterViewFormResponse } from '../../interfaces/api.interfaces';
 import { ViewTableComponent } from '../../../../shared/components/table/view-table/view-table.component';
 import { LanguageService } from '../../../../core/services/language/language.service';
 import { SharedView } from '../../../../core/classes/shared-view/shared-view';
+import {
+  CharactersPlayableMetadataService
+} from "../../services/characters-playable-metadata/characters-playable-metadata.service";
 
 @Component({
   imports: [
@@ -39,15 +42,12 @@ import { SharedView } from '../../../../core/classes/shared-view/shared-view';
   styleUrl: './characters-playable-view.component.scss',
   templateUrl: './characters-playable-view.component.html',
 })
-export class CharactersPlayableViewComponent
-  extends SharedView
-  implements OnInit
-{
-  public characters: IPlayableCharacter[] = [];
+export class CharactersPlayableViewComponent extends SharedView implements OnInit {
+  public tableData: IPlayableCharacter[] = [];
 
   constructor(
-    private charactersApiService: CharactersApiService,
     private charactersPlayableViewTableService: CharactersPlayableViewTableService,
+    private charactersPlayableMetadataService: CharactersPlayableMetadataService,
     protected override destroyRef: DestroyRef,
     protected override languageService: LanguageService,
   ) {
@@ -56,30 +56,17 @@ export class CharactersPlayableViewComponent
 
   ngOnInit(): void {
     this.initLanguage();
-    this.initMetadata(() =>
-      this.charactersPlayableViewTableService.getHeader(),
-    );
-    this.getCharacters();
+    this.initMetadata(this.charactersPlayableMetadataService.getView());
+    this.initTableData();
+  }
+
+  private initTableData(): void {
+    this.charactersPlayableViewTableService.getCharacters((characters: IPlayableCharacter[]): void => {
+      this.tableData = characters;
+    });
   }
 
   public delete(id: string): void {
-    this.charactersApiService
-      .delete(id)
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((): void => {
-        this.getCharacters();
-      });
-  }
-
-  private getCharacters(): void {
-    this.charactersApiService
-      .getAll()
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((response: ICharacterViewFormResponse): void => {
-        this.characters = response.character.map(
-          (character: IPlayableCharacter) =>
-            this.charactersPlayableViewTableService.convertTableData(character),
-        );
-      });
+    this.charactersPlayableViewTableService.deleteCharacter(id, () => this.initTableData());
   }
 }

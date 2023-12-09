@@ -1,138 +1,41 @@
 <div class="playable-create flex-column gap-8">
   <div class="form-wrapper flex-column gap-4">
-    <div class="form flex-column gap-4" cltScrollClass>
-      <clt-text-field-view
-        label="page.characters.playable.create.field.name.en"
-        >{{ character.name[language.English] }}</clt-text-field-view>
-      <clt-text-field-view
-        label="page.characters.playable.create.field.name.ua"
-        >{{ character.name[language.Ukrainian] }}</clt-text-field-view
-      >
-      <clt-text-field-view
-        label="page.characters.playable.create.field.name.ru"
-        >{{ character.name[language.Russian] }}</clt-text-field-view
-      >
-
-      <clt-text-field-view
-        label="page.characters.playable.create.field.quality"
-        >{{
-          translateKey + "select.quality." + character.quality | translate
-        }}</clt-text-field-view
-      >
-      <clt-text-field-view
-        label="page.characters.playable.create.field.elemental-type"
-        >{{
-          translateKey + "select.element." + character.elementalType | translate
-        }}</clt-text-field-view
-      >
-      <clt-text-field-view
-        label="page.characters.playable.create.field.region"
-        >{{
-          translateKey + "select.region." + character.region | translate
-        }}</clt-text-field-view
-      >
-      <clt-text-field-view
-        label="page.characters.playable.create.field.bonus-attribute"
-        >{{
-          translateKey + "select.bonus-attribute." + character.bonusAttribute
-            | translate
-        }}</clt-text-field-view
-      >
-      <clt-text-field-view
-        label="page.characters.playable.create.field.weapon"
-        >{{
-          translateKey + "select.weapon." + character.weapon | translate
-        }}</clt-text-field-view
-      >
-
-      <clt-text-field-view
-        label="page.characters.playable.create.field.constellation.en"
-        >{{ character.constellation[language.English] }}</clt-text-field-view
-      >
-      <clt-text-field-view
-        label="page.characters.playable.create.field.constellation.ua"
-        >{{ character.constellation[language.Ukrainian] }}</clt-text-field-view
-      >
-      <clt-text-field-view
-        label="page.characters.playable.create.field.constellation.ru"
-        >{{ character.constellation[language.Russian] }}</clt-text-field-view
-      >
-
-      <clt-text-field-view label="page.characters.playable.create.field.arche">
-        <div class="flex-column gap-4">
-          <div *ngFor="let arche of character.arche">
-            {{
-              "page.characters.playable.create.checkbox.arche." + arche
-                | translate
-            }}
-          </div>
-        </div>
-      </clt-text-field-view>
-      <clt-text-field-view
-        label="page.characters.playable.create.field.birthday"
-        >{{ character.birthday | dfnsFormat: "d MMMM" }}</clt-text-field-view
-      >
-
-      <clt-text-field-view
-        label="page.characters.playable.create.field.title.en"
-        >{{ character.title[language.English] }}</clt-text-field-view
-      >
-      <clt-text-field-view
-        label="page.characters.playable.create.field.title.ua"
-        >{{ character.title[language.Ukrainian] }}</clt-text-field-view
-      >
-      <clt-text-field-view
-        label="page.characters.playable.create.field.title.ru"
-        >{{ character.title[language.Russian] }}</clt-text-field-view
-      >
-
-      <clt-text-field-view
-        label="page.characters.playable.create.field.affiliation.en"
-        >{{ character.affiliation[language.English] }}</clt-text-field-view
-      >
-      <clt-text-field-view
-        label="page.characters.playable.create.field.affiliation.ua"
-        >{{ character.affiliation[language.Ukrainian] }}</clt-text-field-view
-      >
-      <clt-text-field-view
-        label="page.characters.playable.create.field.affiliation.ru"
-        >{{ character.affiliation[language.Russian] }}</clt-text-field-view
-      >
-
-      <clt-text-field-view
-        label="page.characters.playable.create.field.icon"
-        [valueWrapper]="false"
-      >
-        <div class="flex-column gap-8">
-          <img [src]="character.icon" alt="" />
-          <div class="link-wrapper">{{ character.icon }}</div>
-        </div>
-      </clt-text-field-view>
-      <clt-text-field-view
-        label="page.characters.playable.create.field.splash-art"
-        [valueWrapper]="false"
-      >
-        <div class="flex-column gap-8">
-          <img [src]="character.splashArt" alt="" />
-          <div class="link-wrapper">{{ character.splashArt }}</div>
-        </div>
-      </clt-text-field-view>
-      <clt-text-field-view
-        label="page.characters.playable.create.field.card-icon"
-        [valueWrapper]="false"
-      >
-        <div class="flex-column gap-8">
-          <img [src]="character.cardIcon" alt="" />
-          <div class="link-wrapper">{{ character.cardIcon }}</div>
-        </div>
-      </clt-text-field-view>
+    <div class="form flex-column gap-4" cltScrollClass *ngIf="character">
+      @for (item of metadata; track $index) {
+        @if (item.type === fieldType.String) {
+          <clt-text-field-view [label]="item.label">{{ character[item.fieldName][item.language] }}</clt-text-field-view>
+        }
+        @if (item.type === fieldType.Option) {
+          <clt-text-field-view [label]="item.label">{{ item.valueTranslateKey + character[item.fieldName] | translate }}</clt-text-field-view>
+        }
+        @if (item.type === fieldType.Birthday) {
+          <clt-text-field-view [label]="item.label">{{ character[item.fieldName] | dfnsFormat: "d MMMM" }}</clt-text-field-view>
+        }
+        @if (item.type === fieldType.Checkbox) {
+          <clt-text-field-view [label]="item.label">
+            <div class="flex-column gap-4">
+              <div *ngFor="let checkbox of character[item.fieldName]">
+                {{ (item.valueTranslateKey + checkbox) | translate }}
+              </div>
+            </div>
+          </clt-text-field-view>
+        }
+        @if (item.type === fieldType.Image) {
+          <clt-text-field-view [label]="item.label" [valueWrapper]="false">
+            <div class="flex-column gap-8">
+              <img [src]="character[item.fieldName]" alt="" />
+              <div class="link-wrapper">{{ character[item.fieldName] }}</div>
+            </div>
+          </clt-text-field-view>
+        }
+      }
     </div>
   </div>
   <div class="btn-wrapper flex-row-right gap-8">
-    <clt-default-btn [routerLink]="charactersViewLink">{{
+    <clt-default-btn [routerLink]="viewLink">{{
       "shared.btn.back" | translate
     }}</clt-default-btn>
-    <clt-default-btn [routerLink]="charactersEditLink">{{
+    <clt-default-btn [routerLink]="editLink">{{
       "shared.btn.edit" | translate
     }}</clt-default-btn>
   </div>

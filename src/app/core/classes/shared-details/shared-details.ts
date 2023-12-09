@@ -1,21 +1,19 @@
-import { DestroyRef } from '@angular/core';
+import { ELanguage } from '../../enums/language.enum';
 import { LanguageService } from '../../services/language/language.service';
-import { EPage } from '../../enums/page.enum';
-import { EBtnType } from '../../enums/btn-type.enum';
-import { ActivatedRoute } from '@angular/router';
+import { DestroyRef } from '@angular/core';
+import { EPage } from "../../enums/page.enum";
 import { EFormType } from "../../enums/form.enum";
 import { IFormMetadata } from "../../../shared/interfaces/form.interface";
+import { ActivatedRoute } from "@angular/router";
 
-export abstract class SharedEdit<T> {
-  public readonly saveBtnType: EBtnType = EBtnType.Submit;
+export abstract class SharedDetails {
+  public readonly viewLink: string = '../../' + EPage.View;
   public readonly fieldType: typeof EFormType = EFormType;
 
-  public form!: T;
   public metadata: IFormMetadata[] = [];
-  public currentLang: string = '';
-  public detailsLink: string = '../../' + EPage.Details;
+  public editLink: string = '../../' + EPage.Edit;
+  public currentLang: string = ELanguage.English;
   public id: string | null = '';
-  public loaded: boolean = false;
 
   protected constructor(
     protected route: ActivatedRoute,
@@ -23,8 +21,7 @@ export abstract class SharedEdit<T> {
     protected languageService: LanguageService,
   ) {}
 
-  protected abstract initForm(): void;
-  protected abstract save(): void;
+  protected abstract initTableData(id: string): void;
 
   protected initLanguage(): void {
     this.languageService.watchCurrentLanguage(
@@ -33,14 +30,15 @@ export abstract class SharedEdit<T> {
     );
   }
 
+  protected initMetadata(metadata: IFormMetadata[]): void {
+    this.metadata = metadata;
+  }
+
   protected initRoute(): void {
     this.id = this.route.snapshot.paramMap.get('id');
     if (typeof this.id === 'string') {
-      this.detailsLink += EPage.ParamId.replace(':id', this.id);
+      this.editLink += EPage.ParamId.replace(':id', this.id);
+      this.initTableData(this.id);
     }
-  }
-
-  protected initMetadata(metadata: IFormMetadata[]): void {
-    this.metadata = metadata;
   }
 }

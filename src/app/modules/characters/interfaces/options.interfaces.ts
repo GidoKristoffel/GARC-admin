@@ -7,4 +7,5 @@ export interface ICharactersPlayableOptions {
   bonusAttribute: IOption[],
   weapon: IOption[],
   arche: IOption[],
+  [key: string]: any;
 }
