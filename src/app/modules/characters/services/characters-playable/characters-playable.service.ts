@@ -40,7 +40,6 @@ export class CharactersPlayableService {
     form: FormGroup<ICharacterFormBuilder>,
     detailsLink: string,
   ): void {
-    this.charactersPlayableFormService.convertToSend(form);
     const submissionForm: ICharacterApiForm =
       this.charactersPlayableFormService.convertToSend(form);
 
