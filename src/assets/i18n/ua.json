@@ -150,6 +150,37 @@
           }
         }
       }
+    },
+    "enemies": {
+      "mobs": {
+        "field": {
+          "name": {
+            "en": "Ім'я [англійська]",
+            "ua": "Ім'я [українська]",
+            "ru": "Ім'я [російська]"
+          },
+          "description": {
+            "en": "Опис [англійська]",
+            "ua": "Опис [українська]",
+            "ru": "Опис [російська]"
+          },
+          "type": "Тип",
+          "icon": "Піктограма"
+        },
+        "select": {
+          "mob-type": {
+            "other-human-factions":  "Інші людські фракції",
+            "automatons": "Автоматони",
+            "fatui":  "Фатуї",
+            "enemies-of-note": "Вороги, гідні згадки",
+            "hilichurls":  "Хілічурли",
+            "elemental-lifeforms": "Елементальні істоти",
+            "the-abyss":  "Безодня",
+            "mystical-beasts": "Містичні звірі"
+
+          }
+        }
+      }
     }
   },
   "shared": {
@@ -211,6 +242,18 @@
           "actions": "Дії"
         }
       }
+    },
+    "enemies": {
+      "mobs": {
+        "view": {
+          "id": "ID",
+          "name": "Ім'я",
+          "description": "Опис",
+          "mob-type": "Тип",
+          "icon": "Піктограма",
+          "actions": "Дії"
+        }
+      }
     }
   },
   "enum": {
@@ -269,6 +312,16 @@
     "arche": {
       "usia": "Усія",
       "pneuma": "Пневма"
+    },
+    "mob-type": {
+      "other-human-factions":  "Інші людські фракції",
+      "automatons": "Автоматони",
+      "fatui":  "Фатуї",
+      "enemies-of-note": "Вороги, гідні згадки",
+      "hilichurls":  "Хілічурли",
+      "elemental-lifeforms": "Елементальні істоти",
+      "the-abyss":  "Безодня",
+      "mystical-beasts": "Містичні звірі"
     }
   },
   "dialog": {

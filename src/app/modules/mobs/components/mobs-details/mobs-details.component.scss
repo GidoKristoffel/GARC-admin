@@ -1,0 +1,52 @@
+@import "color";
+
+.playable-create {
+  padding: 8px;
+  gap: 8px;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.form-wrapper {
+  border: 1px solid $granite-gray;
+  border-radius: 8px;
+  padding: 8px;
+  height: calc(100vh - 83px);
+}
+
+.btn-wrapper {
+  width: 100%;
+  text-align: right;
+  box-sizing: border-box;
+  border: 1px solid $granite-gray;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+.scroll {
+  padding-right: 8px;
+}
+
+.form {
+  overflow: auto;
+}
+
+img {
+  height: 200px;
+  width: fit-content;
+  border: 1px solid rgba($white, 0.08);
+  background-color: rgba($black, 0.15);
+  border-radius: 8px;
+  overflow: auto;
+  box-sizing: border-box;
+  display: block;
+}
+
+.link-wrapper {
+  border: 1px solid rgba($white, 0.08);
+  background-color: rgba($black, 0.15);
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  line-break: anywhere;
+}

@@ -20,11 +20,16 @@ export const viewMetadata: ITableMetadata[] = [
   {
     fieldName: 'type',
     label: 'table.enemies.mobs.view.mob-type',
-    type: EHeaderType.MonType,
+    type: EHeaderType.MobType,
   },
   {
     fieldName: 'icon',
     label: 'table.enemies.mobs.view.icon',
-    type: EHeaderType.String,
+    type: EHeaderType.Link,
+  },
+  {
+    fieldName: 'actions',
+    label: 'table.enemies.mobs.view.actions',
+    type: EHeaderType.Action,
   },
 ];

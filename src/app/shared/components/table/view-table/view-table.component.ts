@@ -44,6 +44,7 @@ export class ViewTableComponent {
   public readonly bonusAttributeTranslate: string = 'enum.bonus-attribute.';
   public readonly weaponTranslate: string = 'enum.weapon.';
   public readonly archeTranslate: string = 'enum.arche.';
+  public readonly mobTypeTranslate: string = 'enum.mob-type.';
 
   constructor(
     private clipboardService: ClipboardService,

@@ -11,7 +11,7 @@ import { DatetimeFieldComponent } from '../../../../shared/components/fields/dat
 import { ImageFieldComponent } from '../../../../shared/components/fields/image-field/image-field.component';
 import { FormCacheService } from '../../../../core/services/form-cache/form-cache.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ICharacterFormBuilder } from '../../interfaces/form.interface';
 import { SharedCreate } from "../../../../core/classes/shared-create/shared-create";
 import { ICharactersPlayableOptions } from "../../interfaces/options.interfaces";
@@ -53,6 +53,7 @@ export class CharactersPlayableCreateComponent extends SharedCreate<FormGroup<IC
     protected override formBuilder: FormBuilder,
     private formCacheService: FormCacheService,
     private destroyRef: DestroyRef,
+    private route: ActivatedRoute,
     private charactersPlayableOptionsService: CharactersPlayableOptionsService,
     private charactersPlayableService: CharactersPlayableService,
     private charactersPlayableFormService: CharactersPlayableFormService,
@@ -66,7 +67,7 @@ export class CharactersPlayableCreateComponent extends SharedCreate<FormGroup<IC
     this.initForm();
     this.initCashing();
     this.loadCachedData();
-    this.initMetadata(this.charactersPlayableMetadataService.getCreate())
+    this.initMetadata(this.charactersPlayableMetadataService.getCreate());
   }
 
   private initOptions(): void {
@@ -93,10 +94,6 @@ export class CharactersPlayableCreateComponent extends SharedCreate<FormGroup<IC
   }
 
   public save(): void {
-    this.charactersPlayableService.createCharacter(this.form, this.viewLink);
-  }
-
-  protected initMetadata(metadata: IFormMetadata[]): void {
-    this.metadata = metadata;
+    this.charactersPlayableService.createCharacter(this.form, this.viewLink, this.route);
   }
 }

@@ -11,7 +11,7 @@ export class MobsOptionsService {
   constructor() {}
 
   public getOptions(): IOption[] {
-    return this.generateOptions<typeof EMobType>(EMobType, 'select.quality');
+    return this.generateOptions<typeof EMobType>(EMobType, 'select.mob-type');
   }
 
   public generateOptions<T extends Object>(
