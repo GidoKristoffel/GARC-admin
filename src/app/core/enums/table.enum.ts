@@ -11,5 +11,5 @@ export enum EHeaderType {
   Link = 'link',
   TranslateString = 'translate-string',
   Action = 'action',
-  MonType = 'mob-type',
+  MobType = 'mob-type',
 }

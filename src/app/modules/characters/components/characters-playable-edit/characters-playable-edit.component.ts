@@ -89,7 +89,7 @@ export class CharactersPlayableEditComponent extends SharedEdit<FormGroup<IChara
 
   protected save(): void {
     if (this.form && this.id) {
-      this.charactersPlayableService.updateCharacter(this.id, this.form, this.detailsLink);
+      this.charactersPlayableService.updateCharacter(this.id, this.form, this.detailsLink, this.route);
     }
   }
 }

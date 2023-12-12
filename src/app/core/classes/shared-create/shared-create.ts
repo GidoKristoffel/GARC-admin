@@ -17,4 +17,8 @@ export abstract class SharedCreate<T> {
   protected abstract initCashing(): void;
 
   protected abstract loadCachedData(): void;
+
+  protected initMetadata(metadata: IFormMetadata[]): void {
+    this.metadata = metadata;
+  }
 }

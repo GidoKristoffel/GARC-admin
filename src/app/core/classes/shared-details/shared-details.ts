@@ -9,6 +9,7 @@ import { ActivatedRoute } from "@angular/router";
 export abstract class SharedDetails {
   public readonly viewLink: string = '../../' + EPage.View;
   public readonly fieldType: typeof EFormType = EFormType;
+  public readonly language: typeof ELanguage = ELanguage;
 
   public metadata: IFormMetadata[] = [];
   public editLink: string = '../../' + EPage.Edit;

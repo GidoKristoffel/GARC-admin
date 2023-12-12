@@ -63,13 +63,13 @@ export const detailsMetadata: IFormMetadata[] = [
     type: EFormType.Option,
     option: '',
     language: '',
-    valueTranslateKey: 'page.enemies.mobs.select.region.',
+    valueTranslateKey: 'page.enemies.mobs.select.mob-type.',
     checkboxes: []
   },
   {
     fieldName: 'icon',
     label: 'page.enemies.mobs.field.icon',
-    type: EFormType.String,
+    type: EFormType.Image,
     option: '',
     language: '',
     valueTranslateKey: '',

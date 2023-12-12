@@ -37,6 +37,9 @@
           <td *ngIf="header.type === headerType.Weapon">
             {{ weaponTranslate + item[header.fieldName] | translate }}
           </td>
+          <td *ngIf="header.type === headerType.MobType">
+            {{ mobTypeTranslate + item[header.fieldName] | translate }}
+          </td>
           <td *ngIf="header.type === headerType.String">
             {{ item[header.fieldName] }}
           </td>

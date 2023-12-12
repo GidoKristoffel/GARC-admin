@@ -2,7 +2,6 @@ import { Component, DestroyRef, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScrollClassDirective } from '../../../../shared/directives/scroll-class/scroll-class.directive';
 import { DefaultBtnComponent } from '../../../../shared/components/button/default-btn/default-btn.component';
-import { EPage } from '../../../../core/enums/page.enum';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { TextFieldViewComponent } from '../../../../shared/components/view/text-field-view/text-field-view.component';
@@ -36,7 +35,6 @@ export class CharactersPlayableDetailsComponent
   implements OnInit
 {
   public character!: IPlayableCharacter;
-  public language: typeof ELanguage = ELanguage;
 
   constructor(
     private charactersApiService: CharactersApiService,

@@ -14,4 +14,6 @@ export interface IMob {
   };
   type: EMobType;
   icon: string;
+
+  [key: string]: any;
 }

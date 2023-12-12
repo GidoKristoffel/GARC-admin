@@ -68,7 +68,7 @@ export const createMetadata: IFormMetadata[] = [
   {
     fieldName: 'icon',
     label: 'page.enemies.mobs.field.icon',
-    type: EFormType.String,
+    type: EFormType.Image,
     option: '',
     language: '',
     valueTranslateKey: '',

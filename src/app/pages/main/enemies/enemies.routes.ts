@@ -6,6 +6,7 @@ export const enemiesRoutes: Routes = [
     path: EPage.Mobs,
     loadComponent: () =>
       import('./mobs/mobs.component').then((c) => c.MobsComponent),
+    loadChildren: () => import('./mobs/mobs.routers').then((r) => r.mobsPage),
   },
   {
     path: EPage.EliteBosses,

@@ -16,7 +16,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CharactersPlayableService {
   constructor(
-    private route: ActivatedRoute,
     private router: Router,
     private destroyRef: DestroyRef,
     private charactersApiService: CharactersApiService,
@@ -39,6 +38,7 @@ export class CharactersPlayableService {
     id: string,
     form: FormGroup<ICharacterFormBuilder>,
     detailsLink: string,
+    route: ActivatedRoute,
   ): void {
     const submissionForm: ICharacterApiForm =
       this.charactersPlayableFormService.convertToSend(form);
@@ -47,19 +47,24 @@ export class CharactersPlayableService {
       .update(id, submissionForm)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((): void => {
-        this.router.navigate([detailsLink], { relativeTo: this.route }).then();
+        this.router.navigate([detailsLink], { relativeTo: route }).then();
       });
   }
 
-  public createCharacter(form: FormGroup<ICharacterFormBuilder>, viewLink: string): void {
+  public createCharacter(
+    form: FormGroup<ICharacterFormBuilder>,
+    viewLink: string,
+    route: ActivatedRoute,
+  ): void {
     if (form) {
-      const submissionForm: ICharacterApiForm = this.charactersPlayableFormService.convertToSend(form);
+      const submissionForm: ICharacterApiForm =
+        this.charactersPlayableFormService.convertToSend(form);
 
       this.charactersApiService
         .create(submissionForm)
         .pipe(takeUntilDestroyed(this.destroyRef))
         .subscribe((): void => {
-          this.router.navigate([viewLink], { relativeTo: this.route }).then();
+          this.router.navigate([viewLink], { relativeTo: route }).then();
         });
     }
   }
