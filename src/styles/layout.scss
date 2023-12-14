@@ -27,6 +27,15 @@
   padding: 8px;
 }
 
+.card-wrapper-btn {
+  width: 100%;
+  text-align: right;
+  box-sizing: border-box;
+  border: 1px solid $granite-gray;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
 .gap-4 {
   gap: 4px;
 }

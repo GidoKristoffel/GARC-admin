@@ -20,7 +20,7 @@ export interface IMobFormBuilder {
   descriptionEn: FormControl<string | null>;
   descriptionUa: FormControl<string | null>;
   descriptionRu: FormControl<string | null>;
-  type: FormControl<EQuality | string | null>;
+  type: FormControl<EMobType | string | null>;
   icon: FormControl<string | null>;
 }
 

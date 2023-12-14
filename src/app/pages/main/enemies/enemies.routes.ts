@@ -14,6 +14,10 @@ export const enemiesRoutes: Routes = [
       import('./elite-bosses/elite-bosses.component').then(
         (c) => c.EliteBossesComponent,
       ),
+    loadChildren: () =>
+      import('./elite-bosses/elite-bosses.routers').then(
+        (r) => r.eliteBossesPage,
+      ),
   },
   {
     path: EPage.WeeklyBosses,

@@ -1,5 +1,5 @@
-<div class="playable-create flex-column gap-8">
-  <div class="form-wrapper flex-column gap-4">
+<div class="height-100 flex-column gap-8 padding-8">
+  <div class="card-wrapper-form-main flex-column flex-fill-space gap-4">
     <div class="form flex-column gap-4" cltScrollClass *ngIf="character">
       @for (item of metadata; track $index) {
         @if (item.type === fieldType.String) {
@@ -31,7 +31,7 @@
       }
     </div>
   </div>
-  <div class="btn-wrapper flex-row-right gap-8">
+  <div class="card-wrapper-btn flex-row-right gap-8">
     <clt-default-btn [routerLink]="viewLink">{{
       "shared.btn.back" | translate
     }}</clt-default-btn>

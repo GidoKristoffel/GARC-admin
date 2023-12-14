@@ -10,21 +10,15 @@ import { DropdownFieldComponent } from '../../../../shared/components/fields/dro
 import { ImageFieldComponent } from '../../../../shared/components/fields/image-field/image-field.component';
 import { TextFieldComponent } from '../../../../shared/components/fields/text-field/text-field.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { IPlayableCharacter } from '../../interfaces/table.interface';
-import {
-  ICharacterFormBuilder,
-} from '../../interfaces/form.interface';
 import { CharactersPlayableFormService } from '../../services/characters-playable-form/characters-playable-form.service';
 import { SharedEdit } from '../../../../core/classes/shared-edit/shared-edit';
 import { LanguageService } from '../../../../core/services/language/language.service';
-import {
-  CharactersPlayableOptionsService
-} from "../../services/characters-playable-options/characters-playable-options.service";
-import { ICharactersPlayableOptions } from "../../interfaces/options.interfaces";
-import { CharactersPlayableService } from "../../services/characters-playable/characters-playable.service";
-import {
-  CharactersPlayableMetadataService
-} from "../../services/characters-playable-metadata/characters-playable-metadata.service";
+import { CharactersPlayableOptionsService } from '../../services/characters-playable-options/characters-playable-options.service';
+import { CharactersPlayableService } from '../../services/characters-playable/characters-playable.service';
+import { CharactersPlayableMetadataService } from '../../services/characters-playable-metadata/characters-playable-metadata.service';
+import { IPlayableCharacter } from '../../interfaces/table.interface';
+import { ICharacterFormBuilder } from '../../interfaces/form.interface';
+import { ICharactersPlayableOptions } from '../../interfaces/options.interfaces';
 
 @Component({
   selector: 'clt-characters-playable-edit',
@@ -46,7 +40,10 @@ import {
   templateUrl: './characters-playable-edit.component.html',
   styleUrl: './characters-playable-edit.component.scss',
 })
-export class CharactersPlayableEditComponent extends SharedEdit<FormGroup<ICharacterFormBuilder>> implements OnInit {
+export class CharactersPlayableEditComponent
+  extends SharedEdit<FormGroup<ICharacterFormBuilder>>
+  implements OnInit
+{
   public options!: ICharactersPlayableOptions;
 
   constructor(
@@ -75,21 +72,31 @@ export class CharactersPlayableEditComponent extends SharedEdit<FormGroup<IChara
     }
   }
 
+  protected save(): void {
+    if (this.form && this.id) {
+      this.charactersPlayableService.updateCharacter(
+        this.id,
+        this.form,
+        this.detailsLink,
+        this.route,
+      );
+    }
+  }
+
   private getCharacterById(id: string): void {
-    this.charactersPlayableService.getCharacterById(id, (character: IPlayableCharacter): void => {
-      this.form.patchValue(this.charactersPlayableFormService.convertToForm(character));
-      this.initOptions();
-      this.loaded = true;
-    });
+    this.charactersPlayableService.getCharacterById(
+      id,
+      (character: IPlayableCharacter): void => {
+        this.form.patchValue(
+          this.charactersPlayableFormService.convertToForm(character),
+        );
+        this.initOptions();
+        this.loaded = true;
+      },
+    );
   }
 
   private initOptions(): void {
     this.options = this.charactersPlayableOptionsService.getOptions();
-  }
-
-  protected save(): void {
-    if (this.form && this.id) {
-      this.charactersPlayableService.updateCharacter(this.id, this.form, this.detailsLink, this.route);
-    }
   }
 }
