@@ -16,27 +16,34 @@ import { ICharacterApiForm } from '../interfaces/form.interface';
 })
 export class CharactersApiService {
   private readonly api: string = environment.api + '/admin/character';
+  private readonly credentialsOptions: { withCredentials: boolean } = {
+    withCredentials: true,
+  };
 
   constructor(private http: HttpClient) {}
 
   public create(
     form: ICharacterApiForm,
   ): Observable<ICharacterCreateFormResponse> {
-    return this.http.post<ICharacterCreateFormResponse>(this.api, form, {
-      withCredentials: true,
-    });
+    return this.http.post<ICharacterCreateFormResponse>(
+      this.api,
+      form,
+      this.credentialsOptions,
+    );
   }
 
   public getAll(): Observable<ICharacterViewFormResponse> {
-    return this.http.get<ICharacterViewFormResponse>(this.api, {
-      withCredentials: true,
-    });
+    return this.http.get<ICharacterViewFormResponse>(
+      this.api,
+      this.credentialsOptions,
+    );
   }
 
   public getById(id: string): Observable<ICharacterDetailFormResponse> {
-    return this.http.get<ICharacterDetailFormResponse>(`${this.api}/${id}`, {
-      withCredentials: true,
-    });
+    return this.http.get<ICharacterDetailFormResponse>(
+      `${this.api}/${id}`,
+      this.credentialsOptions,
+    );
   }
 
   public update(
@@ -46,13 +53,14 @@ export class CharactersApiService {
     return this.http.patch<ICharacterEditFormResponse>(
       `${this.api}/${id}`,
       form,
-      { withCredentials: true },
+      this.credentialsOptions,
     );
   }
 
   public delete(id: string): Observable<ICharacterDeleteFormResponse> {
-    return this.http.delete<ICharacterDeleteFormResponse>(`${this.api}/${id}`, {
-      withCredentials: true,
-    });
+    return this.http.delete<ICharacterDeleteFormResponse>(
+      `${this.api}/${id}`,
+      this.credentialsOptions,
+    );
   }
 }

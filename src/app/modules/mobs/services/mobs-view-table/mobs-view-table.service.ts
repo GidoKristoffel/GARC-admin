@@ -1,9 +1,7 @@
 import { DestroyRef, Injectable } from '@angular/core';
 import { MobsApiService } from '../../api/mobs.api.service';
 import { IMob } from '../../interfaces/common.inteface';
-import { IPlayableCharacter } from '../../../characters/interfaces/table.interface';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ICharacterViewFormResponse } from '../../../characters/interfaces/api.interfaces';
 import { IMobViewResponse } from '../../interfaces/api.interfaces';
 
 @Injectable({
