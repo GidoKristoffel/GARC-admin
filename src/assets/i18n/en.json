@@ -207,6 +207,34 @@
             "mystical-beasts": "Mystical Beasts"
           }
         }
+      },
+      "weekly-bosses": {
+        "field": {
+          "name": {
+            "en": "Name [English]",
+            "ua": "Name [Ukrainian]",
+            "ru": "Name [Russian]"
+          },
+          "description": {
+            "en": "Description [English]",
+            "ua": "Description [Ukrainian]",
+            "ru": "Description [Russian]"
+          },
+          "type": "Type",
+          "icon": "Icon"
+        },
+        "select": {
+          "mob-type": {
+            "other-human-factions":  "Other Human Factions",
+            "automatons": "Automatons",
+            "fatui":  "Fatui",
+            "enemies-of-note": "Enemies of Note",
+            "hilichurls":  "Hilichurls",
+            "elemental-lifeforms": "Elemental Lifeforms",
+            "the-abyss":  "The Abyss",
+            "mystical-beasts": "Mystical Beasts"
+          }
+        }
       }
     }
   },
@@ -282,6 +310,16 @@
         }
       },
       "elite-bosses": {
+        "view": {
+          "id": "ID",
+          "name": "Name",
+          "description": "Description",
+          "mob-type": "Type",
+          "icon": "Icon",
+          "actions": "Actions"
+        }
+      },
+      "weekly-bosses": {
         "view": {
           "id": "ID",
           "name": "Name",

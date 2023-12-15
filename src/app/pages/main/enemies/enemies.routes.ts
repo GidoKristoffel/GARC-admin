@@ -25,6 +25,7 @@ export const enemiesRoutes: Routes = [
       import('./weekly-bosses/weekly-bosses.component').then(
         (c) => c.WeeklyBossesComponent,
       ),
+    loadChildren: () => import('./weekly-bosses/weekly-bosses.routes').then((c) => c.weeklyBossesRoutes),
   },
   {
     path: EPage.Empty,
