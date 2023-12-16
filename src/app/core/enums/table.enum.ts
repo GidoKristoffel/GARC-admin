@@ -1,3 +1,7 @@
+import { ETalentMaterialType } from "./talent-material-type.enum";
+import { EMaterialRarity } from "./material-rarity.enum";
+import { EDay } from "./day.enum";
+
 export enum EHeaderType {
   Id = 'id',
   String = 'string',
@@ -12,4 +16,7 @@ export enum EHeaderType {
   TranslateString = 'translate-string',
   Action = 'action',
   MobType = 'mob-type',
+  TalentMaterialType = 'talent-material-type',
+  MaterialRarity = 'material-rarity',
+  Day = 'day',
 }
