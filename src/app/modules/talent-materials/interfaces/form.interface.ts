@@ -28,7 +28,7 @@ export interface ITalentMaterialFormBuilder {
   type: FormControl<ETalentMaterialType | string | null>;
   rarity: FormControl<EMaterialRarity | string | null>;
   region: FormControl<ERegion | string | null>;
-  farmDays: FormControl<EDay | string | null>[];
+  farmDays: FormControl<EDay[] | null>;
   icon: FormControl<string | null>;
 }
 
