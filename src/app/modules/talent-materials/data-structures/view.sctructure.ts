@@ -1,5 +1,5 @@
-import { ITableMetadata } from "../../../shared/interfaces/table.interface";
-import { EHeaderType } from "../../../core/enums/table.enum";
+import { ITableMetadata } from '../../../shared/interfaces/table.interface';
+import { EHeaderType } from '../../../core/enums/table.enum';
 
 export const viewMetadata: ITableMetadata[] = [
   {
@@ -34,17 +34,17 @@ export const viewMetadata: ITableMetadata[] = [
   },
   {
     fieldName: 'farmDays',
-    label: 'table.materials.talent.view.farmDays',
+    label: 'table.materials.talent.view.farm-days',
     type: EHeaderType.Day,
   },
   {
     fieldName: 'icon',
-    label: 'table.enemies.mobs.view.icon',
+    label: 'table.materials.talent.view.icon',
     type: EHeaderType.Link,
   },
   {
     fieldName: 'actions',
-    label: 'table.enemies.mobs.view.actions',
+    label: 'table.materials.talent.view.actions',
     type: EHeaderType.Action,
-  }
+  },
 ];
