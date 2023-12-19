@@ -10,14 +10,14 @@ import { ITalentMaterialsOptions } from "../../interfaces/options.interface";
   providedIn: 'root'
 })
 export class TalentMaterialsOptionsService {
-  private readonly translateKey: string = 'page.materials.talent.';
+  private readonly translateKey: string = 'enum.';
 
   public getOptions(): ITalentMaterialsOptions {
     return {
-      type: this.generateOptions<typeof ETalentMaterialType>(ETalentMaterialType, 'select.type'),
-      rarity: this.generateOptions<typeof EMaterialRarity>(EMaterialRarity, 'select.rarity'),
-      region: this.generateOptions<typeof ERegion>(ERegion, 'select.region'),
-      farmDays: this.generateOptions<typeof EDay>(EDay, 'select.farm-days'),
+      type: this.generateOptions<typeof ETalentMaterialType>(ETalentMaterialType, 'talent-type'),
+      rarity: this.generateOptions<typeof EMaterialRarity>(EMaterialRarity, 'rarity'),
+      region: this.generateOptions<typeof ERegion>(ERegion, 'region'),
+      farmDays: this.generateOptions<typeof EDay>(EDay, 'farm-days'),
     };
   }
 

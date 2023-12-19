@@ -151,6 +151,27 @@
         }
       }
     },
+    "materials": {
+      "talent": {
+        "field": {
+          "name": {
+            "en": "Имя [английский]",
+            "ua": "Имя [украинский]",
+            "ru": "Имя [русский]"
+          },
+          "description": {
+            "en": "Описание [английский]",
+            "ua": "Описание [украинский]",
+            "ru": "Описание [русский]"
+          },
+          "type": "Тип",
+          "rarity": "Редкость",
+          "region": "Регион",
+          "farm-days": "Дни фарма",
+          "icon": "Иконка"
+        }
+      }
+    },
     "enemies": {
       "mobs": {
         "field": {
@@ -329,6 +350,21 @@
           "actions": "Действия"
         }
       }
+    },
+    "materials": {
+      "talent": {
+        "view": {
+          "id": "Id",
+          "name": "Имя",
+          "description": "Описание",
+          "type": "Тип",
+          "rarity": "Редкость",
+          "region": "Регион",
+          "farm-days": "Дни фарма",
+          "icon": "Иконка",
+          "actions": "Действия"
+        }
+      }
     }
   },
   "enum": {
@@ -397,6 +433,34 @@
       "elemental-lifeforms": "Элементальные существа",
       "the-abyss":  "Бездна",
       "mystical-beasts": "Мистические звери"
+    },
+    "enemy-type": {
+      "other-human-factions":  "Прочие человеческие фракции",
+      "automatons": "Автоматоны",
+      "fatui":  "Фатуи",
+      "enemies-of-note": "Враги, достойные упоминания",
+      "hilichurls":  "Хиличурлы",
+      "elemental-lifeforms": "Элементальные существа",
+      "the-abyss":  "Бездна",
+      "mystical-beasts": "Мистические звери"
+    },
+    "talent-type": {
+      "book": "Книги талантов",
+      "crown": "Корона"
+    },
+    "rarity": {
+      "uncommon": "Необычная",
+      "rare": "Редкая",
+      "epic": "Эпическая"
+    },
+    "farm-days": {
+      "monday": "Понедельник",
+      "tuesday": "Вторник",
+      "wednesday": "Среда",
+      "thursday": "Четверг",
+      "friday": "Пятница",
+      "saturday": "Субота",
+      "sunday": "Воскресенье"
     }
   },
   "dialog": {

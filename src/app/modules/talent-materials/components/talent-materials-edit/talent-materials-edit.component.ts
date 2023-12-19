@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedEdit } from "../../../../core/classes/shared-edit/shared-edit";
 import { FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { IOption } from "../../../../shared/interfaces/input.interface";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, RouterLink } from "@angular/router";
 import { LanguageService } from "../../../../core/services/language/language.service";
 import { ITalentMaterialFormBuilder } from "../../interfaces/form.interface";
 import {
@@ -27,7 +27,7 @@ import { CheckboxFieldComponent } from "../../../../shared/components/fields/che
 @Component({
   selector: 'clt-talent-materials-edit',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ImageFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, CheckboxFieldComponent],
+  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ImageFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, CheckboxFieldComponent, RouterLink],
   templateUrl: './talent-materials-edit.component.html',
   styleUrl: './talent-materials-edit.component.scss'
 })

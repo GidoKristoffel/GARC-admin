@@ -63,7 +63,7 @@ export const detailsMetadata: IFormMetadata[] = [
     type: EFormType.Option,
     option: '',
     language: '',
-    valueTranslateKey: 'page.materials.talent.select.type.',
+    valueTranslateKey: 'enum.talent-type.',
     checkboxes: [],
   },
   {
@@ -72,7 +72,7 @@ export const detailsMetadata: IFormMetadata[] = [
     type: EFormType.Option,
     option: '',
     language: '',
-    valueTranslateKey: 'page.materials.talent.select.rarity.',
+    valueTranslateKey: 'enum.rarity.',
     checkboxes: [],
   },
   {
@@ -81,16 +81,16 @@ export const detailsMetadata: IFormMetadata[] = [
     type: EFormType.Option,
     option: '',
     language: '',
-    valueTranslateKey: 'page.materials.talent.select.region.',
+    valueTranslateKey: 'enum.region.',
     checkboxes: [],
   },
   {
     fieldName: 'farmDays',
     label: 'page.materials.talent.field.farm-days',
-    type: EFormType.Option,
+    type: EFormType.Checkbox,
     option: '',
     language: '',
-    valueTranslateKey: 'page.materials.talent.select.farm-days.',
+    valueTranslateKey: 'enum.farm-days.',
     checkboxes: [],
   },
   {
