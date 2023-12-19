@@ -45,6 +45,9 @@ export class ViewTableComponent {
   public readonly weaponTranslate: string = 'enum.weapon.';
   public readonly archeTranslate: string = 'enum.arche.';
   public readonly mobTypeTranslate: string = 'enum.mob-type.';
+  public readonly talentTypeTranslate: string = 'enum.talent-type.';
+  public readonly rarityTranslate: string = 'enum.rarity.';
+  public readonly farmDaysTranslate: string = 'enum.farm-days.';
 
   constructor(
     private clipboardService: ClipboardService,

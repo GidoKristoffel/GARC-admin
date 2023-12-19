@@ -151,6 +151,27 @@
         }
       }
     },
+    "materials": {
+      "talent": {
+        "field": {
+          "name": {
+            "en": "Name [English]",
+            "ua": "Name [Ukrainian]",
+            "ru": "Name [Russian]"
+          },
+          "description": {
+            "en": "Description [English]",
+            "ua": "Description [Ukrainian]",
+            "ru": "Description [Russian]"
+          },
+          "type": "Type",
+          "rarity": "Rarity",
+          "region": "Region",
+          "farm-days": "Farm days",
+          "icon": "Icon"
+        }
+      }
+    },
     "enemies": {
       "mobs": {
         "field": {
@@ -329,6 +350,21 @@
           "actions": "Actions"
         }
       }
+    },
+    "materials": {
+      "talent": {
+        "view": {
+          "id": "ID",
+          "name": "Name",
+          "description": "Description",
+          "type": "Type",
+          "rarity": "Rarity",
+          "region": "Region",
+          "farm-days": "Farm days",
+          "icon": "icon",
+          "actions": "Actions"
+        }
+      }
     }
   },
   "enum": {
@@ -407,6 +443,24 @@
       "elemental-lifeforms": "Elemental Lifeforms",
       "the-abyss":  "The Abyss",
       "mystical-beasts": "Mystical Beasts"
+    },
+    "talent-type": {
+      "book": "Talent books",
+      "crown": "Crown"
+    },
+    "rarity": {
+      "uncommon": "Uncommon",
+      "rare": "Rare",
+      "epic": "Epic"
+    },
+    "farm-days": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
     }
   },
   "dialog": {

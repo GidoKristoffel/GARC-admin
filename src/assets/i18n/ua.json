@@ -151,6 +151,27 @@
         }
       }
     },
+    "materials": {
+      "talent": {
+        "field": {
+          "name": {
+            "en": "Ім'я [англійська]",
+            "ua": "Ім'я [українська]",
+            "ru": "Ім'я [російська]"
+          },
+          "description": {
+            "en": "Опис [англійська]",
+            "ua": "Опис [українська]",
+            "ru": "Опис [російська]"
+          },
+          "type": "Тип",
+          "rarity": "Рідкість",
+          "region": "Регіон",
+          "farm-days": "Дні фарму",
+          "icon": "Піктограма"
+        }
+      }
+    },
     "enemies": {
       "mobs": {
         "field": {
@@ -332,6 +353,21 @@
           "actions": "Дії"
         }
       }
+    },
+    "materials": {
+      "talent": {
+        "view": {
+          "id": "ID",
+          "name": "Им'я",
+          "description": "Опис",
+          "type": "Тип",
+          "rarity": "Рідкість",
+          "region": "Регіон",
+          "farm-days": "Дні фарму",
+          "icon": "Піктограма",
+          "actions": "Дії"
+        }
+      }
     }
   },
   "enum": {
@@ -400,6 +436,34 @@
       "elemental-lifeforms": "Елементальні істоти",
       "the-abyss":  "Безодня",
       "mystical-beasts": "Містичні звірі"
+    },
+    "enemy-type": {
+      "other-human-factions":  "Інші людські фракції",
+      "automatons": "Автоматони",
+      "fatui":  "Фатуї",
+      "enemies-of-note": "Вороги, гідні згадки",
+      "hilichurls":  "Хілічурли",
+      "elemental-lifeforms": "Елементальні істоти",
+      "the-abyss":  "Безодня",
+      "mystical-beasts": "Містичні звірі"
+    },
+    "talent-type": {
+      "book": "Книги талантів",
+      "crown": "Корона"
+    },
+    "rarity": {
+      "uncommon": "Незвичайна",
+      "rare": "Рідка",
+      "epic": "Епічна"
+    },
+    "farm-days": {
+      "monday": "Понеділок",
+      "tuesday": "Вівторок",
+      "wednesday": "Середа",
+      "thursday": "Четверг",
+      "friday": "Пятниця",
+      "saturday": "Субота",
+      "sunday": "Неділя"
     }
   },
   "dialog": {

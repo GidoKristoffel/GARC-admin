@@ -86,8 +86,8 @@ export const createMetadata: IFormMetadata[] = [
   {
     fieldName: 'farmDays',
     label: 'page.materials.talent.field.farm-days',
-    type: EFormType.Option,
-    option: 'region',
+    type: EFormType.Checkbox,
+    option: 'farmDays',
     language: '',
     valueTranslateKey: '',
     checkboxes: [],

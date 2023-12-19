@@ -40,6 +40,17 @@
           <td *ngIf="header.type === headerType.MobType">
             {{ mobTypeTranslate + item[header.fieldName] | translate }}
           </td>
+          <td *ngIf="header.type === headerType.TalentMaterialType">
+            {{ talentTypeTranslate + item[header.fieldName] | translate }}
+          </td>
+          <td *ngIf="header.type === headerType.MaterialRarity">
+            {{ rarityTranslate + item[header.fieldName] | translate }}
+          </td>
+          <td *ngIf="header.type === headerType.Day">
+            <div *ngFor="let arrayItem of item[header.fieldName]">
+              {{ farmDaysTranslate + arrayItem | translate }}
+            </div>
+          </td>
           <td *ngIf="header.type === headerType.String">
             {{ item[header.fieldName] }}
           </td>

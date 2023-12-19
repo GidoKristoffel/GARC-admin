@@ -29,6 +29,10 @@ export const materialsRoutes: Routes = [
       import('./character-talents/character-talents.component').then(
         (c) => c.CharacterTalentsComponent,
       ),
+    loadChildren: () =>
+      import('./character-talents/character-talents.routes').then(
+        (r) => r.characterTalentsRoutes,
+      ),
   },
   {
     path: EPage.Weapons,
