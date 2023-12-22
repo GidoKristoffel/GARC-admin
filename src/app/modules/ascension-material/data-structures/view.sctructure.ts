@@ -4,37 +4,37 @@ import { EHeaderType } from "../../../core/enums/table.enum";
 export const viewMetadata: ITableMetadata[] = [
   {
     fieldName: 'id',
-    label: 'table.materials.talent.view.id',
+    label: 'table.materials.ascension.view.id',
     type: EHeaderType.Id,
   },
   {
     fieldName: 'name',
-    label: 'table.materials.talent.view.name',
+    label: 'table.materials.ascension.view.name',
     type: EHeaderType.TranslateString,
   },
   {
     fieldName: 'description',
-    label: 'table.materials.talent.view.description',
+    label: 'table.materials.ascension.view.description',
     type: EHeaderType.TranslateString,
   },
   {
     fieldName: 'type',
-    label: 'table.materials.talent.view.type',
-    type: EHeaderType.TalentMaterialType,
+    label: 'table.materials.ascension.view.type',
+    type: EHeaderType.AscensionMaterialType,
   },
   {
     fieldName: 'rarity',
-    label: 'table.materials.talent.view.rarity',
+    label: 'table.materials.ascension.view.rarity',
     type: EHeaderType.MaterialRarity,
   },
   {
     fieldName: 'icon',
-    label: 'table.materials.talent.view.icon',
+    label: 'table.materials.ascension.view.icon',
     type: EHeaderType.Link,
   },
   {
     fieldName: 'actions',
-    label: 'table.materials.talent.view.actions',
+    label: 'table.materials.ascension.view.actions',
     type: EHeaderType.Action,
   },
 ];
