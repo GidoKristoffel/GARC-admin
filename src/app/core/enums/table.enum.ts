@@ -19,4 +19,5 @@ export enum EHeaderType {
   TalentMaterialType = 'talent-material-type',
   MaterialRarity = 'material-rarity',
   Day = 'day',
+  AscensionMaterialType = 'ascension-material-type'
 }
