@@ -12,7 +12,7 @@ import {
 @Injectable({
   providedIn: 'root'
 })
-export class AscensionMaterialApiService {
+export class AscensionMaterialsApiService {
   private readonly api: string = environment.api + '/admin/ascension-material';
   private readonly options: { withCredentials: boolean } = {
     withCredentials: true,

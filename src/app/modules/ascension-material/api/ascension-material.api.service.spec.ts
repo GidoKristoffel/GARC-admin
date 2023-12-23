@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AscensionMaterialApiService } from './ascension-material.api.service';
+import { AscensionMaterialsApiService } from './ascension-materials.api.service';
 
 describe('AscensionMaterialApiService', () => {
-  let service: AscensionMaterialApiService;
+  let service: AscensionMaterialsApiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AscensionMaterialApiService);
+    service = TestBed.inject(AscensionMaterialsApiService);
   });
 
   it('should be created', () => {
