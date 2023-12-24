@@ -1,6 +1,4 @@
 import { EMaterialRarity } from "../../../core/enums/material-rarity.enum";
-import { ERegion } from "../../characters/enums/region.enum";
-import { EDay } from "../../../core/enums/day.enum";
 import { FormControl } from "@angular/forms";
 import { EAscensionMaterialType } from "../../../core/enums/ascension-material-type.enum";
 
@@ -41,7 +39,5 @@ export interface IAscensionMaterialApiForm {
   };
   type: EAscensionMaterialType;
   rarity: EMaterialRarity;
-  region: ERegion;
-  farmDays: EDay[];
   icon: string;
 }
