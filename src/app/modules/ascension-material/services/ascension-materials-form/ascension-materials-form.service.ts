@@ -1,16 +1,7 @@
 import { Injectable } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
-import {
-  ITalentMaterialApiForm,
-  ITalentMaterialForm,
-  ITalentMaterialFormBuilder
-} from "../../../talent-materials/interfaces/form.interface";
-import { EDay } from "../../../../core/enums/day.enum";
-import { ITalentMaterial } from "../../../talent-materials/interfaces/common.inteface";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { convertToUpperDashFormat } from "../../../../core/utilities/request.utility";
-import { ETalentMaterialType } from "../../../../core/enums/talent-material-type.enum";
 import { EMaterialRarity } from "../../../../core/enums/material-rarity.enum";
-import { ERegion } from "../../../characters/enums/region.enum";
 import {
   IAscensionMaterialApiForm,
   IAscensionMaterialForm,
