@@ -22,6 +22,7 @@ export const materialsRoutes: Routes = [
       import('./character-ascension/character-ascension.component').then(
         (c) => c.CharacterAscensionComponent,
       ),
+    loadChildren: () => import('./character-ascension/character-ascension.routes').then((c) => c.characterAscensionRoutes),
   },
   {
     path: EPage.CharacterTalents,

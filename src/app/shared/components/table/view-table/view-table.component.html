@@ -43,6 +43,9 @@
           <td *ngIf="header.type === headerType.TalentMaterialType">
             {{ talentTypeTranslate + item[header.fieldName] | translate }}
           </td>
+          <td *ngIf="header.type === headerType.AscensionMaterialType">
+            {{ ascensionTypeTranslate + item[header.fieldName] | translate }}
+          </td>
           <td *ngIf="header.type === headerType.MaterialRarity">
             {{ rarityTranslate + item[header.fieldName] | translate }}
           </td>
