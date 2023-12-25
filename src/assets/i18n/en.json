@@ -170,6 +170,23 @@
           "farm-days": "Farm days",
           "icon": "Icon"
         }
+      },
+      "ascension": {
+        "field": {
+          "name": {
+            "en": "Name [English]",
+            "ua": "Name [Ukrainian]",
+            "ru": "Name [Russian]"
+          },
+          "description": {
+            "en": "Description [English]",
+            "ua": "Description [Ukrainian]",
+            "ru": "Description [Russian]"
+          },
+          "type": "Type",
+          "rarity": "Rarity",
+          "icon": "Icon"
+        }
       }
     },
     "enemies": {
@@ -364,6 +381,17 @@
           "icon": "icon",
           "actions": "Actions"
         }
+      },
+      "ascension": {
+        "view": {
+          "id": "ID",
+          "name": "Name",
+          "description": "Description",
+          "type": "Type",
+          "rarity": "Rarity",
+          "icon": "icon",
+          "actions": "Actions"
+        }
       }
     }
   },
@@ -461,6 +489,9 @@
       "friday": "Friday",
       "saturday": "Saturday",
       "sunday": "Sunday"
+    },
+    "ascension-type": {
+      "gems-of-exaltation": "Gems of exaltation"
     }
   },
   "dialog": {
