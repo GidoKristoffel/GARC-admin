@@ -13,11 +13,14 @@ import { FormatPipeModule } from "ngx-date-fns";
 import { ScrollClassDirective } from "../../../../shared/directives/scroll-class/scroll-class.directive";
 import { TextFieldViewComponent } from "../../../../shared/components/view/text-field-view/text-field-view.component";
 import { TranslateModule } from "@ngx-translate/core";
+import {
+    TableDetailsFacadeComponent
+} from "../../../../shared/components/facade/table-details-facade/table-details-facade.component";
 
 @Component({
   selector: 'clt-talent-materials-details',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, FormatPipeModule, ScrollClassDirective, TextFieldViewComponent, TranslateModule, RouterLink],
+    imports: [CommonModule, DefaultBtnComponent, FormatPipeModule, ScrollClassDirective, TextFieldViewComponent, TranslateModule, RouterLink, TableDetailsFacadeComponent],
   templateUrl: './talent-materials-details.component.html',
   styleUrl: './talent-materials-details.component.scss',
 })

@@ -1,30 +1,6 @@
-<div class="playable-create flex-column gap-8">
-  <div class="form-wrapper flex-column gap-4">
-    <div class="form flex-column gap-4" cltScrollClass *ngIf="mob">
-      @for (item of metadata; track $index) {
-        @if (item.type === fieldType.String) {
-          <clt-text-field-view [label]="item.label">{{ mob[item.fieldName][item.language] }}</clt-text-field-view>
-        }
-        @if (item.type === fieldType.Option) {
-          <clt-text-field-view [label]="item.label">{{ item.valueTranslateKey + mob[item.fieldName] | translate }}</clt-text-field-view>
-        }
-        @if (item.type === fieldType.Image) {
-          <clt-text-field-view [label]="item.label" [valueWrapper]="false">
-            <div class="flex-column gap-8">
-              <img [src]="mob[item.fieldName]" alt="" />
-              <div class="link-wrapper">{{ mob[item.fieldName] }}</div>
-            </div>
-          </clt-text-field-view>
-        }
-      }
-    </div>
-  </div>
-  <div class="card-wrapper-btn flex-row-right gap-8">
-    <clt-default-btn [routerLink]="viewLink">{{
-        "shared.btn.back" | translate
-      }}</clt-default-btn>
-    <clt-default-btn [routerLink]="editLink">{{
-        "shared.btn.edit" | translate
-      }}</clt-default-btn>
-  </div>
-</div>
+<clt-table-details-facade
+  [details]="mob"
+  [metadata]="metadata"
+  [viewLink]="viewLink"
+  [editLink]="editLink"
+></clt-table-details-facade>

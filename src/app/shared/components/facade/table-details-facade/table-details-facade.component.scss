@@ -1,0 +1,29 @@
+@import "color";
+
+.scroll {
+  padding-right: 8px;
+}
+
+.form {
+  overflow: auto;
+}
+
+img {
+  height: 200px;
+  width: fit-content;
+  border: 1px solid rgba($white, 0.08);
+  background-color: rgba($black, 0.15);
+  border-radius: 8px;
+  overflow: auto;
+  box-sizing: border-box;
+  display: block;
+}
+
+.link-wrapper {
+  border: 1px solid rgba($white, 0.08);
+  background-color: rgba($black, 0.15);
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  line-break: anywhere;
+}

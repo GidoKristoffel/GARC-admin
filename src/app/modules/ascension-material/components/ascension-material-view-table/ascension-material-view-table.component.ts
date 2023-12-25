@@ -14,11 +14,14 @@ import { FormsModule } from "@angular/forms";
 import { TranslateModule } from "@ngx-translate/core";
 import { ViewTableComponent } from "../../../../shared/components/table/view-table/view-table.component";
 import { RouterLink } from "@angular/router";
+import {
+  TableViewFacadeComponent
+} from "../../../../shared/components/facade/table-view-facade/table-view-facade.component";
 
 @Component({
   selector: 'clt-ascension-material-view-table',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, FormsModule, TranslateModule, ViewTableComponent, RouterLink],
+  imports: [CommonModule, DefaultBtnComponent, FormsModule, TranslateModule, ViewTableComponent, RouterLink, TableViewFacadeComponent],
   templateUrl: './ascension-material-view-table.component.html',
   styleUrl: './ascension-material-view-table.component.scss',
 })
