@@ -10,11 +10,14 @@ import { FormsModule } from "@angular/forms";
 import { TranslateModule } from "@ngx-translate/core";
 import { ViewTableComponent } from "../../../../shared/components/table/view-table/view-table.component";
 import { RouterLink } from "@angular/router";
+import {
+  TableViewFacadeComponent
+} from "../../../../shared/components/facade/table-view-facade/table-view-facade.component";
 
 @Component({
   selector: 'clt-elite-bosses-view',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, FormsModule, TranslateModule, ViewTableComponent, RouterLink],
+  imports: [CommonModule, DefaultBtnComponent, FormsModule, TranslateModule, ViewTableComponent, RouterLink, TableViewFacadeComponent],
   templateUrl: './elite-bosses-view.component.html',
   styleUrl: './elite-bosses-view.component.scss',
 })

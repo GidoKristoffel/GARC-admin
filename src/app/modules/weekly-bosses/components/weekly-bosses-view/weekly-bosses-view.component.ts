@@ -10,11 +10,14 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { TranslateModule } from "@ngx-translate/core";
 import { ViewTableComponent } from "../../../../shared/components/table/view-table/view-table.component";
 import { RouterLink } from "@angular/router";
+import {
+  TableViewFacadeComponent
+} from "../../../../shared/components/facade/table-view-facade/table-view-facade.component";
 
 @Component({
   selector: 'clt-weekly-bosses-view',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, FormsModule, ReactiveFormsModule, TranslateModule, ViewTableComponent, RouterLink],
+  imports: [CommonModule, DefaultBtnComponent, FormsModule, ReactiveFormsModule, TranslateModule, ViewTableComponent, RouterLink, TableViewFacadeComponent],
   templateUrl: './weekly-bosses-view.component.html',
   styleUrl: './weekly-bosses-view.component.scss',
 })

@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { ViewTableComponent } from '../../../../shared/components/table/view-table/view-table.component';
 import { RouterLink } from '@angular/router';
+import {
+  TableViewFacadeComponent
+} from "../../../../shared/components/facade/table-view-facade/table-view-facade.component";
 
 @Component({
   selector: 'clt-mobs-view',
@@ -21,6 +24,7 @@ import { RouterLink } from '@angular/router';
     TranslateModule,
     ViewTableComponent,
     RouterLink,
+    TableViewFacadeComponent,
   ],
   templateUrl: './mobs-view.component.html',
   styleUrl: './mobs-view.component.scss',

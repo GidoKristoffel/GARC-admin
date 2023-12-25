@@ -21,6 +21,9 @@ import { SharedView } from '../../../../core/classes/shared-view/shared-view';
 import {
   CharactersPlayableMetadataService
 } from "../../services/characters-playable-metadata/characters-playable-metadata.service";
+import {
+  TableViewFacadeComponent
+} from "../../../../shared/components/facade/table-view-facade/table-view-facade.component";
 
 @Component({
   imports: [
@@ -36,6 +39,7 @@ import {
     TranslateModule,
     RouterLink,
     ViewTableComponent,
+    TableViewFacadeComponent,
   ],
   selector: 'clt-characters-playable-view',
   standalone: true,

@@ -1,39 +1,6 @@
-<div class="height-100 flex-column gap-8 padding-8">
-  <div class="card-wrapper-form-main flex-column flex-fill-space gap-4">
-    <div class="form flex-column gap-4" cltScrollClass *ngIf="ascensionMaterial">
-      @for (item of metadata; track $index) {
-        @if (item.type === fieldType.String) {
-          <clt-text-field-view [label]="item.label">{{ ascensionMaterial[item.fieldName][item.language] }}</clt-text-field-view>
-        }
-        @if (item.type === fieldType.Option) {
-          <clt-text-field-view [label]="item.label">{{ item.valueTranslateKey + ascensionMaterial[item.fieldName] | translate }}</clt-text-field-view>
-        }
-        @if (item.type === fieldType.Checkbox) {
-          <clt-text-field-view [label]="item.label">
-            <div class="flex-column gap-4">
-              <div *ngFor="let checkbox of ascensionMaterial[item.fieldName]">
-                {{ (item.valueTranslateKey + checkbox) | translate }}
-              </div>
-            </div>
-          </clt-text-field-view>
-        }
-        @if (item.type === fieldType.Image) {
-          <clt-text-field-view [label]="item.label" [valueWrapper]="false">
-            <div class="flex-column gap-8">
-              <img [src]="ascensionMaterial[item.fieldName]" alt="" />
-              <div class="link-wrapper">{{ ascensionMaterial[item.fieldName] }}</div>
-            </div>
-          </clt-text-field-view>
-        }
-      }
-    </div>
-  </div>
-  <div class="card-wrapper-btn flex-row-right gap-8">
-    <clt-default-btn [routerLink]="viewLink">{{
-        "shared.btn.back" | translate
-      }}</clt-default-btn>
-    <clt-default-btn [routerLink]="editLink">{{
-        "shared.btn.edit" | translate
-      }}</clt-default-btn>
-  </div>
-</div>
+<clt-table-details-facade
+  [details]="ascensionMaterial"
+  [metadata]="metadata"
+  [viewLink]="viewLink"
+  [editLink]="editLink"
+></clt-table-details-facade>

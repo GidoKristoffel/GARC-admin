@@ -12,11 +12,14 @@ import { DefaultBtnComponent } from "../../../../shared/components/button/defaul
 import { ScrollClassDirective } from "../../../../shared/directives/scroll-class/scroll-class.directive";
 import { TextFieldViewComponent } from "../../../../shared/components/view/text-field-view/text-field-view.component";
 import { TranslateModule } from "@ngx-translate/core";
+import {
+    TableDetailsFacadeComponent
+} from "../../../../shared/components/facade/table-details-facade/table-details-facade.component";
 
 @Component({
   selector: 'clt-elite-bosses-details',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, ScrollClassDirective, TextFieldViewComponent, TranslateModule, RouterLink],
+    imports: [CommonModule, DefaultBtnComponent, ScrollClassDirective, TextFieldViewComponent, TranslateModule, RouterLink, TableDetailsFacadeComponent],
   templateUrl: './elite-bosses-details.component.html',
   styleUrl: './elite-bosses-details.component.scss',
 })

@@ -1,0 +1,15 @@
+<form class="height-100 flex-column gap-8 padding-8">
+  <div class="card-wrapper-form-main flex-column flex-fill-space gap-4">
+    <clt-view-table
+      [metadata]="metadata"
+      [body]="tableData"
+      [currentLang]="currentLang"
+      (delete)="onDelete($event)"
+    ></clt-view-table>
+  </div>
+  <div class="card-wrapper-btn flex-row-right gap-8">
+    <clt-default-btn [routerLink]="createItemLink">
+      {{ "shared.btn.create" | translate }}
+    </clt-default-btn>
+  </div>
+</form>

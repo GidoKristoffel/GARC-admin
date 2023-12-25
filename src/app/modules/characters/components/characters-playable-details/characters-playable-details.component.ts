@@ -14,19 +14,23 @@ import { FormatPipeModule } from 'ngx-date-fns';
 import { SharedDetails } from '../../../../core/classes/shared-details/shared-details';
 import { LanguageService } from '../../../../core/services/language/language.service';
 import { CharactersPlayableMetadataService } from '../../services/characters-playable-metadata/characters-playable-metadata.service';
+import {
+    TableDetailsFacadeComponent
+} from "../../../../shared/components/facade/table-details-facade/table-details-facade.component";
 
 @Component({
   selector: 'clt-characters-playable-details',
   standalone: true,
-  imports: [
-    CommonModule,
-    ScrollClassDirective,
-    DefaultBtnComponent,
-    RouterLink,
-    TranslateModule,
-    TextFieldViewComponent,
-    FormatPipeModule,
-  ],
+    imports: [
+        CommonModule,
+        ScrollClassDirective,
+        DefaultBtnComponent,
+        RouterLink,
+        TranslateModule,
+        TextFieldViewComponent,
+        FormatPipeModule,
+        TableDetailsFacadeComponent,
+    ],
   templateUrl: './characters-playable-details.component.html',
   styleUrl: './characters-playable-details.component.scss',
 })

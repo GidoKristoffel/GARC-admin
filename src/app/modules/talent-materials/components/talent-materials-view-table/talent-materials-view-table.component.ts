@@ -5,16 +5,25 @@ import { LanguageService } from '../../../../core/services/language/language.ser
 import { ITalentMaterial } from '../../interfaces/common.inteface';
 import { TalentMaterialsMetadataService } from '../../services/talent-materials-metadata/talent-materials-metadata.service';
 import { TalentMaterialsViewTableService } from '../../services/talent-materials-view-table/talent-materials-view-table.service';
-import { DefaultBtnComponent } from "../../../../shared/components/button/default-btn/default-btn.component";
-import { FormsModule } from "@angular/forms";
-import { TranslateModule } from "@ngx-translate/core";
-import { ViewTableComponent } from "../../../../shared/components/table/view-table/view-table.component";
-import { RouterLink } from "@angular/router";
+import { DefaultBtnComponent } from '../../../../shared/components/button/default-btn/default-btn.component';
+import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
+import { ViewTableComponent } from '../../../../shared/components/table/view-table/view-table.component';
+import { RouterLink } from '@angular/router';
+import { TableViewFacadeComponent } from '../../../../shared/components/facade/table-view-facade/table-view-facade.component';
 
 @Component({
   selector: 'clt-talent-materials-view-table',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, FormsModule, TranslateModule, ViewTableComponent, RouterLink],
+  imports: [
+    CommonModule,
+    DefaultBtnComponent,
+    FormsModule,
+    TranslateModule,
+    ViewTableComponent,
+    RouterLink,
+    TableViewFacadeComponent,
+  ],
   templateUrl: './talent-materials-view-table.component.html',
   styleUrl: './talent-materials-view-table.component.scss',
 })
