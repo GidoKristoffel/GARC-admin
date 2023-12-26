@@ -41,12 +41,14 @@ export class DropdownFieldComponent
 
   override ngOnInit(): void {
     super.ngOnInit();
-    const cashedValue = this.options.find(
-      (option: IOption): boolean =>
-        option.value === this.form.value[this.formField],
-    );
-    if (cashedValue) {
-      this.defaultValue = cashedValue;
+    if (this.options) {
+      const cashedValue: IOption | undefined = this.options.find(
+        (option: IOption): boolean =>
+          option.value === this.form.value[this.formField],
+      );
+      if (cashedValue) {
+        this.defaultValue = cashedValue;
+      }
     }
   }
 

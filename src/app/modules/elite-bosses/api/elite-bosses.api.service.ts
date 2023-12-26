@@ -8,15 +8,13 @@ import {
   IEliteBossDetailsResponse, IEliteBossEditResponse,
   IEliteBossViewResponse
 } from '../interfaces/api.interfaces';
+import { apiOptions } from "../../../core/constants/api.constant";
 
 @Injectable({
   providedIn: 'root',
 })
 export class EliteBossesApiService {
   private readonly api: string = environment.api + '/admin/elite-boss';
-  private readonly credentialsOptions: { withCredentials: boolean } = {
-    withCredentials: true,
-  };
 
   constructor(private http: HttpClient) {}
 
@@ -24,23 +22,23 @@ export class EliteBossesApiService {
     return this.http.post<IEliteBossCreateResponse>(
       this.api,
       form,
-      this.credentialsOptions,
+      apiOptions
     );
   }
 
   public getAll(): Observable<IEliteBossViewResponse> {
-    return this.http.get<IEliteBossViewResponse>(this.api, this.credentialsOptions);
+    return this.http.get<IEliteBossViewResponse>(this.api, apiOptions);
   }
 
   public getById(id: string): Observable<IEliteBossDetailsResponse> {
-    return this.http.get<IEliteBossDetailsResponse>(`${this.api}/${id}`, this.credentialsOptions);
+    return this.http.get<IEliteBossDetailsResponse>(`${this.api}/${id}`, apiOptions);
   }
 
   public update(id: string, form: IEliteBossApiForm): Observable<IEliteBossEditResponse> {
-    return this.http.patch<IEliteBossEditResponse>(`${this.api}/${id}`, form, this.credentialsOptions);
+    return this.http.patch<IEliteBossEditResponse>(`${this.api}/${id}`, form, apiOptions);
   }
 
   public delete(id: string): Observable<IEliteBossDeleteResponse> {
-    return this.http.delete<IEliteBossDeleteResponse>(`${this.api}/${id}`, this.credentialsOptions);
+    return this.http.delete<IEliteBossDeleteResponse>(`${this.api}/${id}`, apiOptions);
   }
 }

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedCreate } from '../../../../core/classes/shared-create/shared-create';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IMobFormBuilder } from '../../interfaces/form.interface';
-import { IOption } from '../../../../shared/interfaces/input.interface';
+import { IOption, IOptions } from '../../../../shared/interfaces/input.interface';
 import { IPlayableCharacter } from "../../../characters/interfaces/table.interface";
 import { ActivatedRoute, RouterLink } from "@angular/router";
 import { LanguageService } from "../../../../core/services/language/language.service";
@@ -21,11 +21,14 @@ import { ImageFieldComponent } from "../../../../shared/components/fields/image-
 import { ScrollClassDirective } from "../../../../shared/directives/scroll-class/scroll-class.directive";
 import { TextFieldComponent } from "../../../../shared/components/fields/text-field/text-field.component";
 import { TranslateModule } from "@ngx-translate/core";
+import {
+  TableEditFacadeComponent
+} from "../../../../shared/components/facade/table-edit-facade/table-edit-facade.component";
 
 @Component({
   selector: 'clt-mobs-edit',
   standalone: true,
-  imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, ReactiveFormsModule],
+  imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, ReactiveFormsModule, TableEditFacadeComponent],
   templateUrl: './mobs-edit.component.html',
   styleUrl: './mobs-edit.component.scss',
 })
@@ -33,7 +36,7 @@ export class MobsEditComponent
   extends SharedEdit<FormGroup<IMobFormBuilder>>
   implements OnInit
 {
-  public mobTypeOption: IOption[] = [];
+  public options!: IOptions;
 
   constructor(
     private mobsMetadataService: MobsMetadataService,
@@ -70,7 +73,7 @@ export class MobsEditComponent
   }
 
   private initOptions(): void {
-    this.mobTypeOption = this.mobsOptionsService.getOptions();
+    this.options = this.mobsOptionsService.getOptions();
   }
 
   protected save(): void {

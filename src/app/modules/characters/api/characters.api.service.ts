@@ -10,15 +10,13 @@ import {
   ICharacterViewFormResponse,
 } from '../interfaces/api.interfaces';
 import { ICharacterApiForm } from '../interfaces/form.interface';
+import { apiOptions } from '../../../core/constants/api.constant';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CharactersApiService {
   private readonly api: string = environment.api + '/admin/character';
-  private readonly credentialsOptions: { withCredentials: boolean } = {
-    withCredentials: true,
-  };
 
   constructor(private http: HttpClient) {}
 
@@ -28,21 +26,18 @@ export class CharactersApiService {
     return this.http.post<ICharacterCreateFormResponse>(
       this.api,
       form,
-      this.credentialsOptions,
+      apiOptions,
     );
   }
 
   public getAll(): Observable<ICharacterViewFormResponse> {
-    return this.http.get<ICharacterViewFormResponse>(
-      this.api,
-      this.credentialsOptions,
-    );
+    return this.http.get<ICharacterViewFormResponse>(this.api, apiOptions);
   }
 
   public getById(id: string): Observable<ICharacterDetailFormResponse> {
     return this.http.get<ICharacterDetailFormResponse>(
       `${this.api}/${id}`,
-      this.credentialsOptions,
+      apiOptions,
     );
   }
 
@@ -53,14 +48,14 @@ export class CharactersApiService {
     return this.http.patch<ICharacterEditFormResponse>(
       `${this.api}/${id}`,
       form,
-      this.credentialsOptions,
+      apiOptions,
     );
   }
 
   public delete(id: string): Observable<ICharacterDeleteFormResponse> {
     return this.http.delete<ICharacterDeleteFormResponse>(
       `${this.api}/${id}`,
-      this.credentialsOptions,
+      apiOptions,
     );
   }
 }

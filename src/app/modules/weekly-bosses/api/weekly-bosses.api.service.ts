@@ -8,15 +8,13 @@ import {
   IWeeklyBossDetailsResponse, IWeeklyBossEditResponse,
   IWeeklyBossViewResponse
 } from "../interfaces/api.interfaces";
+import { apiOptions } from "../../../core/constants/api.constant";
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeeklyBossesApiService {
   private readonly api: string = environment.api + '/admin/weekly-boss';
-  private readonly credentialsOptions: { withCredentials: boolean } = {
-    withCredentials: true,
-  };
 
   constructor(private http: HttpClient) {}
 
@@ -24,23 +22,23 @@ export class WeeklyBossesApiService {
     return this.http.post<IWeeklyBossCreateResponse>(
       this.api,
       form,
-      this.credentialsOptions,
+      apiOptions
     );
   }
 
   public getAll(): Observable<IWeeklyBossViewResponse> {
-    return this.http.get<IWeeklyBossViewResponse>(this.api, this.credentialsOptions);
+    return this.http.get<IWeeklyBossViewResponse>(this.api, apiOptions);
   }
 
   public getById(id: string): Observable<IWeeklyBossDetailsResponse> {
-    return this.http.get<IWeeklyBossDetailsResponse>(`${this.api}/${id}`, this.credentialsOptions);
+    return this.http.get<IWeeklyBossDetailsResponse>(`${this.api}/${id}`, apiOptions);
   }
 
   public update(id: string, form: IWeeklyBossApiForm): Observable<IWeeklyBossEditResponse> {
-    return this.http.patch<IWeeklyBossEditResponse>(`${this.api}/${id}`, form, this.credentialsOptions);
+    return this.http.patch<IWeeklyBossEditResponse>(`${this.api}/${id}`, form, apiOptions);
   }
 
   public delete(id: string): Observable<IWeeklyBossDeleteResponse> {
-    return this.http.delete<IWeeklyBossDeleteResponse>(`${this.api}/${id}`, this.credentialsOptions);
+    return this.http.delete<IWeeklyBossDeleteResponse>(`${this.api}/${id}`, apiOptions);
   }
 }

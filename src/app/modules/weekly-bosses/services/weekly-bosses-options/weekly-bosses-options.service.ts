@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { IOption } from "../../../../shared/interfaces/input.interface";
+import { IOptions } from "../../../../shared/interfaces/input.interface";
 import { EEnemyType } from "../../../../core/enums/enemy-type.enum";
+import { OptionsService } from "../../../../core/services/options/options.service";
 
 @Injectable({
   providedIn: 'root'
@@ -8,21 +9,13 @@ import { EEnemyType } from "../../../../core/enums/enemy-type.enum";
 export class WeeklyBossesOptionsService {
   private readonly translateKey: string = 'enum.';
 
-  constructor() { }
+  constructor(
+    private optionsService: OptionsService
+  ) {}
 
-  public getOptions(): IOption[] {
-    return this.generateOptions<typeof EEnemyType>(EEnemyType, 'enemy-type');
-  }
-
-  public generateOptions<T extends Object>(
-    enumObject: T,
-    translateSubKey: string = '',
-  ): IOption[] {
-    return Object.values(enumObject).map((value): IOption => {
-      return {
-        label: this.translateKey + translateSubKey + '.' + value,
-        value,
-      };
-    });
+  public getOptions(): IOptions {
+    return {
+      type: this.optionsService.generateOptions<typeof EEnemyType>(EEnemyType, this.translateKey, 'enemy-type'),
+    }
   }
 }

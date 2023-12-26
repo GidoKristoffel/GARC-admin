@@ -88,60 +88,6 @@
             "splash-art": "Сплэш арт",
             "card-icon": "Карточка"
           },
-          "select": {
-            "quality": {
-              "epic": "Эпическое",
-              "legendary": "Легендарное",
-              "other": "Другое"
-            },
-            "element": {
-              "anemo": "Анемо",
-              "geo": "Гео",
-              "electro": "Електро",
-              "dendro": "Дендро",
-              "hydro": "Гидро",
-              "pyro": "Пиро",
-              "cryo": "Крио",
-              "other": "Другой"
-            },
-            "region": {
-              "mondstadt": "Мондштадт",
-              "liyue": "Ли Юэ",
-              "inazuma": "Инадзума",
-              "sumeru": "Сумеру",
-              "fontaine": "Фонтейн",
-              "natlan": "Натлан",
-              "snezhnaya": "Снежная",
-              "other": "Другой"
-            },
-            "bonus-attribute": {
-              "crit-dmg": "Крит. урон",
-              "elemental-mastery": "Мастерство стихий",
-              "energy-recharge": "Восст. энергии",
-              "crit-rate": "Шанс крит. попадания",
-              "hp": "HP",
-              "healing-bonus": "Бонус лечения",
-              "physical-dmg-bonus": "Бонус физ. урона",
-              "atk": "Сила атаки",
-              "def": "Защита",
-              "pyro-dmg-bonus": "Бонус Пиро урона",
-              "hydro-dmg-bonus": "Бонус Гидро урона",
-              "dendro-dmg-bonus": "Бонус Дендро урона",
-              "electro-dmg-bonus": "Бонус Электро урона",
-              "cryo-dmg-bonus": "Бонус Крио урона",
-              "anemo-dmg-bonus": "Бонус Анемо урона",
-              "geo-dmg-bonus": "Бонус Гео урона",
-              "other": "Другой"
-            },
-            "weapon": {
-              "sword": "Одноручное",
-              "claymore": "Двуручное",
-              "bow": "Стрелковое",
-              "catalyst": "Катализатор",
-              "polearm": "Древковое",
-              "other": "Другое"
-            }
-          },
           "checkbox": {
             "arche": {
               "usia": "Усия",
@@ -204,18 +150,6 @@
           },
           "type": "Тип",
           "icon": "Иконка"
-        },
-        "select": {
-          "mob-type": {
-            "other-human-factions":  "Прочие человеческие фракции",
-            "automatons": "Автоматоны",
-            "fatui":  "Фатуи",
-            "enemies-of-note": "Враги, достойные упоминания",
-            "hilichurls":  "Хиличурлы",
-            "elemental-lifeforms": "Элементальные существа",
-            "the-abyss":  "Бездна",
-            "mystical-beasts": "Мистические звери"
-          }
         }
       },
       "elite-bosses": {
@@ -232,18 +166,6 @@
           },
           "type": "Тип",
           "icon": "Иконка"
-        },
-        "select": {
-          "mob-type": {
-            "other-human-factions":  "Прочие человеческие фракции",
-            "automatons": "Автоматоны",
-            "fatui":  "Фатуи",
-            "enemies-of-note": "Враги, достойные упоминания",
-            "hilichurls":  "Хиличурлы",
-            "elemental-lifeforms": "Элементальные существа",
-            "the-abyss":  "Бездна",
-            "mystical-beasts": "Мистические звери"
-          }
         }
       },
       "weekly-bosses": {
@@ -260,18 +182,6 @@
           },
           "type": "Тип",
           "icon": "Иконка"
-        },
-        "select": {
-          "mob-type": {
-            "other-human-factions":  "Прочие человеческие фракции",
-            "automatons": "Автоматоны",
-            "fatui":  "Фатуи",
-            "enemies-of-note": "Враги, достойные упоминания",
-            "hilichurls":  "Хиличурлы",
-            "elemental-lifeforms": "Элементальные существа",
-            "the-abyss":  "Бездна",
-            "mystical-beasts": "Мистические звери"
-          }
         }
       }
     }

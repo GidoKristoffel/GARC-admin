@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedCreate } from '../../../../core/classes/shared-create/shared-create';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IMobFormBuilder } from '../../interfaces/form.interface';
-import { IOption } from '../../../../shared/interfaces/input.interface';
+import { IOption, IOptions } from '../../../../shared/interfaces/input.interface';
 import { MobsOptionsService } from "../../services/mobs-options/mobs-options.service";
 import { MobsMetadataService } from "../../services/mobs-metadata/mobs-metadata.service";
 import { MobsFormService } from "../../services/mobs-form/mobs-form.service";
@@ -19,11 +19,14 @@ import { ScrollClassDirective } from "../../../../shared/directives/scroll-class
 import { TextFieldComponent } from "../../../../shared/components/fields/text-field/text-field.component";
 import { TranslateModule } from "@ngx-translate/core";
 import { ActivatedRoute, RouterLink } from "@angular/router";
+import {
+  TableCreateFacadeComponent
+} from "../../../../shared/components/facade/table-create-facade/table-create-facade.component";
 
 @Component({
   selector: 'clt-mobs-create',
   standalone: true,
-  imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, ReactiveFormsModule, RouterLink],
+  imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, ReactiveFormsModule, RouterLink, TableCreateFacadeComponent],
   templateUrl: './mobs-create.component.html',
   styleUrl: './mobs-create.component.scss',
 })
@@ -31,7 +34,7 @@ export class MobsCreateComponent
   extends SharedCreate<FormGroup<IMobFormBuilder>>
   implements OnInit
 {
-  public mobTypeOption: IOption[] = [];
+  public options!: IOptions;
 
   constructor(
     protected override formBuilder: FormBuilder,
@@ -55,7 +58,7 @@ export class MobsCreateComponent
   }
 
   private initOptions(): void {
-    this.mobTypeOption = this.mobsOptionsService.getOptions();
+    this.options = this.mobsOptionsService.getOptions();
   }
 
   private initForm(): void {

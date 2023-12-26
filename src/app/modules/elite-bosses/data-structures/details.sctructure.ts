@@ -63,7 +63,7 @@ export const detailsMetadata: IFormMetadata[] = [
     type: EFormType.Option,
     option: '',
     language: '',
-    valueTranslateKey: 'page.enemies.elite-bosses.select.mob-type.',
+    valueTranslateKey: 'enum.mob-type.',
     checkboxes: []
   },
   {

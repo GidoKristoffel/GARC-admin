@@ -36,7 +36,7 @@ export const detailsMetadata: IFormMetadata[] = [
     type: EFormType.Option,
     option: '',
     language: '',
-    valueTranslateKey: 'page.characters.playable.create.select.quality.',
+    valueTranslateKey: 'enum.quality.',
     checkboxes: []
   },
   {
@@ -45,7 +45,7 @@ export const detailsMetadata: IFormMetadata[] = [
     type: EFormType.Option,
     option: '',
     language: '',
-    valueTranslateKey: 'page.characters.playable.create.select.element.',
+    valueTranslateKey: 'enum.element.',
     checkboxes: []
   },
   {
@@ -54,7 +54,7 @@ export const detailsMetadata: IFormMetadata[] = [
     type: EFormType.Option,
     option: '',
     language: '',
-    valueTranslateKey: 'page.characters.playable.create.select.region.',
+    valueTranslateKey: 'enum.region.',
     checkboxes: []
   },
   {
@@ -63,7 +63,7 @@ export const detailsMetadata: IFormMetadata[] = [
     type: EFormType.Option,
     option: '',
     language: '',
-    valueTranslateKey: 'page.characters.playable.create.select.bonus-attribute.',
+    valueTranslateKey: 'enum.bonus-attribute.',
     checkboxes: []
   },
   {
@@ -72,7 +72,7 @@ export const detailsMetadata: IFormMetadata[] = [
     type: EFormType.Option,
     option: '',
     language: '',
-    valueTranslateKey: 'page.characters.playable.create.select.weapon.',
+    valueTranslateKey: 'enum.weapon.',
     checkboxes: []
   },
   {

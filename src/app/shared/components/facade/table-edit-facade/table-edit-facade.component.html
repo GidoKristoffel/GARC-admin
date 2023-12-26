@@ -1,0 +1,48 @@
+<form
+  *ngIf="form && options"
+  [formGroup]="form"
+  class="height-100 flex-column gap-8 padding-8"
+  (ngSubmit)="onSave()"
+>
+  <div class="card-wrapper-form-main flex-column flex-fill-space gap-4">
+    <div class="form flex-column gap-4" cltScrollClass>
+      @for (item of metadata; track $index) {
+        <clt-text-field
+          *ngIf="item.type === fieldType.String"
+          [formField]="item.fieldName"
+          [label]="item.label"
+        ></clt-text-field>
+        <clt-dropdown-field
+          *ngIf="item.type === fieldType.Option"
+          [formField]="item.fieldName"
+          [options]="options[item.option]"
+          [label]="item.label"
+        ></clt-dropdown-field>
+        <clt-checkbox-field
+          *ngIf="item.type === fieldType.Checkbox"
+          [formField]="item.fieldName"
+          [options]="options[item.option]"
+          [label]="item.label"
+        ></clt-checkbox-field>
+        <clt-datetime-field
+          *ngIf="item.type === fieldType.Birthday"
+          [formField]="item.fieldName"
+          [label]="item.label"
+        ></clt-datetime-field>
+        <clt-image-field
+          *ngIf="item.type === fieldType.Image"
+          [formField]="item.fieldName"
+          [label]="item.label"
+        ></clt-image-field>
+      }
+    </div>
+  </div>
+  <div class="card-wrapper-btn flex-row-right gap-8">
+    <clt-default-btn [routerLink]="detailsLink">{{
+        "shared.btn.cancel" | translate
+      }}</clt-default-btn>
+    <clt-default-btn [type]="btnType" [disabled]="!form.valid">{{
+        "shared.btn.save" | translate
+      }}</clt-default-btn>
+  </div>
+</form>

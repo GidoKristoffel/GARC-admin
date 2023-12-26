@@ -15,7 +15,7 @@
   </div>
   <div
     class="pointer dropdown-options default-select-options"
-    *ngIf="openSelector && options.length"
+    *ngIf="openSelector && options"
   >
     <div *ngFor="let option of options" (click)="select(option)">
       {{ option.label | translate }}

@@ -1,28 +1,21 @@
 import { Injectable } from '@angular/core';
-import { IOption } from '../../../../shared/interfaces/input.interface';
+import { IOptions } from '../../../../shared/interfaces/input.interface';
 import { EMobType } from '../../enums/mob-type.enum';
+import { OptionsService } from "../../../../core/services/options/options.service";
 
 @Injectable({
   providedIn: 'root',
 })
 export class MobsOptionsService {
-  private readonly translateKey: string = 'page.enemies.mobs.';
+  private readonly translateKey: string = 'enum.';
 
-  constructor() {}
+  constructor(
+    private optionsService: OptionsService
+  ) {}
 
-  public getOptions(): IOption[] {
-    return this.generateOptions<typeof EMobType>(EMobType, 'select.mob-type');
-  }
-
-  public generateOptions<T extends Object>(
-    enumObject: T,
-    translateSubKey: string = '',
-  ): IOption[] {
-    return Object.values(enumObject).map((value): IOption => {
-      return {
-        label: this.translateKey + translateSubKey + '.' + value,
-        value,
-      };
-    });
+  public getOptions(): IOptions {
+    return {
+      type: this.optionsService.generateOptions<typeof EMobType>(EMobType, this.translateKey, 'mob-type'),
+    }
   }
 }
