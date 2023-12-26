@@ -2,7 +2,7 @@ import { Component, DestroyRef, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedEdit } from '../../../../core/classes/shared-edit/shared-edit';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { IOption } from '../../../../shared/interfaces/input.interface';
+import { IOptions } from '../../../../shared/interfaces/input.interface';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { LanguageService } from '../../../../core/services/language/language.service';
 import { IWeeklyBossFormBuilder } from '../../interfaces/form.interface';
@@ -17,11 +17,17 @@ import { ImageFieldComponent } from "../../../../shared/components/fields/image-
 import { ScrollClassDirective } from "../../../../shared/directives/scroll-class/scroll-class.directive";
 import { TextFieldComponent } from "../../../../shared/components/fields/text-field/text-field.component";
 import { TranslateModule } from "@ngx-translate/core";
+import {
+  TableCreateFacadeComponent
+} from "../../../../shared/components/facade/table-create-facade/table-create-facade.component";
+import {
+  TableEditFacadeComponent
+} from "../../../../shared/components/facade/table-edit-facade/table-edit-facade.component";
 
 @Component({
   selector: 'clt-weekly-bosses-edit',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ImageFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink],
+  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ImageFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, TableCreateFacadeComponent, TableEditFacadeComponent],
   templateUrl: './weekly-bosses-edit.component.html',
   styleUrl: './weekly-bosses-edit.component.scss',
 })
@@ -29,7 +35,7 @@ export class WeeklyBossesEditComponent
   extends SharedEdit<FormGroup<IWeeklyBossFormBuilder>>
   implements OnInit
 {
-  public weeklyBossTypeOption: IOption[] = [];
+  public options!: IOptions;
 
   constructor(
     private weeklyBossesMetadataService: WeeklyBossesMetadataService,
@@ -71,7 +77,7 @@ export class WeeklyBossesEditComponent
   }
 
   private initOptions(): void {
-    this.weeklyBossTypeOption = this.weeklyBossesOptionsService.getOptions();
+    this.options = this.weeklyBossesOptionsService.getOptions();
   }
 
   protected save(): void {

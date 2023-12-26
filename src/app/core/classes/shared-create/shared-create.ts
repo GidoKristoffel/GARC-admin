@@ -5,7 +5,6 @@ import { IFormMetadata } from "../../../shared/interfaces/form.interface";
 import { EFormType } from "../../enums/form.enum";
 
 export abstract class SharedCreate<T> {
-  public readonly btnType: EBtnType = EBtnType.Submit;
   public readonly viewLink: string = '../' + EPage.View;
   public readonly fieldType: typeof EFormType = EFormType;
 

@@ -1,37 +1,7 @@
-<form
-  [formGroup]="form"
-  class="height-100 flex-column gap-8 padding-8"
-  *ngIf="loaded"
-  (ngSubmit)="save()"
->
-  <div class="card-wrapper-form-main flex-column flex-fill-space gap-4">
-    <div class="form flex-column gap-4" cltScrollClass>
-      @for (item of metadata; track $index) {
-        <clt-text-field
-          *ngIf="item.type === fieldType.String"
-          [formField]="item.fieldName"
-          [label]="item.label"
-        ></clt-text-field>
-        <clt-dropdown-field
-          *ngIf="item.type === fieldType.Option"
-          [formField]="item.fieldName"
-          [options]="mobTypeOption"
-          [label]="item.label"
-        ></clt-dropdown-field>
-        <clt-image-field
-          *ngIf="item.type === fieldType.Image"
-          [formField]="item.fieldName"
-          [label]="item.label"
-        ></clt-image-field>
-      }
-    </div>
-  </div>
-  <div class="card-wrapper-btn flex-row-right gap-8">
-    <clt-default-btn [routerLink]="detailsLink">
-      {{ "shared.btn.back" | translate }}
-    </clt-default-btn>
-    <clt-default-btn [type]="saveBtnType">
-      {{ "shared.btn.save" | translate }}
-    </clt-default-btn>
-  </div>
-</form>
+<clt-table-edit-facade
+  [form]="form"
+  [metadata]="metadata"
+  [detailsLink]="detailsLink"
+  [options]="options"
+  (save)="save()"
+></clt-table-edit-facade>

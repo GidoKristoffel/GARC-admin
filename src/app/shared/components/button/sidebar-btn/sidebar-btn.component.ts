@@ -20,7 +20,6 @@ export class SidebarBtnComponent {
 
   public redirectTo(): void {
     if (this.link) {
-      console.log(this.link);
       this.router.navigate([this.link]).then();
     }
   }

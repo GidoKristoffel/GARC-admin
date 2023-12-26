@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { EMaterialRarity } from "../../../../core/enums/material-rarity.enum";
-import { IOption } from "../../../../shared/interfaces/input.interface";
 import { IAscensionMaterialsOptions } from "../../interfaces/options.interface";
 import { EAscensionMaterialType } from "../../../../core/enums/ascension-material-type.enum";
+import { OptionsService } from "../../../../core/services/options/options.service";
 
 @Injectable({
   providedIn: 'root'
@@ -10,22 +10,14 @@ import { EAscensionMaterialType } from "../../../../core/enums/ascension-materia
 export class AscensionMaterialsOptionsService {
   private readonly translateKey: string = 'enum.';
 
+  constructor(
+    private optionsService: OptionsService
+  ) {}
+
   public getOptions(): IAscensionMaterialsOptions {
     return {
-      type: this.generateOptions<typeof EAscensionMaterialType>(EAscensionMaterialType, 'ascension-type'),
-      rarity: this.generateOptions<typeof EMaterialRarity>(EMaterialRarity, 'rarity'),
+      type: this.optionsService.generateOptions<typeof EAscensionMaterialType>(EAscensionMaterialType, this.translateKey, 'ascension-type'),
+      rarity: this.optionsService.generateOptions<typeof EMaterialRarity>(EMaterialRarity, this.translateKey,  'rarity'),
     };
-  }
-
-  public generateOptions<T extends Object>(
-    enumObject: T,
-    translateSubKey: string = '',
-  ): IOption[] {
-    return Object.values(enumObject).map((value): IOption => {
-      return {
-        label: this.translateKey + translateSubKey + '.' + value,
-        value,
-      };
-    });
   }
 }

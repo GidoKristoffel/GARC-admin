@@ -19,24 +19,28 @@ import { CharactersPlayableMetadataService } from '../../services/characters-pla
 import { IPlayableCharacter } from '../../interfaces/table.interface';
 import { ICharacterFormBuilder } from '../../interfaces/form.interface';
 import { ICharactersPlayableOptions } from '../../interfaces/options.interfaces';
+import {
+    TableEditFacadeComponent
+} from "../../../../shared/components/facade/table-edit-facade/table-edit-facade.component";
 
 @Component({
   selector: 'clt-characters-playable-edit',
   standalone: true,
-  imports: [
-    CommonModule,
-    ScrollClassDirective,
-    DefaultBtnComponent,
-    TranslateModule,
-    RouterLink,
-    CheckboxFieldComponent,
-    DatetimeFieldComponent,
-    DropdownFieldComponent,
-    ImageFieldComponent,
-    TextFieldComponent,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
+    imports: [
+        CommonModule,
+        ScrollClassDirective,
+        DefaultBtnComponent,
+        TranslateModule,
+        RouterLink,
+        CheckboxFieldComponent,
+        DatetimeFieldComponent,
+        DropdownFieldComponent,
+        ImageFieldComponent,
+        TextFieldComponent,
+        FormsModule,
+        ReactiveFormsModule,
+        TableEditFacadeComponent,
+    ],
   templateUrl: './characters-playable-edit.component.html',
   styleUrl: './characters-playable-edit.component.scss',
 })

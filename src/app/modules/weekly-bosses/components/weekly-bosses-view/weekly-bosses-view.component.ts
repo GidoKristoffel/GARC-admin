@@ -25,10 +25,10 @@ export class WeeklyBossesViewComponent extends SharedView implements OnInit {
   public tableData: IWeeklyBoss[] = [];
 
   constructor(
-    private weeklyBossesMetadataService: WeeklyBossesMetadataService,
-    private weeklyBossesViewTableService: WeeklyBossesViewTableService,
     protected override destroyRef: DestroyRef,
     protected override languageService: LanguageService,
+    private weeklyBossesMetadataService: WeeklyBossesMetadataService,
+    private weeklyBossesViewTableService: WeeklyBossesViewTableService,
   ) {
     super(destroyRef, languageService);
   }

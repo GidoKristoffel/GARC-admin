@@ -25,11 +25,14 @@ import { ImageFieldComponent } from "../../../../shared/components/fields/image-
 import { ScrollClassDirective } from "../../../../shared/directives/scroll-class/scroll-class.directive";
 import { TextFieldComponent } from "../../../../shared/components/fields/text-field/text-field.component";
 import { TranslateModule } from "@ngx-translate/core";
+import {
+    TableCreateFacadeComponent
+} from "../../../../shared/components/facade/table-create-facade/table-create-facade.component";
 
 @Component({
   selector: 'clt-ascension-materials-create',
   standalone: true,
-  imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, ImageFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink],
+    imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, ImageFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, TableCreateFacadeComponent],
   templateUrl: './ascension-materials-create.component.html',
   styleUrl: './ascension-materials-create.component.scss'
 })

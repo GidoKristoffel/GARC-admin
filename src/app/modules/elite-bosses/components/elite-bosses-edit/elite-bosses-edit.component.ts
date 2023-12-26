@@ -2,7 +2,7 @@ import { Component, DestroyRef, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedEdit } from '../../../../core/classes/shared-edit/shared-edit';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { IOption } from '../../../../shared/interfaces/input.interface';
+import { IOption, IOptions } from '../../../../shared/interfaces/input.interface';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { LanguageService } from '../../../../core/services/language/language.service';
 import { EliteBossesMetadataService } from '../../services/elite-bosses-metadata/elite-bosses-metadata.service';
@@ -17,11 +17,14 @@ import { ImageFieldComponent } from "../../../../shared/components/fields/image-
 import { ScrollClassDirective } from "../../../../shared/directives/scroll-class/scroll-class.directive";
 import { TextFieldComponent } from "../../../../shared/components/fields/text-field/text-field.component";
 import { TranslateModule } from "@ngx-translate/core";
+import {
+  TableEditFacadeComponent
+} from "../../../../shared/components/facade/table-edit-facade/table-edit-facade.component";
 
 @Component({
   selector: 'clt-elite-bosses-edit',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, ReactiveFormsModule],
+  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, ReactiveFormsModule, TableEditFacadeComponent],
   templateUrl: './elite-bosses-edit.component.html',
   styleUrl: './elite-bosses-edit.component.scss',
 })
@@ -29,7 +32,7 @@ export class EliteBossesEditComponent
   extends SharedEdit<FormGroup<IEliteBossFormBuilder>>
   implements OnInit
 {
-  public eliteBossTypeOption: IOption[] = [];
+  public options!: IOptions;
 
   constructor(
     private eliteBossesMetadataService: EliteBossesMetadataService,
@@ -71,7 +74,7 @@ export class EliteBossesEditComponent
   }
 
   private initOptions(): void {
-    this.eliteBossTypeOption = this.eliteBossesOptionsService.getOptions();
+    this.options = this.eliteBossesOptionsService.getOptions();
   }
 
   protected save(): void {

@@ -26,23 +26,27 @@ import { IFormMetadata } from "../../../../shared/interfaces/form.interface";
 import {
   CharactersPlayableMetadataService
 } from "../../services/characters-playable-metadata/characters-playable-metadata.service";
+import {
+    TableCreateFacadeComponent
+} from "../../../../shared/components/facade/table-create-facade/table-create-facade.component";
 
 @Component({
   selector: 'clt-characters-playable-create',
   standalone: true,
-  imports: [
-    CommonModule,
-    DefaultBtnComponent,
-    DropdownFieldComponent,
-    ReactiveFormsModule,
-    ScrollClassDirective,
-    TextFieldComponent,
-    TranslateModule,
-    CheckboxFieldComponent,
-    DatetimeFieldComponent,
-    ImageFieldComponent,
-    RouterLink,
-  ],
+    imports: [
+        CommonModule,
+        DefaultBtnComponent,
+        DropdownFieldComponent,
+        ReactiveFormsModule,
+        ScrollClassDirective,
+        TextFieldComponent,
+        TranslateModule,
+        CheckboxFieldComponent,
+        DatetimeFieldComponent,
+        ImageFieldComponent,
+        RouterLink,
+        TableCreateFacadeComponent,
+    ],
   templateUrl: './characters-playable-create.component.html',
   styleUrl: './characters-playable-create.component.scss',
 })

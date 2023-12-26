@@ -23,11 +23,14 @@ import { ScrollClassDirective } from "../../../../shared/directives/scroll-class
 import { TextFieldComponent } from "../../../../shared/components/fields/text-field/text-field.component";
 import { TranslateModule } from "@ngx-translate/core";
 import { CheckboxFieldComponent } from "../../../../shared/components/fields/checkbox-field/checkbox-field.component";
+import {
+    TableEditFacadeComponent
+} from "../../../../shared/components/facade/table-edit-facade/table-edit-facade.component";
 
 @Component({
   selector: 'clt-talent-materials-edit',
   standalone: true,
-  imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ImageFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, CheckboxFieldComponent, RouterLink],
+    imports: [CommonModule, DefaultBtnComponent, DropdownFieldComponent, ImageFieldComponent, ReactiveFormsModule, ScrollClassDirective, TextFieldComponent, TranslateModule, CheckboxFieldComponent, RouterLink, TableEditFacadeComponent],
   templateUrl: './talent-materials-edit.component.html',
   styleUrl: './talent-materials-edit.component.scss'
 })

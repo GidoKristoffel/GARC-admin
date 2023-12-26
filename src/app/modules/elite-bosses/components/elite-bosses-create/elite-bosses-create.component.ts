@@ -7,7 +7,7 @@ import {
   FormsModule,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { IOption } from '../../../../shared/interfaces/input.interface';
+import { IOption, IOptions } from '../../../../shared/interfaces/input.interface';
 import { FormCacheService } from '../../../../core/services/form-cache/form-cache.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -24,6 +24,9 @@ import { ImageFieldComponent } from '../../../../shared/components/fields/image-
 import { ScrollClassDirective } from '../../../../shared/directives/scroll-class/scroll-class.directive';
 import { TextFieldComponent } from '../../../../shared/components/fields/text-field/text-field.component';
 import { TranslateModule } from '@ngx-translate/core';
+import {
+  TableCreateFacadeComponent
+} from "../../../../shared/components/facade/table-create-facade/table-create-facade.component";
 
 @Component({
   selector: 'clt-elite-bosses-create',
@@ -41,6 +44,7 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule,
     RouterLink,
     ReactiveFormsModule,
+    TableCreateFacadeComponent,
   ],
   templateUrl: './elite-bosses-create.component.html',
   styleUrl: './elite-bosses-create.component.scss',
@@ -49,7 +53,7 @@ export class EliteBossesCreateComponent
   extends SharedCreate<FormGroup<IEliteBossFormBuilder>>
   implements OnInit
 {
-  public eliteBossTypeOption: IOption[] = [];
+  public options!: IOptions;
 
   constructor(
     protected override formBuilder: FormBuilder,
@@ -73,7 +77,7 @@ export class EliteBossesCreateComponent
   }
 
   private initOptions(): void {
-    this.eliteBossTypeOption = this.eliteBossesOptionsService.getOptions();
+    this.options = this.eliteBossesOptionsService.getOptions();
   }
 
   private initForm(): void {

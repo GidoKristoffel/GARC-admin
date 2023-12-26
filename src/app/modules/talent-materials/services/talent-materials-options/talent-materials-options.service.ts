@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { IOption } from "../../../../shared/interfaces/input.interface";
 import { ETalentMaterialType } from "../../../../core/enums/talent-material-type.enum";
 import { EMaterialRarity } from "../../../../core/enums/material-rarity.enum";
 import { ERegion } from "../../../characters/enums/region.enum";
 import { EDay } from "../../../../core/enums/day.enum";
 import { ITalentMaterialsOptions } from "../../interfaces/options.interface";
+import { OptionsService } from "../../../../core/services/options/options.service";
 
 @Injectable({
   providedIn: 'root'
@@ -12,24 +12,16 @@ import { ITalentMaterialsOptions } from "../../interfaces/options.interface";
 export class TalentMaterialsOptionsService {
   private readonly translateKey: string = 'enum.';
 
+  constructor(
+    private optionsService: OptionsService
+  ) {}
+
   public getOptions(): ITalentMaterialsOptions {
     return {
-      type: this.generateOptions<typeof ETalentMaterialType>(ETalentMaterialType, 'talent-type'),
-      rarity: this.generateOptions<typeof EMaterialRarity>(EMaterialRarity, 'rarity'),
-      region: this.generateOptions<typeof ERegion>(ERegion, 'region'),
-      farmDays: this.generateOptions<typeof EDay>(EDay, 'farm-days'),
+      type: this.optionsService.generateOptions<typeof ETalentMaterialType>(ETalentMaterialType, this.translateKey,  'talent-type'),
+      rarity: this.optionsService.generateOptions<typeof EMaterialRarity>(EMaterialRarity, this.translateKey,  'rarity'),
+      region: this.optionsService.generateOptions<typeof ERegion>(ERegion, this.translateKey,  'region'),
+      farmDays: this.optionsService.generateOptions<typeof EDay>(EDay, this.translateKey,  'farm-days'),
     };
-  }
-
-  public generateOptions<T extends Object>(
-    enumObject: T,
-    translateSubKey: string = '',
-  ): IOption[] {
-    return Object.values(enumObject).map((value): IOption => {
-      return {
-        label: this.translateKey + translateSubKey + '.' + value,
-        value,
-      };
-    });
   }
 }
