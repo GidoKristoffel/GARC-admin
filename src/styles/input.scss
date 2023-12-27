@@ -1,9 +1,8 @@
 @import "color";
 
-.input {
+.input, .textarea {
   border: 1px solid rgba($white, 0.08);
   background-color: rgba($black, 0.15);
-  height: 32px;
   box-sizing: border-box;
   border-radius: 16px;
   padding: 0 16px;
@@ -17,6 +16,15 @@
   &:hover {
     border-color: rgba($white, 0.25);
   }
+}
+
+.input {
+  height: 32px;
+}
+
+.textarea {
+  padding: 8px 16px;
+  resize: none;
 }
 
 .dropdown-input {

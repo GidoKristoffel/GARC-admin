@@ -4,7 +4,7 @@
   class="height-100 flex-column gap-8 padding-8"
   (ngSubmit)="onSave()"
 >
-  <div class="card-wrapper-form-main flex-column flex-fill-space gap-4">
+  <div class="form-wrapper card-wrapper-form-main flex-column flex-fill-space gap-4">
     <div class="form flex-column gap-4" cltScrollClass>
       @for (item of metadata; track $index) {
         <clt-text-field
@@ -12,6 +12,11 @@
           [formField]="item.fieldName"
           [label]="item.label"
         ></clt-text-field>
+        <clt-textarea-field
+          *ngIf="item.type === fieldType.Textarea"
+          [formField]="item.fieldName"
+          [label]="item.label"
+        ></clt-textarea-field>
         <clt-dropdown-field
           *ngIf="item.type === fieldType.Option"
           [formField]="item.fieldName"

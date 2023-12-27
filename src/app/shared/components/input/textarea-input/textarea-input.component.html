@@ -1,0 +1,12 @@
+<ng-container [formGroup]="form">
+  <div class="flex-column gap-8">
+    <label *ngIf="label">{{ label | translate }}</label>
+    <textarea
+      cltScrollClass
+      class="textarea"
+      [rows]="rows"
+      [placeholder]="placeholder | translate"
+      [formControlName]="formField"
+    ></textarea>
+  </div>
+</ng-container>
