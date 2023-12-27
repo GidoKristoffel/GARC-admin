@@ -32,7 +32,7 @@ export const editMetadata: IFormMetadata[] = [
   {
     fieldName: 'descriptionEn',
     label: 'page.materials.ascension.field.description.en',
-    type: EFormType.String,
+    type: EFormType.Textarea,
     option: '',
     language: '',
     valueTranslateKey: '',
@@ -41,7 +41,7 @@ export const editMetadata: IFormMetadata[] = [
   {
     fieldName: 'descriptionUa',
     label: 'page.materials.ascension.field.description.ua',
-    type: EFormType.String,
+    type: EFormType.Textarea,
     option: '',
     language: '',
     valueTranslateKey: '',
@@ -50,7 +50,7 @@ export const editMetadata: IFormMetadata[] = [
   {
     fieldName: 'descriptionRu',
     label: 'page.materials.ascension.field.description.ru',
-    type: EFormType.String,
+    type: EFormType.Textarea,
     option: '',
     language: '',
     valueTranslateKey: '',

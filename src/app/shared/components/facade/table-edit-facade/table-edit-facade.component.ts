@@ -14,11 +14,12 @@ import { EFormType } from "../../../../core/enums/form.enum";
 import { EBtnType } from "../../../../core/enums/btn-type.enum";
 import { IFormMetadata } from "../../../interfaces/form.interface";
 import { IOptions } from "../../../interfaces/input.interface";
+import { TextareaFieldComponent } from "../../fields/textarea-field/textarea-field.component";
 
 @Component({
   selector: 'clt-table-edit-facade',
   standalone: true,
-  imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, ReactiveFormsModule],
+  imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, ReactiveFormsModule, TextareaFieldComponent],
   templateUrl: './table-edit-facade.component.html',
   styleUrl: './table-edit-facade.component.scss'
 })
