@@ -15,6 +15,7 @@ export const materialsRoutes: Routes = [
       import('./character-level-up/character-level-up.component').then(
         (c) => c.CharacterLevelUpComponent,
       ),
+    loadChildren: () => import('./character-level-up/character-level-up.routes').then((r) => r.characterLevelUpRoutes),
   },
   {
     path: EPage.CharacterAscension,
