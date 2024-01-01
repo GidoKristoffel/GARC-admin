@@ -1,4 +1,4 @@
 export enum ETalentMaterialType {
-  book = 'book',
+  Book = 'book',
   Crown = 'crown',
 }

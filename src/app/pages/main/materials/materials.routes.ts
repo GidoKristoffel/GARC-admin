@@ -8,6 +8,10 @@ export const materialsRoutes: Routes = [
       import(
         './character-weapon-enhancement/character-weapon-enhancement.component'
       ).then((c) => c.CharacterWeaponEnhancementComponent),
+    loadChildren: () =>
+      import(
+        './character-weapon-enhancement/character-weapon-enhancement.routes'
+      ).then((r) => r.characterWeaponEnhancementRoutes),
   },
   {
     path: EPage.CharacterLevelUp,
@@ -15,7 +19,10 @@ export const materialsRoutes: Routes = [
       import('./character-level-up/character-level-up.component').then(
         (c) => c.CharacterLevelUpComponent,
       ),
-    loadChildren: () => import('./character-level-up/character-level-up.routes').then((r) => r.characterLevelUpRoutes),
+    loadChildren: () =>
+      import('./character-level-up/character-level-up.routes').then(
+        (r) => r.characterLevelUpRoutes,
+      ),
   },
   {
     path: EPage.CharacterAscension,
@@ -23,7 +30,10 @@ export const materialsRoutes: Routes = [
       import('./character-ascension/character-ascension.component').then(
         (c) => c.CharacterAscensionComponent,
       ),
-    loadChildren: () => import('./character-ascension/character-ascension.routes').then((c) => c.characterAscensionRoutes),
+    loadChildren: () =>
+      import('./character-ascension/character-ascension.routes').then(
+        (c) => c.characterAscensionRoutes,
+      ),
   },
   {
     path: EPage.CharacterTalents,
