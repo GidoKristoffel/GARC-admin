@@ -3,10 +3,14 @@
     <div class="form flex-column gap-4" cltScrollClass *ngIf="details">
       @for (item of metadata; track $index) {
         @if (item.type === fieldType.String) {
-          <clt-text-field-view [label]="item.label">{{ details[item.fieldName][item.language] }}</clt-text-field-view>
+          <clt-text-field-view [label]="item.label">
+            {{ details[item.fieldName][item.language] }}
+          </clt-text-field-view>
         }
         @if (item.type === fieldType.Option) {
-          <clt-text-field-view [label]="item.label">{{ item.valueTranslateKey + details[item.fieldName] | translate }}</clt-text-field-view>
+          <clt-text-field-view [label]="item.label">
+            {{ item.valueTranslateKey + details[item.fieldName] | translate }}
+          </clt-text-field-view>
         }
         @if (item.type === fieldType.Image) {
           <clt-text-field-view [label]="item.label" [valueWrapper]="false">

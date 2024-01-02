@@ -49,6 +49,7 @@ export class ViewTableComponent {
   public readonly ascensionTypeTranslate: string = 'enum.ascension-type.';
   public readonly rarityTranslate: string = 'enum.rarity.';
   public readonly farmDaysTranslate: string = 'enum.farm-days.';
+  public readonly weaponMaterialTypeTranslate: string = 'enum.weapon-type.';
 
   constructor(
     private clipboardService: ClipboardService,

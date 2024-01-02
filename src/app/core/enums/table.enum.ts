@@ -16,5 +16,6 @@ export enum EHeaderType {
   MaterialRarity = 'material-rarity',
   Day = 'day',
   AscensionMaterialType = 'ascension-material-type',
-  LevelUpMaterialType = 'level-up-material-type'
+  LevelUpMaterialType = 'level-up-material-type',
+  WeaponMaterialType = 'weapon-material-type'
 }
