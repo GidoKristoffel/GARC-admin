@@ -63,7 +63,7 @@ export const detailsMetadata: IFormMetadata[] = [
     type: EFormType.Option,
     option: '',
     language: '',
-    valueTranslateKey: 'enum.talent-type.',
+    valueTranslateKey: 'enum.weapon-type.',
     checkboxes: [],
   },
   {

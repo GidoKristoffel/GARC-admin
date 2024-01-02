@@ -52,6 +52,10 @@ export const materialsRoutes: Routes = [
       import('./weapon-materials/weapon-materials.component').then(
         (c) => c.WeaponMaterialsComponent,
       ),
+    loadChildren: () =>
+      import('./weapon-materials/weapon-materials.routes').then(
+        (r) => r.weaponMaterialsRoutes,
+      ),
   },
   {
     path: EPage.Empty,

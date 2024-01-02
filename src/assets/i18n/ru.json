@@ -131,6 +131,8 @@
           },
           "type": "Тип",
           "rarity": "Редкость",
+          "region": "Регион",
+          "farm-days": "Дни фарма",
           "icon": "Иконка"
         }
       }
@@ -183,6 +185,63 @@
           "type": "Тип",
           "icon": "Иконка"
         }
+      }
+    },
+    "details": {
+      "field": {
+        "name": {
+          "en": "Name [English]",
+          "ua": "Name [Ukrainian]",
+          "ru": "Name [Russian]"
+        },
+        "description": {
+          "en": "Description [English]",
+          "ua": "Description [Ukrainian]",
+          "ru": "Description [Russian]"
+        },
+        "type": "Type",
+        "rarity": "Rarity",
+        "region": "Region",
+        "farm-days": "Farm days",
+        "icon": "Icon"
+      }
+    },
+    "edit": {
+      "field": {
+        "name": {
+          "en": "Name [English]",
+          "ua": "Name [Ukrainian]",
+          "ru": "Name [Russian]"
+        },
+        "description": {
+          "en": "Description [English]",
+          "ua": "Description [Ukrainian]",
+          "ru": "Description [Russian]"
+        },
+        "type": "Type",
+        "rarity": "Rarity",
+        "region": "Region",
+        "farm-days": "Farm days",
+        "icon": "Icon"
+      }
+    },
+    "create": {
+      "field": {
+        "name": {
+          "en": "Name [English]",
+          "ua": "Name [Ukrainian]",
+          "ru": "Name [Russian]"
+        },
+        "description": {
+          "en": "Description [English]",
+          "ua": "Description [Ukrainian]",
+          "ru": "Description [Russian]"
+        },
+        "type": "Type",
+        "rarity": "Rarity",
+        "region": "Region",
+        "farm-days": "Farm days",
+        "icon": "Icon"
       }
     }
   },
@@ -303,6 +362,17 @@
           "actions": "Действия"
         }
       }
+    },
+    "view": {
+      "id": "ID",
+      "name": "Имя",
+      "description": "Описание",
+      "type": "Тип",
+      "rarity": "Редкость",
+      "region": "Регион",
+      "farm-days": "Дни фарма",
+      "icon": "Иконка",
+      "actions": "Действия"
     }
   },
   "enum": {
@@ -402,6 +472,10 @@
     },
     "ascension-type": {
       "gems-of-exaltation": "Драгоценные камни возвышения"
+    },
+    "weapon-type": {
+      "ascension": "Возвышение",
+      "refinement": "Пробуждение"
     }
   },
   "dialog": {

@@ -87,7 +87,7 @@
             "icon": "Піктограма",
             "splash-art": "Сплеш арт",
             "card-icon": "Картка"
-          }
+          },
           "checkbox": {
             "arche": {
               "usia": "Усія",
@@ -131,6 +131,8 @@
           },
           "type": "Тип",
           "rarity": "Рідкість",
+          "region": "Регіон",
+          "farm-days": "Дні фарму",
           "icon": "Піктограма"
         }
       }
@@ -183,6 +185,63 @@
           "type": "Тип",
           "icon": "Піктограма"
         }
+      }
+    },
+    "details": {
+      "field": {
+        "name": {
+          "en": "Имя [английский]",
+          "ua": "Имя [украинский]",
+          "ru": "Имя [русский]"
+        },
+        "description": {
+          "en": "Описание [английский]",
+          "ua": "Описание [украинский]",
+          "ru": "Описание [русский]"
+        },
+        "type": "Тип",
+        "rarity": "Редкость",
+        "region": "Регион",
+        "farm-days": "Дни фарма",
+        "icon": "Иконка"
+      }
+    },
+    "edit": {
+      "field": {
+        "name": {
+          "en": "Имя [английский]",
+          "ua": "Имя [украинский]",
+          "ru": "Имя [русский]"
+        },
+        "description": {
+          "en": "Описание [английский]",
+          "ua": "Описание [украинский]",
+          "ru": "Описание [русский]"
+        },
+        "type": "Тип",
+        "rarity": "Редкость",
+        "region": "Регион",
+        "farm-days": "Дни фарма",
+        "icon": "Иконка"
+      }
+    },
+    "create": {
+      "field": {
+        "name": {
+          "en": "Name [English]",
+          "ua": "Name [Ukrainian]",
+          "ru": "Name [Russian]"
+        },
+        "description": {
+          "en": "Description [English]",
+          "ua": "Description [Ukrainian]",
+          "ru": "Description [Russian]"
+        },
+        "type": "Type",
+        "rarity": "Rarity",
+        "region": "Region",
+        "farm-days": "Farm days",
+        "icon": "Icon"
       }
     }
   },
@@ -282,7 +341,7 @@
       "talent": {
         "view": {
           "id": "ID",
-          "name": "Им'я",
+          "name": "Ім'я",
           "description": "Опис",
           "type": "Тип",
           "rarity": "Рідкість",
@@ -295,7 +354,7 @@
       "ascension": {
         "view": {
           "id": "ID",
-          "name": "Им'я",
+          "name": "Ім'я",
           "description": "Опис",
           "type": "Тип",
           "rarity": "Рідкість",
@@ -303,6 +362,17 @@
           "actions": "Дії"
         }
       }
+    },
+    "view": {
+      "id": "ID",
+      "name": "Ім'я",
+      "description": "Опис",
+      "type": "Тип",
+      "rarity": "Рідкість",
+      "region": "Регіон",
+      "farm-days": "Дні фарму",
+      "icon": "Піктограма",
+      "actions": "Дії"
     }
   },
   "enum": {
@@ -362,16 +432,6 @@
       "usia": "Усія",
       "pneuma": "Пневма"
     },
-    "mob-type": {
-      "other-human-factions":  "Інші людські фракції",
-      "automatons": "Автоматони",
-      "fatui":  "Фатуї",
-      "enemies-of-note": "Вороги, гідні згадки",
-      "hilichurls":  "Хілічурли",
-      "elemental-lifeforms": "Елементальні істоти",
-      "the-abyss":  "Безодня",
-      "mystical-beasts": "Містичні звірі"
-    },
     "enemy-type": {
       "other-human-factions":  "Інші людські фракції",
       "automatons": "Автоматони",
@@ -402,6 +462,10 @@
     },
     "ascension-type": {
       "gems-of-exaltation": "Дорогоцінне каміння піднесення"
+    },
+    "weapon-type": {
+      "ascension": "Піднесення",
+      "refinement": "Пробудження"
     }
   },
   "dialog": {

@@ -20,7 +20,7 @@ export const viewMetadata: ITableMetadata[] = [
   {
     fieldName: 'type',
     label: 'table.view.type',
-    type: EHeaderType.TalentMaterialType,
+    type: EHeaderType.WeaponMaterialType,
   },
   {
     fieldName: 'rarity',

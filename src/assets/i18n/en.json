@@ -184,6 +184,63 @@
           "icon": "Icon"
         }
       }
+    },
+    "details": {
+      "field": {
+        "name": {
+          "en": "Name [English]",
+          "ua": "Name [Ukrainian]",
+          "ru": "Name [Russian]"
+        },
+        "description": {
+          "en": "Description [English]",
+          "ua": "Description [Ukrainian]",
+          "ru": "Description [Russian]"
+        },
+        "type": "Type",
+        "rarity": "Rarity",
+        "region": "Region",
+        "farm-days": "Farm days",
+        "icon": "Icon"
+      }
+    },
+    "edit": {
+      "field": {
+        "name": {
+          "en": "Name [English]",
+          "ua": "Name [Ukrainian]",
+          "ru": "Name [Russian]"
+        },
+        "description": {
+          "en": "Description [English]",
+          "ua": "Description [Ukrainian]",
+          "ru": "Description [Russian]"
+        },
+        "type": "Type",
+        "rarity": "Rarity",
+        "region": "Region",
+        "farm-days": "Farm days",
+        "icon": "Icon"
+      }
+    },
+    "create": {
+      "field": {
+        "name": {
+          "en": "Name [English]",
+          "ua": "Name [Ukrainian]",
+          "ru": "Name [Russian]"
+        },
+        "description": {
+          "en": "Description [English]",
+          "ua": "Description [Ukrainian]",
+          "ru": "Description [Russian]"
+        },
+        "type": "Type",
+        "rarity": "Rarity",
+        "region": "Region",
+        "farm-days": "Farm days",
+        "icon": "Icon"
+      }
     }
   },
   "shared": {
@@ -303,6 +360,17 @@
           "actions": "Actions"
         }
       }
+    },
+    "view": {
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "type": "Type",
+      "rarity": "Rarity",
+      "region": "Region",
+      "farm-days": "Farm days",
+      "icon": "Icon",
+      "actions": "Actions"
     }
   },
   "enum": {
@@ -402,6 +470,10 @@
     },
     "ascension-type": {
       "gems-of-exaltation": "Gems of exaltation"
+    },
+    "weapon-type": {
+      "ascension": "Ascension",
+      "refinement": "Refinement"
     }
   },
   "dialog": {
