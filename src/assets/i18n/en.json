@@ -455,6 +455,7 @@
       "crown": "Crown"
     },
     "rarity": {
+      "common": "Common",
       "uncommon": "Uncommon",
       "rare": "Rare",
       "epic": "Epic"
@@ -474,6 +475,10 @@
     "weapon-type": {
       "ascension": "Ascension",
       "refinement": "Refinement"
+    },
+    "enhancement-type": {
+      "general-drops": "General drops",
+      "elite-drops": "Elite drops"
     }
   },
   "dialog": {
