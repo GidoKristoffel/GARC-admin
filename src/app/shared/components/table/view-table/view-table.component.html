@@ -55,6 +55,9 @@
           <td *ngIf="header.type === headerType.WeaponMaterialType">
             {{ weaponMaterialTypeTranslate + item[header.fieldName] | translate }}
           </td>
+          <td *ngIf="header.type === headerType.EnhancementMaterialType">
+            {{ enhancementMaterialTypeTranslate + item[header.fieldName] | translate }}
+          </td>
           <td *ngIf="header.type === headerType.Day">
             <div *ngFor="let arrayItem of item[header.fieldName]">
               {{ farmDaysTranslate + arrayItem | translate }}

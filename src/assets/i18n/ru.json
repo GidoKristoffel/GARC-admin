@@ -457,6 +457,7 @@
       "crown": "Корона"
     },
     "rarity": {
+      "common": "Обычная",
       "uncommon": "Необычная",
       "rare": "Редкая",
       "epic": "Эпическая"
@@ -476,6 +477,10 @@
     "weapon-type": {
       "ascension": "Возвышение",
       "refinement": "Пробуждение"
+    },
+    "enhancement-type": {
+      "general-drops": "Общие награды врагов",
+      "elite-drops": "Награды элитных врагов"
     }
   },
   "dialog": {
