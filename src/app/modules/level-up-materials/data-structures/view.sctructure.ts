@@ -1,4 +1,4 @@
-import { ITableMetadata } from "../../../shared/interfaces/table.interface";
+ import { ITableMetadata } from "../../../shared/interfaces/table.interface";
 import { EHeaderType } from "../../../core/enums/table.enum";
 
 export const viewMetadata: ITableMetadata[] = [
