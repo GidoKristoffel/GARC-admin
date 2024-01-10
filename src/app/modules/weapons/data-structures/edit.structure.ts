@@ -1,7 +1,7 @@
 import { IFormMetadata } from "../../../shared/interfaces/form.interface";
 import { EFormType } from "../../../core/enums/form.enum";
 
-export const createMetadata: IFormMetadata[] = [
+export const editMetadata: IFormMetadata[] = [
   {
     fieldName: 'nameEn',
     label: 'page.edit.field.name.en',
