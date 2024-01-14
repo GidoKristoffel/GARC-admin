@@ -11,11 +11,14 @@ import { WeaponFormService } from "../../services/weapon-form/weapon-form.servic
 import { WeaponOptionsService } from "../../services/weapon-options/weapon-options.service";
 import { WeaponService } from "../../services/weapon/weapon.service";
 import { IWeapon } from "../../interfaces/common.inteface";
+import {
+  TableEditFacadeComponent
+} from "../../../../shared/components/facade/table-edit-facade/table-edit-facade.component";
 
 @Component({
   selector: 'clt-weapons-edit',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TableEditFacadeComponent],
   templateUrl: './weapons-edit.component.html',
   styleUrl: './weapons-edit.component.scss'
 })
