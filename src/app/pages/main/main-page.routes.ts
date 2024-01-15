@@ -22,6 +22,7 @@ export const mainPage: Routes = [
     path: `${EPage.Weapons}/${EPage.Weapons}`,
     loadComponent: () =>
       import('./weapons/weapons.component').then((c) => c.WeaponsComponent),
+    loadChildren: () => import('./weapons/weapons.routes').then((r) => r.weaponsPage),
   },
   {
     path: EPage.Material,
