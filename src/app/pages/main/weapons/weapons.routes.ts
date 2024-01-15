@@ -5,29 +5,29 @@ export const weaponsPage: Routes = [
   {
     path: EPage.Create,
     loadComponent: () =>
-      import('./playable-create/playable-create.component').then(
-        (c) => c.PlayableCreateComponent,
+      import('./weapons-create-page/weapons-create-page.component').then(
+        (c) => c.WeaponsCreatePageComponent,
       ),
   },
   {
     path: EPage.View,
     loadComponent: () =>
-      import('./playable-view/playable-view.component').then(
-        (c) => c.PlayableViewComponent,
+      import('./weapons-view-table-page/weapons-view-table-page.component').then(
+        (c) => c.WeaponsViewTablePageComponent,
       ),
   },
   {
     path: EPage.Details + EPage.ParamId,
     loadComponent: () =>
-      import('./playable-details-page/playable-details-page.component').then(
-        (c) => c.PlayableDetailsPageComponent,
+      import('./weapons-details-page/weapons-details-page.component').then(
+        (c) => c.WeaponsDetailsPageComponent,
       ),
   },
   {
     path: EPage.Edit + EPage.ParamId,
     loadComponent: () =>
-      import('./playable-edit/playable-edit.component').then(
-        (c) => c.PlayableEditComponent,
+      import('./weapons-edit-page/weapons-edit-page.component').then(
+        (c) => c.WeaponsEditPageComponent,
       ),
   },
   {
