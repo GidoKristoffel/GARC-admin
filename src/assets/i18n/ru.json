@@ -375,7 +375,11 @@
       "actions": "Действия",
       "ability-description": "Описание способности",
       "bonus-attribute": "Бонусный атрибут",
-      "quality": "Редкость"
+      "quality": "Редкость",
+      "splash-art-original": "Сплэш арт: Оригинал",
+      "splash-art-awakened": "Сплэш арт: Пробужденный",
+      "splash-art-pneuma": "Сплэш арт: Пневма",
+      "splash-art-ousia": "Сплэш арт: Усия"
     }
   },
   "enum": {

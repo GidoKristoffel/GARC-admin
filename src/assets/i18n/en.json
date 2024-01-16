@@ -373,8 +373,11 @@
       "actions": "Actions",
       "ability-description": "Ability description",
       "bonus-attribute": "Bonus attribute",
-      "quality": "Quality"
-
+      "quality": "Quality",
+      "splash-art-original": "Splash art: Original",
+      "splash-art-awakened": "Splash art: Awakened",
+      "splash-art-pneuma": "Splash art: Pneuma",
+      "splash-art-ousia": "Splash art: Ousia"
     }
   },
   "enum": {
