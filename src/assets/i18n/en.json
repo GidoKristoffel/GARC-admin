@@ -370,7 +370,11 @@
       "region": "Region",
       "farm-days": "Farm days",
       "icon": "Icon",
-      "actions": "Actions"
+      "actions": "Actions",
+      "ability-description": "Ability description",
+      "bonus-attribute": "Bonus attribute",
+      "quality": "Quality"
+
     }
   },
   "enum": {
