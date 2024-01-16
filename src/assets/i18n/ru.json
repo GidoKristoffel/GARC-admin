@@ -372,7 +372,10 @@
       "region": "Регион",
       "farm-days": "Дни фарма",
       "icon": "Иконка",
-      "actions": "Действия"
+      "actions": "Действия",
+      "ability-description": "Описание способности",
+      "bonus-attribute": "Бонусный атрибут",
+      "quality": "Редкость"
     }
   },
   "enum": {
