@@ -350,17 +350,6 @@
           "icon": "Піктограма",
           "actions": "Дії"
         }
-      },
-      "ascension": {
-        "view": {
-          "id": "ID",
-          "name": "Ім'я",
-          "description": "Опис",
-          "type": "Тип",
-          "rarity": "Рідкість",
-          "icon": "Піктограма",
-          "actions": "Дії"
-        }
       }
     },
     "view": {

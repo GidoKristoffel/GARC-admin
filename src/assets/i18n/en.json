@@ -348,17 +348,6 @@
           "icon": "icon",
           "actions": "Actions"
         }
-      },
-      "ascension": {
-        "view": {
-          "id": "ID",
-          "name": "Name",
-          "description": "Description",
-          "type": "Type",
-          "rarity": "Rarity",
-          "icon": "icon",
-          "actions": "Actions"
-        }
       }
     },
     "view": {
