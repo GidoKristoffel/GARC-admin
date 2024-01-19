@@ -304,16 +304,6 @@
       }
     },
     "enemies": {
-      "mobs": {
-        "view": {
-          "id": "ID",
-          "name": "Name",
-          "description": "Description",
-          "mob-type": "Type",
-          "icon": "Icon",
-          "actions": "Actions"
-        }
-      },
       "elite-bosses": {
         "view": {
           "id": "ID",
@@ -366,7 +356,8 @@
       "splash-art-original": "Splash art: Original",
       "splash-art-awakened": "Splash art: Awakened",
       "splash-art-pneuma": "Splash art: Pneuma",
-      "splash-art-ousia": "Splash art: Ousia"
+      "splash-art-ousia": "Splash art: Ousia",
+      "mob-type": "Type"
     }
   },
   "enum": {

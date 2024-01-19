@@ -306,16 +306,6 @@
       }
     },
     "enemies": {
-      "mobs": {
-        "view": {
-          "id": "ID",
-          "name": "Ім'я",
-          "description": "Опис",
-          "mob-type": "Тип",
-          "icon": "Піктограма",
-          "actions": "Дії"
-        }
-      },
       "elite-bosses": {
         "view": {
           "id": "ID",
@@ -368,7 +358,8 @@
       "splash-art-original": "Сплеш арт: Оригінал",
       "splash-art-awakened": "Сплеш арт: Пробуджений",
       "splash-art-pneuma": "Сплеш арт: Пневма",
-      "splash-art-ousia": "Сплеш арт: Усія"
+      "splash-art-ousia": "Сплеш арт: Усія",
+      "mob-type": "Тип"
     }
   },
   "enum": {
