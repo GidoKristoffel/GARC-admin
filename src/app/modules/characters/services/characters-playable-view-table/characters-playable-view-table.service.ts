@@ -1,8 +1,5 @@
 import { DestroyRef, Injectable } from '@angular/core';
 import { IPlayableCharacter } from '../../interfaces/table.interface';
-import { EHeaderType } from '../../../../core/enums/table.enum';
-import { ITableMetadata } from '../../../../shared/interfaces/table.interface';
-import { viewMetadata } from '../../data-structures/view.sctructure';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ICharacterViewFormResponse } from '../../interfaces/api.interfaces';
 import { CharactersApiService } from '../../api/characters.api.service';
