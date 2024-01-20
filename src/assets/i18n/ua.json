@@ -315,16 +315,6 @@
           "icon": "Піктограма",
           "actions": "Дії"
         }
-      },
-      "weekly-bosses": {
-        "view": {
-          "id": "ID",
-          "name": "Ім'я",
-          "description": "Опис",
-          "mob-type": "Тип",
-          "icon": "Піктограма",
-          "actions": "Дії"
-        }
       }
     },
     "materials": {
