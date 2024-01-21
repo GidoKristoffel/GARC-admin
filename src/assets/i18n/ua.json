@@ -283,40 +283,6 @@
     }
   },
   "table": {
-    "characters": {
-      "playable": {
-        "view": {
-          "id": "ID",
-          "name": "Ім'я",
-          "quality": "Якість",
-          "element": "Елемент",
-          "region": "Регіон",
-          "bonus-attribute": "Бонусна характеристика вознесіння",
-          "weapon": "Тип зброї",
-          "constellation": "Сузір'я",
-          "arche": "Архе",
-          "birthday": "День народження",
-          "title": "Титул",
-          "affiliation": "Приналежність",
-          "icon": "Піктограма",
-          "splash-art": "Сплеш арт",
-          "card-icon": "Картка",
-          "actions": "Дії"
-        }
-      }
-    },
-    "enemies": {
-      "elite-bosses": {
-        "view": {
-          "id": "ID",
-          "name": "Ім'я",
-          "description": "Опис",
-          "mob-type": "Тип",
-          "icon": "Піктограма",
-          "actions": "Дії"
-        }
-      }
-    },
     "materials": {
       "talent": {
         "view": {

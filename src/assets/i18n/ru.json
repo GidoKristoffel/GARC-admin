@@ -305,18 +305,6 @@
         }
       }
     },
-    "enemies": {
-      "elite-bosses": {
-        "view": {
-          "id": "ID",
-          "name": "Имя",
-          "description": "Описание",
-          "mob-type": "Тип",
-          "icon": "Иконка",
-          "actions": "Действия"
-        }
-      }
-    },
     "materials": {
       "talent": {
         "view": {
