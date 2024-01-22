@@ -305,21 +305,6 @@
         }
       }
     },
-    "materials": {
-      "talent": {
-        "view": {
-          "id": "Id",
-          "name": "Имя",
-          "description": "Описание",
-          "type": "Тип",
-          "rarity": "Редкость",
-          "region": "Регион",
-          "farm-days": "Дни фарма",
-          "icon": "Иконка",
-          "actions": "Действия"
-        }
-      }
-    },
     "view": {
       "id": "ID",
       "name": "Имя",

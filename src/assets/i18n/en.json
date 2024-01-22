@@ -303,21 +303,6 @@
         }
       }
     },
-    "materials": {
-      "talent": {
-        "view": {
-          "id": "ID",
-          "name": "Name",
-          "description": "Description",
-          "type": "Type",
-          "rarity": "Rarity",
-          "region": "Region",
-          "farm-days": "Farm days",
-          "icon": "icon",
-          "actions": "Actions"
-        }
-      }
-    },
     "view": {
       "id": "ID",
       "name": "Name",

@@ -4,47 +4,47 @@ import { EHeaderType } from '../../../core/enums/table.enum';
 export const viewMetadata: ITableMetadata[] = [
   {
     fieldName: 'id',
-    label: 'table.materials.talent.view.id',
+    label: 'table.view.id',
     type: EHeaderType.Id,
   },
   {
     fieldName: 'name',
-    label: 'table.materials.talent.view.name',
+    label: 'table.view.name',
     type: EHeaderType.TranslateString,
   },
   {
     fieldName: 'description',
-    label: 'table.materials.talent.view.description',
+    label: 'table.view.description',
     type: EHeaderType.TranslateString,
   },
   {
     fieldName: 'type',
-    label: 'table.materials.talent.view.type',
+    label: 'table.view.type',
     type: EHeaderType.TalentMaterialType,
   },
   {
     fieldName: 'rarity',
-    label: 'table.materials.talent.view.rarity',
+    label: 'table.view.rarity',
     type: EHeaderType.MaterialRarity,
   },
   {
     fieldName: 'region',
-    label: 'table.materials.talent.view.region',
+    label: 'table.view.region',
     type: EHeaderType.Region,
   },
   {
     fieldName: 'farmDays',
-    label: 'table.materials.talent.view.farm-days',
+    label: 'table.view.farm-days',
     type: EHeaderType.Day,
   },
   {
     fieldName: 'icon',
-    label: 'table.materials.talent.view.icon',
+    label: 'table.view.icon',
     type: EHeaderType.Link,
   },
   {
     fieldName: 'actions',
-    label: 'table.materials.talent.view.actions',
+    label: 'table.view.actions',
     type: EHeaderType.Action,
   },
 ];
