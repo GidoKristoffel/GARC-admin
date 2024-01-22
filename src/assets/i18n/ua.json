@@ -283,21 +283,6 @@
     }
   },
   "table": {
-    "materials": {
-      "talent": {
-        "view": {
-          "id": "ID",
-          "name": "Ім'я",
-          "description": "Опис",
-          "type": "Тип",
-          "rarity": "Рідкість",
-          "region": "Регіон",
-          "farm-days": "Дні фарму",
-          "icon": "Піктограма",
-          "actions": "Дії"
-        }
-      }
-    },
     "view": {
       "id": "ID",
       "name": "Ім'я",
