@@ -303,18 +303,6 @@
         }
       }
     },
-    "enemies": {
-      "elite-bosses": {
-        "view": {
-          "id": "ID",
-          "name": "Name",
-          "description": "Description",
-          "mob-type": "Type",
-          "icon": "Icon",
-          "actions": "Actions"
-        }
-      }
-    },
     "materials": {
       "talent": {
         "view": {
