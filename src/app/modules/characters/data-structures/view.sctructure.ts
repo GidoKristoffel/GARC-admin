@@ -4,82 +4,82 @@ import { EHeaderType } from "../../../core/enums/table.enum";
 export const viewMetadata: ITableMetadata[] = [
   {
     fieldName: 'id',
-    label: 'table.characters.playable.view.id',
+    label: 'table.view.id',
     type: EHeaderType.Id,
   },
   {
     fieldName: 'name',
-    label: 'table.characters.playable.view.name',
+    label: 'table.view.name',
     type: EHeaderType.TranslateString,
   },
   {
     fieldName: 'quality',
-    label: 'table.characters.playable.view.quality',
+    label: 'table.view.quality',
     type: EHeaderType.Quality,
   },
   {
     fieldName: 'elementalType',
-    label: 'table.characters.playable.view.element',
+    label: 'table.view.element',
     type: EHeaderType.Element,
   },
   {
     fieldName: 'region',
-    label: 'table.characters.playable.view.region',
+    label: 'table.view.region',
     type: EHeaderType.Region,
   },
   {
     fieldName: 'bonusAttribute',
-    label: 'table.characters.playable.view.bonus-attribute',
+    label: 'table.view.bonus-attribute',
     type: EHeaderType.BonusAttribute,
   },
   {
     fieldName: 'weapon',
-    label: 'table.characters.playable.view.weapon',
+    label: 'table.view.weapon',
     type: EHeaderType.Weapon,
   },
   {
     fieldName: 'constellation',
-    label: 'table.characters.playable.view.constellation',
+    label: 'table.view.constellation',
     type: EHeaderType.TranslateString,
   },
   {
     fieldName: 'arche',
-    label: 'table.characters.playable.view.arche',
+    label: 'table.view.arche',
     type: EHeaderType.Arche,
   },
   {
     fieldName: 'birthday',
-    label: 'table.characters.playable.view.birthday',
+    label: 'table.view.birthday',
     type: EHeaderType.Date,
   },
   {
     fieldName: 'title',
-    label: 'table.characters.playable.view.title',
+    label: 'table.view.title',
     type: EHeaderType.TranslateString,
   },
   {
     fieldName: 'affiliation',
-    label: 'table.characters.playable.view.affiliation',
+    label: 'table.view.affiliation',
     type: EHeaderType.TranslateString,
   },
   {
     fieldName: 'icon',
-    label: 'table.characters.playable.view.icon',
+    label: 'table.view.icon',
     type: EHeaderType.Link,
   },
   {
     fieldName: 'splashArt',
-    label: 'table.characters.playable.view.splash-art',
+    label: 'table.view.splash-art',
     type: EHeaderType.Link,
   },
   {
     fieldName: 'cardIcon',
-    label: 'table.characters.playable.view.card-icon',
+    label: 'table.view.card-icon',
     type: EHeaderType.Link,
   },
   {
     fieldName: 'actions',
-    label: 'table.characters.playable.view.actions',
+    label: 'table.view.actions',
     type: EHeaderType.Action,
   },
 ];
