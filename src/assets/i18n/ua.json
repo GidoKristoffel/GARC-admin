@@ -300,7 +300,15 @@
       "splash-art-awakened": "Сплеш арт: Пробуджений",
       "splash-art-pneuma": "Сплеш арт: Пневма",
       "splash-art-ousia": "Сплеш арт: Усія",
-      "mob-type": "Тип"
+      "mob-type": "Тип",
+      "element": "Елемент",
+      "weapon": "Тип зброї",
+      "constellation": "Сузір'я",
+      "arche": "Архе",
+      "birthday": "День народження",
+      "title": "Титул",
+      "affiliation": "Приналежність",
+      "card-icon": "Картка"
     }
   },
   "enum": {

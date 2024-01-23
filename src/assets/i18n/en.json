@@ -281,28 +281,6 @@
     }
   },
   "table": {
-    "characters": {
-      "playable": {
-        "view": {
-          "id": "ID",
-          "name": "Name",
-          "quality": "Quality",
-          "element": "Elemental type",
-          "region": "Region",
-          "bonus-attribute": "Bonus attribute from ascension",
-          "weapon": "Weapon type",
-          "constellation": "Constellation",
-          "arche": "Arche",
-          "birthday": "Birthday",
-          "title": "Title",
-          "affiliation": "Affiliation",
-          "icon": "Icon",
-          "splash-art": "Splash art",
-          "card-icon": "Card",
-          "actions": "Actions"
-        }
-      }
-    },
     "view": {
       "id": "ID",
       "name": "Name",
@@ -316,11 +294,20 @@
       "ability-description": "Ability description",
       "bonus-attribute": "Bonus attribute",
       "quality": "Quality",
+      "splash-art": "Splash art",
       "splash-art-original": "Splash art: Original",
       "splash-art-awakened": "Splash art: Awakened",
       "splash-art-pneuma": "Splash art: Pneuma",
       "splash-art-ousia": "Splash art: Ousia",
-      "mob-type": "Type"
+      "mob-type": "Type",
+      "element": "Elemental type",
+      "weapon": "Weapon type",
+      "constellation": "Constellation",
+      "arche": "Arche",
+      "birthday": "Birthday",
+      "title": "Title",
+      "affiliation": "Affiliation",
+      "card-icon": "Card"
     }
   },
   "enum": {
