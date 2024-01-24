@@ -4,7 +4,7 @@ import { EFormType } from '../../../core/enums/form.enum';
 export const editMetadata: IFormMetadata[] = [
   {
     fieldName: 'nameEn',
-    label: 'page.materials.talent.field.name.en',
+    label: 'page.edit.field.name.en',
     type: EFormType.String,
     option: '',
     language: '',
@@ -13,7 +13,7 @@ export const editMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'nameUa',
-    label: 'page.materials.talent.field.name.ua',
+    label: 'page.edit.field.name.ua',
     type: EFormType.String,
     option: '',
     language: '',
@@ -22,7 +22,7 @@ export const editMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'nameRu',
-    label: 'page.materials.talent.field.name.ru',
+    label: 'page.edit.field.name.ru',
     type: EFormType.String,
     option: '',
     language: '',
@@ -31,7 +31,7 @@ export const editMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'descriptionEn',
-    label: 'page.materials.talent.field.description.en',
+    label: 'page.edit.field.description.en',
     type: EFormType.Textarea,
     option: '',
     language: '',
@@ -40,7 +40,7 @@ export const editMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'descriptionUa',
-    label: 'page.materials.talent.field.description.ua',
+    label: 'page.edit.field.description.ua',
     type: EFormType.Textarea,
     option: '',
     language: '',
@@ -49,7 +49,7 @@ export const editMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'descriptionRu',
-    label: 'page.materials.talent.field.description.ru',
+    label: 'page.edit.field.description.ru',
     type: EFormType.Textarea,
     option: '',
     language: '',
@@ -58,7 +58,7 @@ export const editMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'type',
-    label: 'page.materials.talent.field.type',
+    label: 'page.edit.field.type',
     type: EFormType.Option,
     option: 'type',
     language: '',
@@ -67,7 +67,7 @@ export const editMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'rarity',
-    label: 'page.materials.talent.field.rarity',
+    label: 'page.edit.field.rarity',
     type: EFormType.Option,
     option: 'rarity',
     language: '',
@@ -76,7 +76,7 @@ export const editMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'region',
-    label: 'page.materials.talent.field.region',
+    label: 'page.edit.field.region',
     type: EFormType.Option,
     option: 'region',
     language: '',
@@ -85,7 +85,7 @@ export const editMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'farmDays',
-    label: 'page.materials.talent.field.farm-days',
+    label: 'page.edit.field.farm-days',
     type: EFormType.Checkbox,
     option: 'farmDays',
     language: '',
@@ -94,7 +94,7 @@ export const editMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'icon',
-    label: 'page.materials.talent.field.icon',
+    label: 'page.edit.field.icon',
     type: EFormType.Image,
     option: '',
     language: '',

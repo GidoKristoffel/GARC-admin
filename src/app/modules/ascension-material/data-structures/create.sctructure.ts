@@ -4,7 +4,7 @@ import { EFormType } from "../../../core/enums/form.enum";
 export const createMetadata: IFormMetadata[] = [
   {
     fieldName: 'nameEn',
-    label: 'page.materials.talent.field.name.en',
+    label: 'page.create.field.name.en',
     type: EFormType.String,
     option: '',
     language: '',
@@ -13,7 +13,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'nameUa',
-    label: 'page.materials.talent.field.name.ua',
+    label: 'page.create.field.name.ua',
     type: EFormType.String,
     option: '',
     language: '',
@@ -22,7 +22,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'nameRu',
-    label: 'page.materials.talent.field.name.ru',
+    label: 'page.create.field.name.ru',
     type: EFormType.String,
     option: '',
     language: '',
@@ -31,7 +31,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'descriptionEn',
-    label: 'page.materials.talent.field.description.en',
+    label: 'page.create.field.description.en',
     type: EFormType.String,
     option: '',
     language: '',
@@ -40,7 +40,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'descriptionUa',
-    label: 'page.materials.talent.field.description.ua',
+    label: 'page.create.field.description.ua',
     type: EFormType.String,
     option: '',
     language: '',
@@ -49,7 +49,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'descriptionRu',
-    label: 'page.materials.talent.field.description.ru',
+    label: 'page.create.field.description.ru',
     type: EFormType.String,
     option: '',
     language: '',
@@ -58,7 +58,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'type',
-    label: 'page.materials.talent.field.type',
+    label: 'page.create.field.type',
     type: EFormType.Option,
     option: 'type',
     language: '',
@@ -67,7 +67,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'rarity',
-    label: 'page.materials.talent.field.rarity',
+    label: 'page.create.field.rarity',
     type: EFormType.Option,
     option: 'rarity',
     language: '',
@@ -76,7 +76,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'icon',
-    label: 'page.materials.talent.field.icon',
+    label: 'page.create.field.icon',
     type: EFormType.Image,
     option: '',
     language: '',

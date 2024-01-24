@@ -5,7 +5,7 @@ import { ELanguage } from '../../../core/enums/language.enum';
 export const detailsMetadata: IFormMetadata[] = [
   {
     fieldName: 'name',
-    label: 'page.materials.talent.field.name.en',
+    label: 'page.details.field.name.en',
     type: EFormType.String,
     option: '',
     language: ELanguage.English,
@@ -14,7 +14,7 @@ export const detailsMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'name',
-    label: 'page.materials.talent.field.name.ua',
+    label: 'page.details.field.name.ua',
     type: EFormType.String,
     option: '',
     language: ELanguage.Ukrainian,
@@ -23,7 +23,7 @@ export const detailsMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'name',
-    label: 'page.materials.talent.field.name.ru',
+    label: 'page.details.field.name.ru',
     type: EFormType.String,
     option: '',
     language: ELanguage.Russian,
@@ -32,7 +32,7 @@ export const detailsMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'description',
-    label: 'page.materials.talent.field.description.en',
+    label: 'page.details.field.description.en',
     type: EFormType.String,
     option: '',
     language: ELanguage.English,
@@ -41,7 +41,7 @@ export const detailsMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'description',
-    label: 'page.materials.talent.field.description.ua',
+    label: 'page.details.field.description.ua',
     type: EFormType.String,
     option: '',
     language: ELanguage.Ukrainian,
@@ -50,7 +50,7 @@ export const detailsMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'description',
-    label: 'page.materials.talent.field.description.ru',
+    label: 'page.details.field.description.ru',
     type: EFormType.String,
     option: '',
     language: ELanguage.Russian,
@@ -59,7 +59,7 @@ export const detailsMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'type',
-    label: 'page.materials.talent.field.type',
+    label: 'page.details.field.type',
     type: EFormType.Option,
     option: '',
     language: '',
@@ -68,7 +68,7 @@ export const detailsMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'rarity',
-    label: 'page.materials.talent.field.rarity',
+    label: 'page.details.field.rarity',
     type: EFormType.Option,
     option: '',
     language: '',
@@ -77,7 +77,7 @@ export const detailsMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'region',
-    label: 'page.materials.talent.field.region',
+    label: 'page.details.field.region',
     type: EFormType.Option,
     option: '',
     language: '',
@@ -86,7 +86,7 @@ export const detailsMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'farmDays',
-    label: 'page.materials.talent.field.farm-days',
+    label: 'page.details.field.farm-days',
     type: EFormType.Checkbox,
     option: '',
     language: '',
@@ -95,7 +95,7 @@ export const detailsMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'icon',
-    label: 'page.materials.talent.field.icon',
+    label: 'page.details.field.icon',
     type: EFormType.Image,
     option: '',
     language: '',
