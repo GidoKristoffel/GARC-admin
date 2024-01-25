@@ -98,25 +98,6 @@
       }
     },
     "materials": {
-      "talent": {
-        "field": {
-          "name": {
-            "en": "Name [English]",
-            "ua": "Name [Ukrainian]",
-            "ru": "Name [Russian]"
-          },
-          "description": {
-            "en": "Description [English]",
-            "ua": "Description [Ukrainian]",
-            "ru": "Description [Russian]"
-          },
-          "type": "Type",
-          "rarity": "Rarity",
-          "region": "Region",
-          "farm-days": "Farm days",
-          "icon": "Icon"
-        }
-      },
       "ascension": {
         "field": {
           "name": {
