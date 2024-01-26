@@ -97,25 +97,6 @@
         }
       }
     },
-    "materials": {
-      "ascension": {
-        "field": {
-          "name": {
-            "en": "Name [English]",
-            "ua": "Name [Ukrainian]",
-            "ru": "Name [Russian]"
-          },
-          "description": {
-            "en": "Description [English]",
-            "ua": "Description [Ukrainian]",
-            "ru": "Description [Russian]"
-          },
-          "type": "Type",
-          "rarity": "Rarity",
-          "icon": "Icon"
-        }
-      }
-    },
     "enemies": {
       "mobs": {
         "field": {
