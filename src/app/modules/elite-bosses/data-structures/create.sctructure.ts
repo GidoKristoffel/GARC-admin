@@ -4,7 +4,7 @@ import { EFormType } from "../../../core/enums/form.enum";
 export const createMetadata: IFormMetadata[] = [
   {
     fieldName: 'nameEn',
-    label: 'page.enemies.elite-bosses.field.name.en',
+    label: 'page.create.field.name.en',
     type: EFormType.String,
     option: '',
     language: '',
@@ -13,7 +13,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'nameUa',
-    label: 'page.enemies.elite-bosses.field.name.ua',
+    label: 'page.create.field.name.ua',
     type: EFormType.String,
     option: '',
     language: '',
@@ -22,7 +22,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'nameRu',
-    label: 'page.enemies.elite-bosses.field.name.ru',
+    label: 'page.create.field.name.ru',
     type: EFormType.String,
     option: '',
     language: '',
@@ -31,7 +31,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'descriptionEn',
-    label: 'page.enemies.elite-bosses.field.description.en',
+    label: 'page.create.field.description.en',
     type: EFormType.String,
     option: '',
     language: '',
@@ -40,7 +40,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'descriptionUa',
-    label: 'page.enemies.elite-bosses.field.description.ua',
+    label: 'page.create.field.description.ua',
     type: EFormType.String,
     option: '',
     language: '',
@@ -49,7 +49,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'descriptionRu',
-    label: 'page.enemies.elite-bosses.field.description.ru',
+    label: 'page.create.field.description.ru',
     type: EFormType.String,
     option: '',
     language: '',
@@ -58,7 +58,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'type',
-    label: 'page.enemies.elite-bosses.field.type',
+    label: 'page.create.field.type',
     type: EFormType.Option,
     option: 'type',
     language: '',
@@ -67,7 +67,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'icon',
-    label: 'page.enemies.elite-bosses.field.icon',
+    label: 'page.create.field.icon',
     type: EFormType.Image,
     option: '',
     language: '',
