@@ -103,7 +103,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'arche',
-    label: 'page.characters.playable.create.field.arche',
+    label: 'enum.arche',
     type: EFormType.Checkbox,
     option: 'arche',
     language: '',
