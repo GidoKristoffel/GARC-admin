@@ -4,7 +4,7 @@ import { EFormType } from "../../../core/enums/form.enum";
 export const createMetadata: IFormMetadata[] = [
   {
     fieldName: 'nameEn',
-    label: 'page.characters.playable.create.field.name.en',
+    label: 'page.create.field.name.en',
     type: EFormType.String,
     option: '',
     language: '',
@@ -13,7 +13,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'nameUa',
-    label: 'page.characters.playable.create.field.name.ua',
+    label: 'page.create.field.name.ua',
     type: EFormType.String,
     option: '',
     language: '',
@@ -22,7 +22,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'nameRu',
-    label: 'page.characters.playable.create.field.name.ru',
+    label: 'page.create.field.name.ru',
     type: EFormType.String,
     option: '',
     language: '',
@@ -31,7 +31,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'quality',
-    label: 'page.characters.playable.create.field.quality',
+    label: 'page.create.field.quality',
     type: EFormType.Option,
     option: 'quality',
     language: '',
@@ -40,7 +40,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'elementalType',
-    label: 'page.characters.playable.create.field.elemental-type',
+    label: 'page.create.field.elemental-type',
     type: EFormType.Option,
     option: 'element',
     language: '',
@@ -49,7 +49,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'region',
-    label: 'page.characters.playable.create.field.region',
+    label: 'page.create.field.region',
     type: EFormType.Option,
     option: 'region',
     language: '',
@@ -58,7 +58,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'bonusAttribute',
-    label: 'page.characters.playable.create.field.bonus-attribute',
+    label: 'page.create.field.bonus-attribute',
     type: EFormType.Option,
     option: 'bonusAttribute',
     language: '',
@@ -67,7 +67,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'weapon',
-    label: 'page.characters.playable.create.field.weapon',
+    label: 'page.create.field.weapon',
     type: EFormType.Option,
     option: 'weapon',
     language: '',
@@ -76,7 +76,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'constellationEn',
-    label: 'page.characters.playable.create.field.constellation.en',
+    label: 'page.create.field.constellation.en',
     type: EFormType.String,
     option: '',
     language: '',
@@ -85,7 +85,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'constellationUa',
-    label: 'page.characters.playable.create.field.constellation.ua',
+    label: 'page.create.field.constellation.ua',
     type: EFormType.String,
     option: '',
     language: '',
@@ -94,7 +94,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'constellationRu',
-    label: 'page.characters.playable.create.field.constellation.ru',
+    label: 'page.create.field.constellation.ru',
     type: EFormType.String,
     option: '',
     language: '',
@@ -112,7 +112,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'birthday',
-    label: 'page.characters.playable.create.field.birthday',
+    label: 'page.create.field.birthday',
     type: EFormType.Birthday,
     option: '',
     language: '',
@@ -121,7 +121,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'titleEn',
-    label: 'page.characters.playable.create.field.title.en',
+    label: 'page.create.field.title.en',
     type: EFormType.String,
     option: '',
     language: '',
@@ -130,7 +130,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'titleUa',
-    label: 'page.characters.playable.create.field.title.ua',
+    label: 'page.create.field.title.ua',
     type: EFormType.String,
     option: '',
     language: '',
@@ -139,7 +139,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'titleRu',
-    label: 'page.characters.playable.create.field.title.ru',
+    label: 'page.create.field.title.ru',
     type: EFormType.String,
     option: '',
     language: '',
@@ -148,7 +148,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'affiliationEn',
-    label: 'page.characters.playable.create.field.affiliation.en',
+    label: 'page.create.field.affiliation.en',
     type: EFormType.String,
     option: '',
     language: '',
@@ -157,7 +157,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'affiliationUa',
-    label: 'page.characters.playable.create.field.affiliation.ua',
+    label: 'page.create.field.affiliation.ua',
     type: EFormType.String,
     option: '',
     language: '',
@@ -166,7 +166,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'affiliationRu',
-    label: 'page.characters.playable.create.field.affiliation.ru',
+    label: 'page.create.field.affiliation.ru',
     type: EFormType.String,
     option: '',
     language: '',
@@ -175,7 +175,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'icon',
-    label: 'page.characters.playable.create.field.icon',
+    label: 'page.create.field.icon',
     type: EFormType.Image,
     option: '',
     language: '',
@@ -184,7 +184,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'splashArt',
-    label: 'page.characters.playable.create.field.splash-art',
+    label: 'page.create.field.splash-art',
     type: EFormType.Image,
     option: '',
     language: '',
@@ -193,7 +193,7 @@ export const createMetadata: IFormMetadata[] = [
   },
   {
     fieldName: 'cardIcon',
-    label: 'page.characters.playable.create.field.card-icon',
+    label: 'page.create.field.card-icon',
     type: EFormType.Image,
     option: '',
     language: '',
