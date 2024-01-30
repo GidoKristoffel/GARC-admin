@@ -87,12 +87,6 @@
             "icon": "Піктограма",
             "splash-art": "Сплеш арт",
             "card-icon": "Картка"
-          },
-          "checkbox": {
-            "arche": {
-              "usia": "Усія",
-              "pneuma": "Пневма"
-            }
           }
         }
       }

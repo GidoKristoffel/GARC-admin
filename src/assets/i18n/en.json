@@ -87,12 +87,6 @@
             "icon": "Icon",
             "splash-art": "Splash art",
             "card-icon": "Card"
-          },
-          "checkbox": {
-            "arche": {
-              "usia": "Usia",
-              "pneuma": "Pneuma"
-            }
           }
         }
       }
