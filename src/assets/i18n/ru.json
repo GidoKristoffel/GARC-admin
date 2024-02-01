@@ -99,14 +99,14 @@
           "ru": "Имя [русский]"
         },
         "description": {
-          "en": "Description [English]",
-          "ua": "Description [Ukrainian]",
-          "ru": "Description [Russian]"
+          "en": "Описание [английский]",
+          "ua": "Описание [украинский]",
+          "ru": "Описание [русский]"
         },
-        "type": "Type",
-        "rarity": "Rarity",
+        "type": "Тип",
+        "rarity": "Редкость",
         "region": "Регион",
-        "farm-days": "Farm days",
+        "farm-days": "Дни фарма",
         "icon": "Иконка",
         "quality": "Качество",
         "elemental-type": "Элемент",
