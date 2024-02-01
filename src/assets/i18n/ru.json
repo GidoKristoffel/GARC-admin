@@ -94,9 +94,9 @@
     "details": {
       "field": {
         "name": {
-          "en": "Name [English]",
-          "ua": "Name [Ukrainian]",
-          "ru": "Name [Russian]"
+          "en": "Имя [английский]",
+          "ua": "Имя [украинский]",
+          "ru": "Имя [русский]"
         },
         "description": {
           "en": "Description [English]",
@@ -105,9 +105,32 @@
         },
         "type": "Type",
         "rarity": "Rarity",
-        "region": "Region",
+        "region": "Регион",
         "farm-days": "Farm days",
-        "icon": "Icon"
+        "icon": "Иконка",
+        "quality": "Качество",
+        "elemental-type": "Элемент",
+        "bonus-attribute": "Бонусная характеристика возвышения",
+        "weapon": "Тип оружия",
+        "constellation": {
+          "en": "Созвездие [английский]",
+          "ua": "Созвездие [украинский]",
+          "ru": "Созвездие [русский]"
+        },
+        "arche": "Архэ",
+        "birthday": "День рождения",
+        "title": {
+          "en": "Титул [английский]",
+          "ua": "Титул [украинский]",
+          "ru": "Титул [русский]"
+        },
+        "affiliation": {
+          "en": "Принадлежность [английский]",
+          "ua": "Принадлежность [украинский]",
+          "ru": "Принадлежность [русский]"
+        },
+        "splash-art": "Сплэш арт",
+        "card-icon": "Карточка"
       }
     },
     "edit": {
