@@ -191,7 +191,30 @@
         "rarity": "Rarity",
         "region": "Region",
         "farm-days": "Farm days",
-        "icon": "Icon"
+        "icon": "Icon",
+        "quality": "Quality",
+        "elemental-type": "Elemental Type",
+        "bonus-attribute": "Bonus attribute from ascension",
+        "weapon": "Weapon type",
+        "constellation": {
+          "en": "Constellation [English]",
+          "ua": "Constellation [Ukrainian]",
+          "ru": "Constellation [Russian]"
+        },
+        "arche": "Arche",
+        "birthday": "Birthday",
+        "title": {
+          "en": "Title [English]",
+          "ua": "Title [Ukrainian]",
+          "ru": "Title [Russian]"
+        },
+        "affiliation": {
+          "en": "Affiliation [English]",
+          "ua": "Affiliation [Ukrainian]",
+          "ru": "Affiliation [Russian]"
+        },
+        "splash-art": "Splash art",
+        "card-icon": "Card"
       }
     }
   },
