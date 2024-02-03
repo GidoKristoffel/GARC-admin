@@ -98,20 +98,20 @@
     "edit": {
       "field": {
         "name": {
-          "en": "Name [English]",
-          "ua": "Name [Ukrainian]",
-          "ru": "Name [Russian]"
+          "en": "Имя [Английский]",
+          "ua": "Имя [Украинский]",
+          "ru": "Имя [Русский]"
         },
         "description": {
-          "en": "Description [English]",
-          "ua": "Description [Ukrainian]",
-          "ru": "Description [Russian]"
+          "en": "Описание [Английский]",
+          "ua": "Описание [Украинский]",
+          "ru": "Описание [Русский]"
         },
-        "type": "Type",
-        "rarity": "Rarity",
-        "region": "Region",
-        "farm-days": "Farm days",
-        "icon": "Icon",
+        "type": "Тип",
+        "rarity": "Редкость",
+        "region": "Регион",
+        "farm-days": "Дни фарма",
+        "icon": "Иконка",
         "quality": "Качество",
         "elemental-type": "Элемент",
         "bonus-attribute": "Бонусная характеристика возвышения",
