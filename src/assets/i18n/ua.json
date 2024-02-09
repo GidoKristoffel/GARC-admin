@@ -140,20 +140,20 @@
     "create": {
       "field": {
         "name": {
-          "en": "Name [English]",
-          "ua": "Name [Ukrainian]",
-          "ru": "Name [Russian]"
+          "en": "Ім'я [англійська]",
+          "ua": "Ім'я [українська]",
+          "ru": "Ім'я [російська]"
         },
         "description": {
-          "en": "Description [English]",
-          "ua": "Description [Ukrainian]",
-          "ru": "Description [Russian]"
+          "en": "Опис [англійська]",
+          "ua": "Опис [українська]",
+          "ru": "Опис [російська]"
         },
-        "type": "Type",
-        "rarity": "Rarity",
-        "region": "Region",
-        "farm-days": "Farm days",
-        "icon": "Icon",
+        "type": "Тип",
+        "rarity": "Рідкість",
+        "region": "Регіон",
+        "farm-days": "Дні фарму",
+        "icon": "Піктограма",
         "quality": "Якість",
         "elemental-type": "Елемент",
         "bonus-attribute": "Бонусна характеристика вознесіння",
@@ -243,6 +243,7 @@
       "birthday": "День народження",
       "title": "Титул",
       "affiliation": "Приналежність",
+      "splash-art": "Сплеш арт",
       "card-icon": "Картка"
     }
   },
@@ -300,7 +301,7 @@
       "other": "Інше"
     },
     "arche": {
-      "usia": "Усія",
+      "ousia": "Усія",
       "pneuma": "Пневма"
     },
     "enemy-type": {
