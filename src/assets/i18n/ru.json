@@ -140,20 +140,20 @@
     "create": {
       "field": {
         "name": {
-          "en": "Name [English]",
-          "ua": "Name [Ukrainian]",
-          "ru": "Name [Russian]"
+          "en": "Имя [английский]",
+          "ua": "Имя [украинский]",
+          "ru": "Имя [русский]"
         },
         "description": {
-          "en": "Description [English]",
-          "ua": "Description [Ukrainian]",
-          "ru": "Description [Russian]"
+          "en": "Описание [английский]",
+          "ua": "Описание [украинский]",
+          "ru": "Описание [русский]"
         },
-        "type": "Type",
-        "rarity": "Rarity",
-        "region": "Region",
-        "farm-days": "Farm days",
-        "icon": "Icon",
+        "type": "Тип",
+        "rarity": "Редкость",
+        "region": "Регион",
+        "farm-days": "Дни фарма",
+        "icon": "Иконка",
         "quality": "Качество",
         "elemental-type": "Элемент",
         "bonus-attribute": "Бонусная характеристика возвышения",
@@ -243,6 +243,7 @@
       "birthday": "День рождения",
       "title": "Титул",
       "affiliation": "Принадлежность",
+      "splash-art": "Сплэш арт",
       "card-icon": "Карточка"
     }
   },
@@ -300,7 +301,7 @@
       "other": "Другое"
     },
     "arche": {
-      "usia": "Усия",
+      "ousia": "Усия",
       "pneuma": "Пневма"
     },
     "mob-type": {

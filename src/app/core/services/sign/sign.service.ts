@@ -40,6 +40,9 @@ export class SignService {
       .subscribe((): void => {
         this.localStorageService.remove(ELocalStorage.Token);
         this.router.navigate([EPage.Authorization]).then();
+      }, () => {
+        this.localStorageService.remove(ELocalStorage.Token);
+        this.router.navigate([EPage.Authorization]).then();
       });
   }
 
