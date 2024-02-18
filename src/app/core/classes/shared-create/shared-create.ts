@@ -1,15 +1,14 @@
-import { FormBuilder } from '@angular/forms';
-import { EBtnType } from "../../enums/btn-type.enum";
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { EPage } from "../../enums/page.enum";
-import { IFormMetadata } from "../../../shared/interfaces/form.interface";
-import { EFormType } from "../../enums/form.enum";
+import { IFormMetadata, IParsePageFormBuilder } from "../../../shared/interfaces/form.interface";
 
 export abstract class SharedCreate<T> {
   public readonly viewLink: string = '../' + EPage.View;
-  public readonly fieldType: typeof EFormType = EFormType;
 
   public form!: T;
+  public parsePageForm!: FormGroup<IParsePageFormBuilder>;
   public metadata: IFormMetadata[] = [];
+  public loading: boolean = false;
 
   protected constructor(protected formBuilder: FormBuilder) {}
 
@@ -19,5 +18,19 @@ export abstract class SharedCreate<T> {
 
   protected initMetadata(metadata: IFormMetadata[]): void {
     this.metadata = metadata;
+  }
+
+  protected initParsePageForm(): void {
+    this.parsePageForm = this.formBuilder.group({
+      pageUrl: ['', [Validators.required]],
+    });
+  }
+
+  protected startLoading(): void {
+    this.loading = true;
+  }
+
+  protected finishLoading(): void {
+    this.loading = false;
   }
 }

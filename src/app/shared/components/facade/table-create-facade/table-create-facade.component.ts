@@ -14,11 +14,13 @@ import { EFormType } from "../../../../core/enums/form.enum";
 import { EBtnType } from "../../../../core/enums/btn-type.enum";
 import { IOptions } from "../../../interfaces/input.interface";
 import { IFormMetadata } from "../../../interfaces/form.interface";
+import { TextInputComponent } from "../../input/text-input/text-input.component";
+import { ParsePageFieldComponent } from "../../fields/parse-page-field/parse-page-field.component";
 
 @Component({
   selector: 'clt-table-create-facade',
   standalone: true,
-  imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, ReactiveFormsModule],
+  imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, ReactiveFormsModule, TextInputComponent, ParsePageFieldComponent],
   templateUrl: './table-create-facade.component.html',
   styleUrl: './table-create-facade.component.scss'
 })
@@ -27,12 +29,20 @@ export class TableCreateFacadeComponent {
   @Input() metadata: IFormMetadata[] = [];
   @Input() viewLink: string = '';
   @Input() options: IOptions = {};
+  @Input() parseFromPage: boolean = false;
+  @Input() parsePageForm: any;
+  @Input() loading: boolean = false;
   @Output() save: EventEmitter<void> = new EventEmitter<void>();
+  @Output() parse: EventEmitter<void> = new EventEmitter<void>();
 
   public readonly btnType: EBtnType = EBtnType.Submit;
   public readonly fieldType: typeof EFormType = EFormType;
 
   public onSave(): void {
     this.save.emit();
+  }
+
+  public onParse(): void {
+    this.parse.emit();
   }
 }

@@ -3,6 +3,7 @@ import {
   IPlayableCharacter,
   IPlayableCharacterResponse,
 } from './table.interface';
+import { ICharacter } from "./form.interface";
 
 export interface ICharacterCreateFormResponse {
   character: IPlayableCharacterResponse;
@@ -26,5 +27,10 @@ export interface ICharacterDetailFormResponse {
 
 export interface ICharacterEditFormResponse {
   character: IPlayableCharacter;
+  status: HttpStatusCode;
+}
+
+export interface IAutocompleteCharacterResponse {
+  character: ICharacter;
   status: HttpStatusCode;
 }

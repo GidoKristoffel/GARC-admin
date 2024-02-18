@@ -12,45 +12,43 @@ import { ImageFieldComponent } from '../../../../shared/components/fields/image-
 import { FormCacheService } from '../../../../core/services/form-cache/form-cache.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { ICharacterFormBuilder } from '../../interfaces/form.interface';
-import { SharedCreate } from "../../../../core/classes/shared-create/shared-create";
-import { ICharactersPlayableOptions } from "../../interfaces/options.interfaces";
 import {
-  CharactersPlayableOptionsService
-} from "../../services/characters-playable-options/characters-playable-options.service";
-import { CharactersPlayableService } from "../../services/characters-playable/characters-playable.service";
-import {
-  CharactersPlayableFormService
-} from "../../services/characters-playable-form/characters-playable-form.service";
-import { IFormMetadata } from "../../../../shared/interfaces/form.interface";
-import {
-  CharactersPlayableMetadataService
-} from "../../services/characters-playable-metadata/characters-playable-metadata.service";
-import {
-    TableCreateFacadeComponent
-} from "../../../../shared/components/facade/table-create-facade/table-create-facade.component";
+  ICharacter,
+  ICharacterFormBuilder,
+} from '../../interfaces/form.interface';
+import { SharedCreate } from '../../../../core/classes/shared-create/shared-create';
+import { ICharactersPlayableOptions } from '../../interfaces/options.interfaces';
+import { CharactersPlayableOptionsService } from '../../services/characters-playable-options/characters-playable-options.service';
+import { CharactersPlayableService } from '../../services/characters-playable/characters-playable.service';
+import { CharactersPlayableFormService } from '../../services/characters-playable-form/characters-playable-form.service';
+import { CharactersPlayableMetadataService } from '../../services/characters-playable-metadata/characters-playable-metadata.service';
+import { TableCreateFacadeComponent } from '../../../../shared/components/facade/table-create-facade/table-create-facade.component';
 
 @Component({
   selector: 'clt-characters-playable-create',
   standalone: true,
-    imports: [
-        CommonModule,
-        DefaultBtnComponent,
-        DropdownFieldComponent,
-        ReactiveFormsModule,
-        ScrollClassDirective,
-        TextFieldComponent,
-        TranslateModule,
-        CheckboxFieldComponent,
-        DatetimeFieldComponent,
-        ImageFieldComponent,
-        RouterLink,
-        TableCreateFacadeComponent,
-    ],
+  imports: [
+    CommonModule,
+    DefaultBtnComponent,
+    DropdownFieldComponent,
+    ReactiveFormsModule,
+    ScrollClassDirective,
+    TextFieldComponent,
+    TranslateModule,
+    CheckboxFieldComponent,
+    DatetimeFieldComponent,
+    ImageFieldComponent,
+    RouterLink,
+    TableCreateFacadeComponent,
+  ],
   templateUrl: './characters-playable-create.component.html',
   styleUrl: './characters-playable-create.component.scss',
 })
-export class CharactersPlayableCreateComponent extends SharedCreate<FormGroup<ICharacterFormBuilder>> implements OnInit {
+export class CharactersPlayableCreateComponent
+  extends SharedCreate<FormGroup<ICharacterFormBuilder>>
+  implements OnInit
+{
+  public readonly parseFromPage: boolean = true;
   public options!: ICharactersPlayableOptions;
 
   constructor(
@@ -69,6 +67,7 @@ export class CharactersPlayableCreateComponent extends SharedCreate<FormGroup<IC
   ngOnInit(): void {
     this.initOptions();
     this.initForm();
+    this.initParsePageForm();
     this.initCashing();
     this.loadCachedData();
     this.initMetadata(this.charactersPlayableMetadataService.getCreate());
@@ -98,6 +97,25 @@ export class CharactersPlayableCreateComponent extends SharedCreate<FormGroup<IC
   }
 
   public save(): void {
-    this.charactersPlayableService.createCharacter(this.form, this.viewLink, this.route);
+    this.charactersPlayableService.createCharacter(
+      this.form,
+      this.viewLink,
+      this.route,
+    );
+  }
+
+  public loadDataFromPage(): void {
+    if (this.parsePageForm.value.pageUrl) {
+      this.startLoading();
+      this.charactersPlayableService.autocompleteCharacterData(
+        this.parsePageForm.value.pageUrl,
+        (character: ICharacter): void => {
+          this.finishLoading();
+          this.form.patchValue(character);
+        }, () => {
+          this.finishLoading();
+        },
+      );
+    }
   }
 }

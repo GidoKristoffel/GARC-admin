@@ -7,6 +7,11 @@
   border-radius: 16px;
   padding: 0 16px;
   border: 1px solid rgba(0, 0, 0, 0);
+  white-space: nowrap;
+
+  & img {
+    display: block;
+  }
 
   &:hover {
     border-color: rgba($white, 0.25);

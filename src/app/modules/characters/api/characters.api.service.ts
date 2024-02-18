@@ -3,6 +3,7 @@ import { environment } from '../../../../environment/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {
+  IAutocompleteCharacterResponse,
   ICharacterCreateFormResponse,
   ICharacterDeleteFormResponse,
   ICharacterDetailFormResponse,
@@ -26,6 +27,15 @@ export class CharactersApiService {
     return this.http.post<ICharacterCreateFormResponse>(
       this.api,
       form,
+      apiOptions,
+    );
+  }
+
+  public getDataAutocomplete(
+    id: string,
+  ): Observable<IAutocompleteCharacterResponse> {
+    return this.http.get<IAutocompleteCharacterResponse>(
+      `${this.api}/data-autocomplete/${id}`,
       apiOptions,
     );
   }
