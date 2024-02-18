@@ -1,10 +1,14 @@
 import { DestroyRef, Injectable } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ICharacterDetailFormResponse } from '../../interfaces/api.interfaces';
+import {
+  IAutocompleteCharacterResponse,
+  ICharacterDetailFormResponse,
+} from '../../interfaces/api.interfaces';
 import { IPlayableCharacter } from '../../interfaces/table.interface';
 import { CharactersApiService } from '../../api/characters.api.service';
 import { FormGroup } from '@angular/forms';
 import {
+  ICharacter,
   ICharacterApiForm,
   ICharacterFormBuilder,
 } from '../../interfaces/form.interface';
@@ -67,5 +71,20 @@ export class CharactersPlayableService {
           this.router.navigate([viewLink], { relativeTo: route }).then();
         });
     }
+  }
+
+  public autocompleteCharacterData(
+    id: string,
+    callbackAccept: (character: ICharacter) => void,
+    callbackError: () => void,
+  ): void {
+    this.charactersApiService
+      .getDataAutocomplete(id)
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(
+        (response: IAutocompleteCharacterResponse): void =>
+          callbackAccept(response.character),
+        () => callbackError(),
+      );
   }
 }

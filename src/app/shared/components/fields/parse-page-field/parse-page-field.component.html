@@ -1,0 +1,4 @@
+<form class="flex gap-4" *ngIf="form" [formGroup]="form" (submit)="onParse()">
+  <clt-text-input [formField]="formField"></clt-text-input>
+  <clt-default-btn [type]="btnType" [disabled]="!form.valid" [loading]="loading">{{ 'shared.btn.parse-page' | translate }}</clt-default-btn>
+</form>

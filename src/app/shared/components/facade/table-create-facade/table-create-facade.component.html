@@ -37,12 +37,20 @@
       }
     </div>
   </div>
-  <div class="card-wrapper-btn flex-row-right gap-8">
-    <clt-default-btn [routerLink]="viewLink">{{
-        "shared.btn.cancel" | translate
-      }}</clt-default-btn>
-    <clt-default-btn [type]="btnType" [disabled]="!form.valid">{{
-        "shared.btn.save" | translate
-      }}</clt-default-btn>
+  <div class="card-wrapper-btn flex-column gap-8">
+    <clt-parse-page-field
+      *ngIf="parseFromPage"
+      [form]="parsePageForm"
+      [loading]="loading"
+      (parse)="onParse()"
+    ></clt-parse-page-field>
+    <div class="flex-row-right gap-8">
+      <clt-default-btn [routerLink]="viewLink">{{
+          "shared.btn.cancel" | translate
+        }}</clt-default-btn>
+      <clt-default-btn [type]="btnType" [disabled]="!form.valid">{{
+          "shared.btn.save" | translate
+        }}</clt-default-btn>
+    </div>
   </div>
 </form>

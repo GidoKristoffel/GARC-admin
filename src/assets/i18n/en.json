@@ -204,7 +204,8 @@
       "yes": "Yes",
       "no": "No",
       "back": "Back",
-      "edit": "Edit"
+      "edit": "Edit",
+      "parse-page": "Load data from page"
     }
   },
   "language": {

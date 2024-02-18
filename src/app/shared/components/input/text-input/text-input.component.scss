@@ -1,3 +1,16 @@
+@import "color";
+
 :host {
   width: 100%;
+
+  & input {
+    &:disabled {
+      user-select: none;
+      cursor: no-drop;
+      border: 1px solid rgba(0, 0, 0, 0);
+      background-color: rgba($black, 0.15);
+      color: rgba($white, 0.85);
+      opacity: 0.6;
+    }
+  }
 }
