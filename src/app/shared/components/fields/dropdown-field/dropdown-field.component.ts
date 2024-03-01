@@ -9,6 +9,7 @@ import { FieldLineDirective } from '../../../directives/field-line/field-line.di
 import { IOption } from '../../../interfaces/input.interface';
 import { EDefaultValue } from '../../../../core/enums/default-value.enum';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { EventService } from '../../../../core/services/event/event.service';
 
 @Component({
   selector: 'clt-dropdown-field',
@@ -38,6 +39,7 @@ export class DropdownFieldComponent
 
   constructor(
     protected override rootFormGroup: FormGroupDirective,
+    private eventService: EventService,
     private destroyRef: DestroyRef,
   ) {
     super(rootFormGroup);
@@ -68,17 +70,16 @@ export class DropdownFieldComponent
   }
 
   private initChangeDetection(): void {
-    console.log('init!!!');
-    this.form
-      .get(this.formField)
-      ?.valueChanges.pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((value: string) => {
-        const convertedValue: string = value.toLowerCase().replace(/_/g, '-');
+    this.eventService.dataAutocomplete
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((): void => {
+        const formValue: string = this.form.get(this.formField)?.value;
         const changedValue: IOption | undefined = this.options.find(
-          (option: IOption): boolean => option.value === convertedValue,
+          (option: IOption): boolean => option.value === formValue,
         );
         if (changedValue) {
           this.defaultValue = changedValue;
+          this.change(this.defaultValue.value);
         }
       });
   }

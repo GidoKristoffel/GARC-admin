@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, DestroyRef, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { DefaultSelectComponent } from '../../select/default-select/default-select.component';
@@ -8,6 +8,8 @@ import { FormGroupDirective, FormsModule } from '@angular/forms';
 import { EDefaultValue } from '../../../../core/enums/default-value.enum';
 import { InjectReactiveForm } from '../../../../core/classes/inject-reactive-form/inject-reactive-form';
 import { FieldLineDirective } from '../../../directives/field-line/field-line.directive';
+import { EventService } from '../../../../core/services/event/event.service';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'clt-datetime-field',
@@ -39,31 +41,20 @@ export class DatetimeFieldComponent
     value: '0',
   };
 
-  constructor(protected override rootFormGroup: FormGroupDirective) {
+  constructor(
+    protected override rootFormGroup: FormGroupDirective,
+    private eventService: EventService,
+    private destroyRef: DestroyRef,
+  ) {
     super(rootFormGroup);
   }
 
   override ngOnInit(): void {
     super.ngOnInit();
     this.initOptions();
+    this.initAutocompleteEvent();
 
-    if (this.form.value[this.formField]) {
-      const date: Date = new Date(this.form.value[this.formField]);
-      const month: string = date.toLocaleString('en', { month: 'long' });
-      const day: string = date.toLocaleString('en', { day: 'numeric' });
-
-      this.currentMonth =
-        this.monthOption.find((m: IOption): boolean => m.value === month) ||
-        this.currentMonth;
-      if (EMonthDayCount.hasOwnProperty(this.currentMonth.value)) {
-        this.dayOption = this.generateObjectArray(
-          +EMonthDayCount[
-            this.currentMonth.value as keyof typeof EMonthDayCount
-          ],
-        );
-      }
-      this.currentDay = { label: day, value: day };
-    }
+    this.setValue();
   }
 
   private initOptions(): void {
@@ -80,6 +71,26 @@ export class DatetimeFieldComponent
         value: value,
       };
     });
+  }
+
+  private setValue(): void {
+    if (this.form.value[this.formField]) {
+      const date: Date = new Date(this.form.value[this.formField]);
+      const month: string = date.toLocaleString('en', { month: 'long' });
+      const day: string = date.toLocaleString('en', { day: 'numeric' });
+
+      this.currentMonth =
+        this.monthOption.find((m: IOption): boolean => m.value === month) ||
+        this.currentMonth;
+      if (EMonthDayCount.hasOwnProperty(this.currentMonth.value)) {
+        this.dayOption = this.generateObjectArray(
+          +EMonthDayCount[
+            this.currentMonth.value as keyof typeof EMonthDayCount
+            ],
+        );
+      }
+      this.currentDay = { label: day, value: day };
+    }
   }
 
   public change(key: string): void {
@@ -124,5 +135,11 @@ export class DatetimeFieldComponent
       this.currentMonth.value as keyof typeof EMonth,
     );
     return new Date(0, monthIndex, +this.currentDay.value);
+  }
+
+  private initAutocompleteEvent(): void {
+    this.eventService.dataAutocomplete
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => this.setValue());
   }
 }

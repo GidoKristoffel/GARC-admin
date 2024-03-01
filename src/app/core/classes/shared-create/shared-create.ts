@@ -1,6 +1,7 @@
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { EPage } from "../../enums/page.enum";
 import { IFormMetadata, IParsePageFormBuilder } from "../../../shared/interfaces/form.interface";
+import { EventService } from "../../services/event/event.service";
 
 export abstract class SharedCreate<T> {
   public readonly viewLink: string = '../' + EPage.View;
