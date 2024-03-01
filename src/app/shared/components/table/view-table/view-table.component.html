@@ -22,10 +22,10 @@
             />
             {{ item[header.fieldName] }}
           </td>
-          <td *ngIf="header.type === headerType.Quality">
+          <td *ngIf="header.type === headerType.Quality" [class]="item[header.fieldName]">
             {{ qualityTranslate + item[header.fieldName] | translate }}
           </td>
-          <td *ngIf="header.type === headerType.Element">
+          <td *ngIf="header.type === headerType.Element" [class]="item[header.fieldName]">
             {{ elementTranslate + item[header.fieldName] | translate }}
           </td>
           <td *ngIf="header.type === headerType.Region">
@@ -70,7 +70,7 @@
             {{ item[header.fieldName][currentLang] }}
           </td>
           <td *ngIf="header.type === headerType.Arche">
-            <div *ngFor="let arrayItem of item[header.fieldName]">
+            <div *ngFor="let arrayItem of item[header.fieldName]" [class]="arrayItem">
               {{ archeTranslate + arrayItem | translate }}
             </div>
           </td>

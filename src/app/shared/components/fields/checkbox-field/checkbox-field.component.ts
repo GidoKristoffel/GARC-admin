@@ -1,5 +1,6 @@
 import {
   Component,
+  DestroyRef,
   Input,
   OnChanges,
   OnInit,
@@ -12,6 +13,8 @@ import { DefaultCheckboxComponent } from '../../input/default-checkbox/default-c
 import { InjectReactiveForm } from '../../../../core/classes/inject-reactive-form/inject-reactive-form';
 import { FormGroupDirective } from '@angular/forms';
 import { FieldLineDirective } from '../../../directives/field-line/field-line.directive';
+import { EventService } from '../../../../core/services/event/event.service';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'clt-checkbox-field',
@@ -36,20 +39,18 @@ export class CheckboxFieldComponent
   private optionValues: string[] = [];
   public optionsData: { option: IOption; checked: boolean }[] = [];
 
-  constructor(protected override rootFormGroup: FormGroupDirective) {
+  constructor(
+    protected override rootFormGroup: FormGroupDirective,
+    private eventService: EventService,
+    private destroyRef: DestroyRef,
+  ) {
     super(rootFormGroup);
   }
 
-  override ngOnInit() {
+  override ngOnInit(): void {
     super.ngOnInit();
-    if (this.options) {
-      this.optionsData = this.options.map((option: IOption) => {
-        return {
-          option,
-          checked: this.isChecked(option.value),
-        };
-      });
-    }
+    this.setValue();
+    this.initAutocompleteEvent();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -57,6 +58,18 @@ export class CheckboxFieldComponent
       this.optionValues = changes['options'].currentValue.map(
         (option: IOption) => option.value,
       );
+    }
+  }
+
+  private setValue(): void {
+    if (this.options) {
+      this.optionsData = this.options.map((option: IOption) => {
+        return {
+          option,
+          checked: this.isChecked(option.value),
+        };
+      });
+      console.log(this.form);
     }
   }
 
@@ -78,5 +91,14 @@ export class CheckboxFieldComponent
 
   public isChecked(value: any): boolean {
     return this.form.value[this.formField].includes(value);
+  }
+
+  private initAutocompleteEvent(): void {
+    this.eventService.dataAutocomplete
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => {
+        console.log(this.form);
+        this.setValue();
+      });
   }
 }

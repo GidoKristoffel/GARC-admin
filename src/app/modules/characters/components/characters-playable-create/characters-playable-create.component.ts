@@ -23,6 +23,7 @@ import { CharactersPlayableService } from '../../services/characters-playable/ch
 import { CharactersPlayableFormService } from '../../services/characters-playable-form/characters-playable-form.service';
 import { CharactersPlayableMetadataService } from '../../services/characters-playable-metadata/characters-playable-metadata.service';
 import { TableCreateFacadeComponent } from '../../../../shared/components/facade/table-create-facade/table-create-facade.component';
+import { EventService } from "../../../../core/services/event/event.service";
 
 @Component({
   selector: 'clt-characters-playable-create',
@@ -60,6 +61,7 @@ export class CharactersPlayableCreateComponent
     private charactersPlayableService: CharactersPlayableService,
     private charactersPlayableFormService: CharactersPlayableFormService,
     private charactersPlayableMetadataService: CharactersPlayableMetadataService,
+    private eventService: EventService
   ) {
     super(formBuilder);
   }
@@ -112,6 +114,7 @@ export class CharactersPlayableCreateComponent
         (character: ICharacter): void => {
           this.finishLoading();
           this.form.patchValue(character);
+          this.eventService.dataAutocomplete.emit();
         }, () => {
           this.finishLoading();
         },

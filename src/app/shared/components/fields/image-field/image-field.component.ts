@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, DestroyRef, Input, OnInit } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { TextInputComponent } from '../../input/text-input/text-input.component';
@@ -7,6 +7,8 @@ import { FormGroupDirective } from '@angular/forms';
 import { DefaultBtnComponent } from '../../button/default-btn/default-btn.component';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { FieldLineDirective } from '../../../directives/field-line/field-line.directive';
+import { EventService } from '../../../../core/services/event/event.service';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'clt-image-field',
@@ -30,13 +32,18 @@ export class ImageFieldComponent extends InjectReactiveForm implements OnInit {
   public imageUrl: string = '';
   public readonly icon: string = './assets/images/icons/load-img.svg';
 
-  constructor(protected override rootFormGroup: FormGroupDirective) {
+  constructor(
+    protected override rootFormGroup: FormGroupDirective,
+    private eventService: EventService,
+    private destroyRef: DestroyRef,
+  ) {
     super(rootFormGroup);
   }
 
   override ngOnInit(): void {
     super.ngOnInit();
     this.loadImage();
+    this.initAutocompleteEvent();
   }
 
   loadImage() {
@@ -46,7 +53,13 @@ export class ImageFieldComponent extends InjectReactiveForm implements OnInit {
   }
 
   private isValidUrl(url: string): boolean {
-    const pattern = /^((http|https):\/\/)/;
+    const pattern: RegExp = /^((http|https):\/\/)/;
     return pattern.test(url);
+  }
+
+  private initAutocompleteEvent(): void {
+    this.eventService.dataAutocomplete
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => this.loadImage());
   }
 }
