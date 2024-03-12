@@ -1,37 +1,38 @@
 import { IFormMetadata } from "../../../shared/interfaces/form.interface";
 import { EFormType } from "../../../core/enums/form.enum";
+import { ELanguage } from "../../../core/enums/language.enum";
 
-export const createMetadata: IFormMetadata[] = [
+export const detailsMetadata: IFormMetadata[] = [
   {
-    fieldName: 'nameEn',
-    label: 'page.create.field.name.en',
+    fieldName: 'name',
+    label: 'page.details.field.name.en',
     type: EFormType.String,
     option: '',
-    language: '',
+    language: ELanguage.English,
     valueTranslateKey: '',
     checkboxes: [],
   },
   {
-    fieldName: 'nameUa',
-    label: 'page.create.field.name.ua',
+    fieldName: 'name',
+    label: 'page.details.field.name.ua',
     type: EFormType.String,
     option: '',
-    language: '',
+    language: ELanguage.Ukrainian,
     valueTranslateKey: '',
     checkboxes: [],
   },
   {
-    fieldName: 'nameRu',
-    label: 'page.create.field.name.ru',
+    fieldName: 'name',
+    label: 'page.details.field.name.ru',
     type: EFormType.String,
     option: '',
-    language: '',
+    language: ELanguage.Russian,
     valueTranslateKey: '',
     checkboxes: [],
   },
   {
     fieldName: 'index',
-    label: 'page.create.field.index',
+    label: 'page.details.field.index',
     type: EFormType.Number,
     option: '',
     language: '',
