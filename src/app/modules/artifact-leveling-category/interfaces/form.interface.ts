@@ -14,7 +14,7 @@ export interface IArtifactLevelingCategoryFormBuilder {
   index: FormControl<number | null>;
 }
 
-export interface IAscensionMaterialApiForm {
+export interface IArtifactLevelingCategoryApiForm {
   name: {
     en: string;
     ua: string;
