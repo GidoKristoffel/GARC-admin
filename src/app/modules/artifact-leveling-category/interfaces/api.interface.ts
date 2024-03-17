@@ -7,7 +7,7 @@ export interface IArtifactLevelingCategoryCreateResponse {
 }
 
 export interface IArtifactLevelingCategoryViewResponse {
-  artifactLevelingCategorys: IArtifactLevelingCategory[];
+  artifactLevelingCategories: IArtifactLevelingCategory[];
   status: HttpStatusCode;
 }
 
