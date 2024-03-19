@@ -15,11 +15,14 @@ import {
 import {
   ArtifactLevelingCategoryService
 } from "../../services/artifact-leveling-category/artifact-leveling-category.service";
+import {
+  TableCreateFacadeComponent
+} from "../../../../shared/components/facade/table-create-facade/table-create-facade.component";
 
 @Component({
   selector: 'clt-artifact-leveling-category-create',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TableCreateFacadeComponent],
   templateUrl: './artifact-leveling-category-create.component.html',
   styleUrl: './artifact-leveling-category-create.component.scss'
 })
