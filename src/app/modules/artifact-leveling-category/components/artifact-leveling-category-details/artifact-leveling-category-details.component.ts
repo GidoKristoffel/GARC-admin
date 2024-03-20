@@ -10,11 +10,14 @@ import {
 } from "../../services/artifact-leveling-category-metadata/artifact-leveling-category-metadata.service";
 import { ArtifactLevelingCategoryApi } from "../../api/artifact-leveling-category.api";
 import { IArtifactLevelingCategoryDetailsResponse } from "../../interfaces/api.interface";
+import {
+  TableDetailsFacadeComponent
+} from "../../../../shared/components/facade/table-details-facade/table-details-facade.component";
 
 @Component({
   selector: 'clt-artifact-leveling-category-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TableDetailsFacadeComponent],
   templateUrl: './artifact-leveling-category-details.component.html',
   styleUrl: './artifact-leveling-category-details.component.scss'
 })
