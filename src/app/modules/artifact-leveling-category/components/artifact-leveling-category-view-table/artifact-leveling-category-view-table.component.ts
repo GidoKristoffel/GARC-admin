@@ -1,13 +1,6 @@
 import { Component, DestroyRef, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedView } from "../../../../core/classes/shared-view/shared-view";
-import { IAscensionMaterial } from "../../../ascension-material/interfaces/common.inteface";
-import {
-  AscensionMaterialsMetadataService
-} from "../../../ascension-material/services/ascension-materials-metadata/ascension-materials-metadata.service";
-import {
-  AscensionMaterialsViewTableService
-} from "../../../ascension-material/services/ascension-materials-view-table/ascension-materials-view-table.service";
 import { LanguageService } from "../../../../core/services/language/language.service";
 import {
   ArtifactLevelingCategoryMetadataService
