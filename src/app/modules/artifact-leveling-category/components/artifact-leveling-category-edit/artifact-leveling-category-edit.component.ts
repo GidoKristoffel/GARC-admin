@@ -9,11 +9,14 @@ import { ArtifactLevelingCategoryMetadataService } from '../../services/artifact
 import { ArtifactLevelingCategoryFormService } from '../../services/artifact-leveling-category-form/artifact-leveling-category-form.service';
 import { ArtifactLevelingCategoryService } from '../../services/artifact-leveling-category/artifact-leveling-category.service';
 import { IArtifactLevelingCategory } from '../../interfaces/common.inteface';
+import {
+  TableEditFacadeComponent
+} from "../../../../shared/components/facade/table-edit-facade/table-edit-facade.component";
 
 @Component({
   selector: 'clt-artifact-leveling-category-edit',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TableEditFacadeComponent],
   templateUrl: './artifact-leveling-category-edit.component.html',
   styleUrl: './artifact-leveling-category-edit.component.scss',
 })
