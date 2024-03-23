@@ -9,11 +9,14 @@ import {
   ArtifactLevelingCategoryViewTableService
 } from "../../services/artifact-leveling-category-view-table/artifact-leveling-category-view-table.service";
 import { IArtifactLevelingCategory } from "../../interfaces/common.inteface";
+import {
+  TableViewFacadeComponent
+} from "../../../../shared/components/facade/table-view-facade/table-view-facade.component";
 
 @Component({
   selector: 'clt-artifact-leveling-category-view-table',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TableViewFacadeComponent],
   templateUrl: './artifact-leveling-category-view-table.component.html',
   styleUrl: './artifact-leveling-category-view-table.component.scss'
 })
