@@ -17,6 +17,7 @@ export enum EPage {
   Mobs = 'mobs',
   EliteBosses = 'elite-bosses',
   WeeklyBosses = 'weekly-bosses',
+  ArtifactLevelingCategory = 'artifact-leveling-category',
   Settings = 'settings',
   Other = 'other',
   View = 'view',
