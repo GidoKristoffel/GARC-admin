@@ -18,6 +18,7 @@ export enum EPage {
   EliteBosses = 'elite-bosses',
   WeeklyBosses = 'weekly-bosses',
   Settings = 'settings',
+  Other = 'other',
   View = 'view',
   Create = 'create',
   Edit = 'edit',
