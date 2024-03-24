@@ -41,6 +41,13 @@ export const mainPage: Routes = [
       import('./enemies/enemies.routes').then((r) => r.enemiesRoutes),
   },
   {
+    path: EPage.Other,
+    loadComponent: () =>
+      import('./other/other-page.component').then((c) => c.OtherPageComponent),
+    loadChildren: () =>
+      import('./other/other-page.routes').then((r) => r.otherRoutes),
+  },
+  {
     path: EPage.Settings,
     loadComponent: () =>
       import('./settings/settings.component').then((c) => c.SettingsComponent),
