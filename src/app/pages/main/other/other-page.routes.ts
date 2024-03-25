@@ -8,6 +8,10 @@ export const otherRoutes: Routes = [
       import(
         './artifact-leveling-category/artifact-leveling-category.component'
       ).then((c) => c.ArtifactLevelingCategoryComponent),
+    loadChildren: () =>
+      import(
+        './artifact-leveling-category/artifact-leveling-category.routes'
+      ).then((r) => r.artifactLevelingCategoryRoutes),
   },
   {
     path: EPage.Empty,
