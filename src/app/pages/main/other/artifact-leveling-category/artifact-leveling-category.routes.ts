@@ -24,6 +24,13 @@ export const artifactLevelingCategoryRoutes: Routes = [
       ).then((c) => c.ArtifactLevelingCategoryDetailsComponent),
   },
   {
+    path: EPage.View,
+    loadComponent: () =>
+      import(
+        './artifact-leveling-category-view-page/artifact-leveling-category-view-page.component'
+      ).then((c) => c.ArtifactLevelingCategoryViewPageComponent),
+  },
+  {
     path: EPage.Empty,
     redirectTo: EPage.View,
     pathMatch: 'full',
