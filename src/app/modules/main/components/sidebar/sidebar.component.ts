@@ -165,6 +165,20 @@ export class SidebarComponent {
         icon: './assets/images/icons/weekly-boss.svg',
         link: this.baseUrlEnemy + EPage.WeeklyBosses,
       },
+      {
+        id: 18,
+        type: ESidebarType.Divider,
+        label: 'page.main.sidebar.other.title',
+        icon: '',
+        link: '',
+      },
+      {
+        id: 18,
+        type: ESidebarType.Button,
+        label: 'page.main.sidebar.artifact-leveling-category.title',
+        icon: './assets/images/icons/artifact-leveling-category.svg',
+        link: '',
+      },
     ],
   };
 
