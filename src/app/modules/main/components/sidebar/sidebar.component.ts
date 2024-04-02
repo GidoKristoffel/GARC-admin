@@ -33,6 +33,7 @@ export class SidebarComponent {
   public readonly baseUrlWeapon: string = this.baseUrl + EPage.Weapons + '/';
   public readonly baseUrlMaterial: string = this.baseUrl + EPage.Material + '/';
   public readonly baseUrlEnemy: string = this.baseUrl + EPage.Enemies + '/';
+  public readonly baseUrlOther: string = this.baseUrl + EPage.Other + '/';
   public readonly settingsLink: string = this.baseUrl + EPage.Settings;
 
   public readonly sidebarType: typeof ESidebarType = ESidebarType;
@@ -177,7 +178,7 @@ export class SidebarComponent {
         type: ESidebarType.Button,
         label: 'page.main.sidebar.artifact-leveling-category.title',
         icon: './assets/images/icons/artifact-leveling-category.svg',
-        link: '',
+        link: this.baseUrlOther + EPage.ArtifactLevelingCategory,
       },
     ],
   };
