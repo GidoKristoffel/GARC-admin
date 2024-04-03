@@ -50,7 +50,8 @@
           "weekly-boss": "Еженедельные боссы"
         },
         "other": {
-          "title": "Другое"
+          "title": "Другое",
+          "artifact-leveling-category": "Категории прокачки артефактов"
         },
         "settings": "Настройки",
         "exit": "Выход"

@@ -50,7 +50,8 @@
           "weekly-boss": "Weekly bosses"
         },
         "other": {
-          "title": "Other"
+          "title": "Other",
+          "artifact-leveling-category": "Artifact leveling category"
         },
         "settings": "Settings",
         "exit": "Exit"
