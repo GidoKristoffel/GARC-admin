@@ -49,6 +49,9 @@
           "elite-boss": "Elite bosses",
           "weekly-boss": "Weekly bosses"
         },
+        "other": {
+          "title": "Other"
+        },
         "settings": "Settings",
         "exit": "Exit"
       }
