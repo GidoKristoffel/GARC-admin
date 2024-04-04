@@ -6,8 +6,8 @@ export const artifactLevelingCategoryRoutes: Routes = [
     path: EPage.Create,
     loadComponent: () =>
       import(
-        './artifact-leveling-category-create/artifact-leveling-category-create.component'
-      ).then((c) => c.ArtifactLevelingCategoryCreateComponent),
+        './artifact-leveling-category-create-page/artifact-leveling-category-create-page.component'
+      ).then((c) => c.ArtifactLevelingCategoryCreatePageComponent),
   },
   {
     path: EPage.Edit,
