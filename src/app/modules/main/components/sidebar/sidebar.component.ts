@@ -176,7 +176,7 @@ export class SidebarComponent {
       {
         id: 18,
         type: ESidebarType.Button,
-        label: 'page.main.sidebar.artifact-leveling-category.title',
+        label: 'page.main.sidebar.other.artifact-leveling-category',
         icon: './assets/images/icons/artifact-leveling-category.svg',
         link: this.baseUrlOther + EPage.ArtifactLevelingCategory,
       },
