@@ -249,7 +249,8 @@
       "birthday": "Birthday",
       "title": "Title",
       "affiliation": "Affiliation",
-      "card-icon": "Card"
+      "card-icon": "Card",
+      "index": "Index"
     }
   },
   "enum": {
