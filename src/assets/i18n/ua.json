@@ -249,7 +249,8 @@
       "title": "Титул",
       "affiliation": "Приналежність",
       "splash-art": "Сплеш арт",
-      "card-icon": "Картка"
+      "card-icon": "Картка",
+      "index": "Індекс"
     }
   },
   "enum": {
