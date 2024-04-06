@@ -20,8 +20,8 @@ export const artifactLevelingCategoryRoutes: Routes = [
     path: EPage.Details,
     loadComponent: () =>
       import(
-        './artifact-leveling-category-details/artifact-leveling-category-details.component'
-      ).then((c) => c.ArtifactLevelingCategoryDetailsComponent),
+        './artifact-leveling-category-details-page/artifact-leveling-category-details-page.component'
+      ).then((c) => c.ArtifactLevelingCategoryDetailsPageComponent),
   },
   {
     path: EPage.View,
