@@ -13,8 +13,8 @@ export const artifactLevelingCategoryRoutes: Routes = [
     path: EPage.Edit,
     loadComponent: () =>
       import(
-        './artifact-leveling-category-edit/artifact-leveling-category-edit.component'
-      ).then((c) => c.ArtifactLevelingCategoryEditComponent),
+        './artifact-leveling-category-edit-page/artifact-leveling-category-edit-page.component'
+      ).then((c) => c.ArtifactLevelingCategoryEditPageComponent),
   },
   {
     path: EPage.Details,
