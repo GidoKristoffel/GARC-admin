@@ -1,1 +1,12 @@
-<p>number-input works!</p>
+<ng-container [formGroup]="form">
+  <div class="flex-column gap-8">
+    <label *ngIf="label">{{ label | translate }}</label>
+    <input
+      type="number"
+      class="input"
+      [placeholder]="placeholder | translate"
+      [formControlName]="formField"
+      [autocomplete]="autocomplete"
+    />
+  </div>
+</ng-container>
