@@ -16,11 +16,12 @@ import { IOptions } from "../../../interfaces/input.interface";
 import { IFormMetadata } from "../../../interfaces/form.interface";
 import { TextInputComponent } from "../../input/text-input/text-input.component";
 import { ParsePageFieldComponent } from "../../fields/parse-page-field/parse-page-field.component";
+import { NumberFieldComponent } from "../../fields/number-field/number-field.component";
 
 @Component({
   selector: 'clt-table-create-facade',
   standalone: true,
-  imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, ReactiveFormsModule, TextInputComponent, ParsePageFieldComponent],
+  imports: [CommonModule, CheckboxFieldComponent, DatetimeFieldComponent, DefaultBtnComponent, DropdownFieldComponent, FormsModule, ImageFieldComponent, ScrollClassDirective, TextFieldComponent, TranslateModule, RouterLink, ReactiveFormsModule, TextInputComponent, ParsePageFieldComponent, NumberFieldComponent],
   templateUrl: './table-create-facade.component.html',
   styleUrl: './table-create-facade.component.scss'
 })
