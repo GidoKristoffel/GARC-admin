@@ -1,0 +1,15 @@
+@import "color";
+
+.label {
+  min-width: 280px;
+}
+
+.field {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.line {
+  width: 100%;
+  border: 1px solid $granite-gray;
+}
