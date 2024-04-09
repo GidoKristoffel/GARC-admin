@@ -12,6 +12,11 @@
           [formField]="item.fieldName"
           [label]="item.label"
         ></clt-text-field>
+        <clt-number-field
+          *ngIf="item.type === fieldType.Number"
+          [formField]="item.fieldName"
+          [label]="item.label"
+        ></clt-number-field>
         <clt-dropdown-field
           *ngIf="item.type === fieldType.Option"
           [formField]="item.fieldName"
