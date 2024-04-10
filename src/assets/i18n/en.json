@@ -180,7 +180,8 @@
           "ru": "Affiliation [Russian]"
         },
         "splash-art": "Splash art",
-        "card-icon": "Card"
+        "card-icon": "Card",
+        "index": "Index"
       }
     }
   },
